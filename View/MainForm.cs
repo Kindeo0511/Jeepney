@@ -152,51 +152,117 @@ namespace Jeep.View
 
         }
 
+        public void LoadComplaintAndFeedBack()
+        {
+
+            dgv_container.Controls.Clear();
+
+
+            var complaint = new ComplaintAndFeedBackControl();
+            complaint.Dock = DockStyle.Fill;
+
+
+            dgv_container.Controls.Add(complaint);
+
+
+        }
+
+        public void LoadAuditTrail()
+        {
+
+            dgv_container.Controls.Clear();
+
+
+            var auditTrail = new AuditTrailControl();
+            auditTrail.Dock = DockStyle.Fill;
+
+
+            dgv_container.Controls.Add(auditTrail);
+
+
+        }
+
 
 
         private void btn_users_Click(object sender, EventArgs e)
         {
             LoadUsers();
+            SetCheckedButton((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void btn_brgy_Click(object sender, EventArgs e)
         {
             LoadBrgy();
+            SetCheckedButton((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void btn_organization_Click(object sender, EventArgs e)
         {
             LoadOrganization();
+            SetCheckedButton((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void btn_operator_Click(object sender, EventArgs e)
         {
             LoadOperator();
+            SetCheckedButton((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void btn_driver_Click(object sender, EventArgs e)
         {
             LoadDriver();
+            SetCheckedButton((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void btn_route_Click(object sender, EventArgs e)
         {
             LoadRoute();
+            SetCheckedButton((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void btn_jeepney_Click(object sender, EventArgs e)
         {
             LoadJeepney();
+            SetCheckedButton((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void btn_payment_Click(object sender, EventArgs e)
         {
             LoadFarePayment();
+            SetCheckedButton((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void btn_discount_Click(object sender, EventArgs e)
         {
             LoadDiscount();
+            SetCheckedButton((Guna.UI2.WinForms.Guna2Button)sender);
         }
+
+        private void btn_complain_and_feedback_Click(object sender, EventArgs e)
+        {
+            LoadComplaintAndFeedBack();
+            SetCheckedButton((Guna.UI2.WinForms.Guna2Button)sender);
+        }
+
+        private void btn_audit_trail_Click(object sender, EventArgs e)
+        {
+            LoadAuditTrail();
+            SetCheckedButton((Guna.UI2.WinForms.Guna2Button)sender);
+        }
+        private void SetCheckedButton(Guna.UI2.WinForms.Guna2Button clickedButton)
+        {
+            // Loop through all controls on the form (or a panel if your buttons are inside one)
+            foreach (Control ctrl in side_bar_panel.Controls) // replace sidebarPanel with your container name
+            {
+                if (ctrl is Guna.UI2.WinForms.Guna2Button btn)
+                {
+                    btn.Checked = false;
+                }
+            }
+
+            // Set the clicked one to true
+            clickedButton.Checked = true;
+        }
+
     }
 }

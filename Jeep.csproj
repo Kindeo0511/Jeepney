@@ -71,6 +71,12 @@
     <Compile Include="View\ActionButtonControl.Designer.cs">
       <DependentUpon>ActionButtonControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\AuditTrailControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\AuditTrailControl.Designer.cs">
+      <DependentUpon>AuditTrailControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\BaranggayControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -88,6 +94,12 @@
     </Compile>
     <Compile Include="View\ChangePasswordForm.Designer.cs">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComplaintAndFeedBackControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ComplaintAndFeedBackControl.Designer.cs">
+      <DependentUpon>ComplaintAndFeedBackControl.cs</DependentUpon>
     </Compile>
     <Compile Include="View\DIscountControl.cs">
       <SubType>UserControl</SubType>
@@ -233,6 +245,9 @@
     <EmbeddedResource Include="View\ActionButtonControl.resx">
       <DependentUpon>ActionButtonControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\AuditTrailControl.resx">
+      <DependentUpon>AuditTrailControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\BaranggayControl.resx">
       <DependentUpon>BaranggayControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ComplaintAndFeedBackControl.resx">
+      <DependentUpon>ComplaintAndFeedBackControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\DIscountControl.resx">
       <DependentUpon>DIscountControl.cs</DependentUpon>

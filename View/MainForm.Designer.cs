@@ -38,7 +38,7 @@
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.side_bar_panel = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_complain_and_feedback = new Guna.UI2.WinForms.Guna2Button();
             this.btn_discount = new Guna.UI2.WinForms.Guna2Button();
             this.btn_payment = new Guna.UI2.WinForms.Guna2Button();
             this.btn_jeepney = new Guna.UI2.WinForms.Guna2Button();
@@ -51,6 +51,7 @@
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dgv_container = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btn_audit_trail = new Guna.UI2.WinForms.Guna2Button();
             this.panel_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -165,7 +166,8 @@
             // 
             this.side_bar_panel.BackColor = System.Drawing.Color.White;
             this.side_bar_panel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.side_bar_panel.Controls.Add(this.guna2Button10);
+            this.side_bar_panel.Controls.Add(this.btn_audit_trail);
+            this.side_bar_panel.Controls.Add(this.btn_complain_and_feedback);
             this.side_bar_panel.Controls.Add(this.btn_discount);
             this.side_bar_panel.Controls.Add(this.btn_payment);
             this.side_bar_panel.Controls.Add(this.btn_jeepney);
@@ -179,33 +181,32 @@
             this.side_bar_panel.Margin = new System.Windows.Forms.Padding(0);
             this.side_bar_panel.Name = "side_bar_panel";
             this.side_bar_panel.ShadowDecoration.Parent = this.side_bar_panel;
-            this.side_bar_panel.Size = new System.Drawing.Size(273, 538);
+            this.side_bar_panel.Size = new System.Drawing.Size(273, 587);
             this.side_bar_panel.TabIndex = 1;
             // 
-            // guna2Button10
+            // btn_complain_and_feedback
             // 
-            this.guna2Button10.Checked = true;
-            this.guna2Button10.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.guna2Button10.CheckedState.Parent = this.guna2Button10;
-            this.guna2Button10.CustomImages.Parent = this.guna2Button10;
-            this.guna2Button10.FillColor = System.Drawing.Color.White;
-            this.guna2Button10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button10.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button10.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.guna2Button10.HoverState.Parent = this.guna2Button10;
-            this.guna2Button10.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button10.Image")));
-            this.guna2Button10.ImageOffset = new System.Drawing.Point(-30, 0);
-            this.guna2Button10.Location = new System.Drawing.Point(0, 483);
-            this.guna2Button10.Name = "guna2Button10";
-            this.guna2Button10.ShadowDecoration.Parent = this.guna2Button10;
-            this.guna2Button10.Size = new System.Drawing.Size(273, 45);
-            this.guna2Button10.TabIndex = 11;
-            this.guna2Button10.Text = "Complaint/Feedback";
-            this.guna2Button10.TextOffset = new System.Drawing.Point(-20, 0);
+            this.btn_complain_and_feedback.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_complain_and_feedback.CheckedState.Parent = this.btn_complain_and_feedback;
+            this.btn_complain_and_feedback.CustomImages.Parent = this.btn_complain_and_feedback;
+            this.btn_complain_and_feedback.FillColor = System.Drawing.Color.White;
+            this.btn_complain_and_feedback.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_complain_and_feedback.ForeColor = System.Drawing.Color.Black;
+            this.btn_complain_and_feedback.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_complain_and_feedback.HoverState.Parent = this.btn_complain_and_feedback;
+            this.btn_complain_and_feedback.Image = ((System.Drawing.Image)(resources.GetObject("btn_complain_and_feedback.Image")));
+            this.btn_complain_and_feedback.ImageOffset = new System.Drawing.Point(-30, 0);
+            this.btn_complain_and_feedback.Location = new System.Drawing.Point(0, 483);
+            this.btn_complain_and_feedback.Name = "btn_complain_and_feedback";
+            this.btn_complain_and_feedback.ShadowDecoration.Parent = this.btn_complain_and_feedback;
+            this.btn_complain_and_feedback.Size = new System.Drawing.Size(273, 45);
+            this.btn_complain_and_feedback.TabIndex = 11;
+            this.btn_complain_and_feedback.Text = "Complaint/Feedback";
+            this.btn_complain_and_feedback.TextOffset = new System.Drawing.Point(-20, 0);
+            this.btn_complain_and_feedback.Click += new System.EventHandler(this.btn_complain_and_feedback_Click);
             // 
             // btn_discount
             // 
-            this.btn_discount.Checked = true;
             this.btn_discount.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
             this.btn_discount.CheckedState.Parent = this.btn_discount;
             this.btn_discount.CustomImages.Parent = this.btn_discount;
@@ -227,7 +228,6 @@
             // 
             // btn_payment
             // 
-            this.btn_payment.Checked = true;
             this.btn_payment.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
             this.btn_payment.CheckedState.Parent = this.btn_payment;
             this.btn_payment.CustomImages.Parent = this.btn_payment;
@@ -249,7 +249,6 @@
             // 
             // btn_jeepney
             // 
-            this.btn_jeepney.Checked = true;
             this.btn_jeepney.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
             this.btn_jeepney.CheckedState.Parent = this.btn_jeepney;
             this.btn_jeepney.CustomImages.Parent = this.btn_jeepney;
@@ -271,7 +270,6 @@
             // 
             // btn_route
             // 
-            this.btn_route.Checked = true;
             this.btn_route.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
             this.btn_route.CheckedState.Parent = this.btn_route;
             this.btn_route.CustomImages.Parent = this.btn_route;
@@ -293,7 +291,6 @@
             // 
             // btn_driver
             // 
-            this.btn_driver.Checked = true;
             this.btn_driver.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
             this.btn_driver.CheckedState.Parent = this.btn_driver;
             this.btn_driver.CustomImages.Parent = this.btn_driver;
@@ -315,7 +312,6 @@
             // 
             // btn_operator
             // 
-            this.btn_operator.Checked = true;
             this.btn_operator.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
             this.btn_operator.CheckedState.Parent = this.btn_operator;
             this.btn_operator.CustomImages.Parent = this.btn_operator;
@@ -337,7 +333,6 @@
             // 
             // btn_organization
             // 
-            this.btn_organization.Checked = true;
             this.btn_organization.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
             this.btn_organization.CheckedState.Parent = this.btn_organization;
             this.btn_organization.CustomImages.Parent = this.btn_organization;
@@ -359,7 +354,6 @@
             // 
             // btn_brgy
             // 
-            this.btn_brgy.Checked = true;
             this.btn_brgy.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
             this.btn_brgy.CheckedState.Parent = this.btn_brgy;
             this.btn_brgy.CustomImages.Parent = this.btn_brgy;
@@ -381,7 +375,6 @@
             // 
             // btn_users
             // 
-            this.btn_users.Checked = true;
             this.btn_users.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
             this.btn_users.CheckedState.Parent = this.btn_users;
             this.btn_users.CustomImages.Parent = this.btn_users;
@@ -421,6 +414,27 @@
             this.guna2Elipse3.BorderRadius = 30;
             this.guna2Elipse3.TargetControl = this.dgv_container;
             // 
+            // btn_audit_trail
+            // 
+            this.btn_audit_trail.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_audit_trail.CheckedState.Parent = this.btn_audit_trail;
+            this.btn_audit_trail.CustomImages.Parent = this.btn_audit_trail;
+            this.btn_audit_trail.FillColor = System.Drawing.Color.White;
+            this.btn_audit_trail.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_audit_trail.ForeColor = System.Drawing.Color.Black;
+            this.btn_audit_trail.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_audit_trail.HoverState.Parent = this.btn_audit_trail;
+            this.btn_audit_trail.Image = ((System.Drawing.Image)(resources.GetObject("btn_audit_trail.Image")));
+            this.btn_audit_trail.ImageOffset = new System.Drawing.Point(-30, 0);
+            this.btn_audit_trail.Location = new System.Drawing.Point(0, 534);
+            this.btn_audit_trail.Name = "btn_audit_trail";
+            this.btn_audit_trail.ShadowDecoration.Parent = this.btn_audit_trail;
+            this.btn_audit_trail.Size = new System.Drawing.Size(273, 45);
+            this.btn_audit_trail.TabIndex = 12;
+            this.btn_audit_trail.Text = "Audit Trail";
+            this.btn_audit_trail.TextOffset = new System.Drawing.Point(-20, 0);
+            this.btn_audit_trail.Click += new System.EventHandler(this.btn_audit_trail_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -459,7 +473,7 @@
         private Guna.UI2.WinForms.Guna2Panel side_bar_panel;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button btn_users;
-        private Guna.UI2.WinForms.Guna2Button guna2Button10;
+        private Guna.UI2.WinForms.Guna2Button btn_complain_and_feedback;
         private Guna.UI2.WinForms.Guna2Button btn_discount;
         private Guna.UI2.WinForms.Guna2Button btn_payment;
         private Guna.UI2.WinForms.Guna2Button btn_jeepney;
@@ -470,5 +484,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_brgy;
         private Guna.UI2.WinForms.Guna2Panel dgv_container;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private Guna.UI2.WinForms.Guna2Button btn_audit_trail;
     }
 }
