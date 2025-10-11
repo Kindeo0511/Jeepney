@@ -39,7 +39,7 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.side_bar_panel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_discount = new Guna.UI2.WinForms.Guna2Button();
             this.btn_payment = new Guna.UI2.WinForms.Guna2Button();
             this.btn_jeepney = new Guna.UI2.WinForms.Guna2Button();
             this.btn_route = new Guna.UI2.WinForms.Guna2Button();
@@ -166,7 +166,7 @@
             this.side_bar_panel.BackColor = System.Drawing.Color.White;
             this.side_bar_panel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.side_bar_panel.Controls.Add(this.guna2Button10);
-            this.side_bar_panel.Controls.Add(this.guna2Button9);
+            this.side_bar_panel.Controls.Add(this.btn_discount);
             this.side_bar_panel.Controls.Add(this.btn_payment);
             this.side_bar_panel.Controls.Add(this.btn_jeepney);
             this.side_bar_panel.Controls.Add(this.btn_route);
@@ -200,29 +200,30 @@
             this.guna2Button10.ShadowDecoration.Parent = this.guna2Button10;
             this.guna2Button10.Size = new System.Drawing.Size(273, 45);
             this.guna2Button10.TabIndex = 11;
-            this.guna2Button10.Text = "Users";
+            this.guna2Button10.Text = "Complaint/Feedback";
             this.guna2Button10.TextOffset = new System.Drawing.Point(-20, 0);
             // 
-            // guna2Button9
+            // btn_discount
             // 
-            this.guna2Button9.Checked = true;
-            this.guna2Button9.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.guna2Button9.CheckedState.Parent = this.guna2Button9;
-            this.guna2Button9.CustomImages.Parent = this.guna2Button9;
-            this.guna2Button9.FillColor = System.Drawing.Color.White;
-            this.guna2Button9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button9.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button9.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.guna2Button9.HoverState.Parent = this.guna2Button9;
-            this.guna2Button9.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button9.Image")));
-            this.guna2Button9.ImageOffset = new System.Drawing.Point(-30, 0);
-            this.guna2Button9.Location = new System.Drawing.Point(0, 432);
-            this.guna2Button9.Name = "guna2Button9";
-            this.guna2Button9.ShadowDecoration.Parent = this.guna2Button9;
-            this.guna2Button9.Size = new System.Drawing.Size(273, 45);
-            this.guna2Button9.TabIndex = 10;
-            this.guna2Button9.Text = "Users";
-            this.guna2Button9.TextOffset = new System.Drawing.Point(-20, 0);
+            this.btn_discount.Checked = true;
+            this.btn_discount.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_discount.CheckedState.Parent = this.btn_discount;
+            this.btn_discount.CustomImages.Parent = this.btn_discount;
+            this.btn_discount.FillColor = System.Drawing.Color.White;
+            this.btn_discount.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_discount.ForeColor = System.Drawing.Color.Black;
+            this.btn_discount.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_discount.HoverState.Parent = this.btn_discount;
+            this.btn_discount.Image = ((System.Drawing.Image)(resources.GetObject("btn_discount.Image")));
+            this.btn_discount.ImageOffset = new System.Drawing.Point(-30, 0);
+            this.btn_discount.Location = new System.Drawing.Point(0, 432);
+            this.btn_discount.Name = "btn_discount";
+            this.btn_discount.ShadowDecoration.Parent = this.btn_discount;
+            this.btn_discount.Size = new System.Drawing.Size(273, 45);
+            this.btn_discount.TabIndex = 10;
+            this.btn_discount.Text = "DIscount";
+            this.btn_discount.TextOffset = new System.Drawing.Point(-20, 0);
+            this.btn_discount.Click += new System.EventHandler(this.btn_discount_Click);
             // 
             // btn_payment
             // 
@@ -459,7 +460,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button btn_users;
         private Guna.UI2.WinForms.Guna2Button guna2Button10;
-        private Guna.UI2.WinForms.Guna2Button guna2Button9;
+        private Guna.UI2.WinForms.Guna2Button btn_discount;
         private Guna.UI2.WinForms.Guna2Button btn_payment;
         private Guna.UI2.WinForms.Guna2Button btn_jeepney;
         private Guna.UI2.WinForms.Guna2Button btn_route;

@@ -137,6 +137,20 @@ namespace Jeep.View
 
 
         }
+        public void LoadDiscount()
+        {
+
+            dgv_container.Controls.Clear();
+
+
+            var discount = new DIscountControl();
+            discount.Dock = DockStyle.Fill;
+
+
+            dgv_container.Controls.Add(discount);
+
+
+        }
 
 
 
@@ -178,6 +192,11 @@ namespace Jeep.View
         private void btn_payment_Click(object sender, EventArgs e)
         {
             LoadFarePayment();
+        }
+
+        private void btn_discount_Click(object sender, EventArgs e)
+        {
+            LoadDiscount();
         }
     }
 }
