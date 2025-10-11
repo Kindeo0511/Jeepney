@@ -65,11 +65,35 @@
     <Compile Include="SuperAdminMessageBox.Designer.cs">
       <DependentUpon>SuperAdminMessageBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ActionButtonControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ActionButtonControl.Designer.cs">
+      <DependentUpon>ActionButtonControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ForgotPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ForgotPasswordForm.Designer.cs">
+      <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\SuperAdminForm.cs">
       <SubType>Form</SubType>
@@ -98,8 +122,20 @@
     <EmbeddedResource Include="SuperAdminMessageBox.resx">
       <DependentUpon>SuperAdminMessageBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ActionButtonControl.resx">
+      <DependentUpon>ActionButtonControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ForgotPasswordForm.resx">
+      <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\SuperAdminForm.resx">
       <DependentUpon>SuperAdminForm.cs</DependentUpon>

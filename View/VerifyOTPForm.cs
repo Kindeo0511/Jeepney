@@ -27,7 +27,7 @@ namespace Jeep.View
         {
             if (isForgotPassword == true)
             {
-                var form = new LoginForm();
+                var form = new ChangePasswordForm();
                 form.Show();
                 this.Close();
             }
