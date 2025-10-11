@@ -71,6 +71,18 @@
     <Compile Include="View\ActionButtonControl.Designer.cs">
       <DependentUpon>ActionButtonControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\BaranggayControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\BaranggayControl.Designer.cs">
+      <DependentUpon>BaranggayControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BaranggayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BaranggayForm.Designer.cs">
+      <DependentUpon>BaranggayForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ChangePasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,11 +107,35 @@
     <Compile Include="View\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\OrganizationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OrganizationControl.Designer.cs">
+      <DependentUpon>OrganizationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrganizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrganizationForm.Designer.cs">
+      <DependentUpon>OrganizationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\SuperAdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\SuperAdminForm.Designer.cs">
       <DependentUpon>SuperAdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UsersControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UsersControl.Designer.cs">
+      <DependentUpon>UsersControl.cs</DependentUpon>
     </Compile>
     <Compile Include="View\VerifyOTPForm.cs">
       <SubType>Form</SubType>
@@ -125,6 +161,12 @@
     <EmbeddedResource Include="View\ActionButtonControl.resx">
       <DependentUpon>ActionButtonControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\BaranggayControl.resx">
+      <DependentUpon>BaranggayControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BaranggayForm.resx">
+      <DependentUpon>BaranggayForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,8 +179,20 @@
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\OrganizationControl.resx">
+      <DependentUpon>OrganizationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrganizationForm.resx">
+      <DependentUpon>OrganizationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\SuperAdminForm.resx">
       <DependentUpon>SuperAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UsersControl.resx">
+      <DependentUpon>UsersControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\VerifyOTPForm.resx">
       <DependentUpon>VerifyOTPForm.cs</DependentUpon>

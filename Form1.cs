@@ -25,7 +25,12 @@ namespace Jeep
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            using (var form = new SuperAdminForm()) 
+            //using (var form = new SuperAdminForm())
+            //{
+            //    form.ShowDialog();
+            //    this.Hide();
+            //}
+            using (var form = new MainForm())
             {
                 form.ShowDialog();
                 this.Hide();

@@ -21,8 +21,64 @@ namespace Jeep.View
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            guna2DataGridView1.Rows.Add("Louis Jay", "SanSan123", "louisjaycastillo7@gmail.com", "09203101161", "Sta. Ana", "Admin");
-            guna2DataGridView1.Rows.Add("Mohaifa", "Nissan", "malikmohaifa@gmail.com", "09472632013", "Maharlika", "Staff");
+           
+        }
+        public void LoadUsers() 
+        {
+           
+            dgv_container.Controls.Clear();
+
+   
+            var userControl = new UsersControl();
+            userControl.Dock = DockStyle.Fill; 
+
+          
+            dgv_container.Controls.Add(userControl);
+
+
+        }
+        public void LoadBrgy()
+        {
+
+            dgv_container.Controls.Clear();
+
+
+            var brgyControl = new BaranggayControl();
+            brgyControl.Dock = DockStyle.Fill;
+
+
+            dgv_container.Controls.Add(brgyControl);
+
+
+        }
+        public void LoadOrganization()
+        {
+
+            dgv_container.Controls.Clear();
+
+
+            var organization = new OrganizationControl();
+            organization.Dock = DockStyle.Fill;
+
+
+            dgv_container.Controls.Add(organization);
+
+
+        }
+
+        private void btn_users_Click(object sender, EventArgs e)
+        {
+            LoadUsers();
+        }
+
+        private void btn_brgy_Click(object sender, EventArgs e)
+        {
+            LoadBrgy();
+        }
+
+        private void btn_organization_Click(object sender, EventArgs e)
+        {
+            LoadOrganization();
         }
     }
 }
