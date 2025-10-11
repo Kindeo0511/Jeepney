@@ -65,6 +65,20 @@ namespace Jeep.View
 
 
         }
+        public void LoadOperator()
+        {
+
+            dgv_container.Controls.Clear();
+
+
+            var operators = new OperatorsControl();
+            operators.Dock = DockStyle.Fill;
+
+
+            dgv_container.Controls.Add(operators);
+
+
+        }
 
         private void btn_users_Click(object sender, EventArgs e)
         {
@@ -79,6 +93,11 @@ namespace Jeep.View
         private void btn_organization_Click(object sender, EventArgs e)
         {
             LoadOrganization();
+        }
+
+        private void btn_operator_Click(object sender, EventArgs e)
+        {
+            LoadOperator();
         }
     }
 }

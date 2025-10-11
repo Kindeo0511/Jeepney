@@ -107,6 +107,18 @@
     <Compile Include="View\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\OperatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OperatorForm.Designer.cs">
+      <DependentUpon>OperatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OperatorsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OperatorsControl.Designer.cs">
+      <DependentUpon>OperatorsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\OrganizationControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -178,6 +190,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OperatorForm.resx">
+      <DependentUpon>OperatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OperatorsControl.resx">
+      <DependentUpon>OperatorsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\OrganizationControl.resx">
       <DependentUpon>OrganizationControl.cs</DependentUpon>

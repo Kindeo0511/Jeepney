@@ -328,6 +328,7 @@
             this.btn_operator.TabIndex = 5;
             this.btn_operator.Text = "Operators";
             this.btn_operator.TextOffset = new System.Drawing.Point(-20, 0);
+            this.btn_operator.Click += new System.EventHandler(this.btn_operator_Click);
             // 
             // btn_organization
             // 
