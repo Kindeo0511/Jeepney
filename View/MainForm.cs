@@ -79,6 +79,20 @@ namespace Jeep.View
 
 
         }
+        public void LoadDriver()
+        {
+
+            dgv_container.Controls.Clear();
+
+
+            var drivers = new DriverControl();
+            drivers.Dock = DockStyle.Fill;
+
+
+            dgv_container.Controls.Add(drivers);
+
+
+        }
 
         private void btn_users_Click(object sender, EventArgs e)
         {
@@ -98,6 +112,11 @@ namespace Jeep.View
         private void btn_operator_Click(object sender, EventArgs e)
         {
             LoadOperator();
+        }
+
+        private void btn_driver_Click(object sender, EventArgs e)
+        {
+            LoadDriver();
         }
     }
 }

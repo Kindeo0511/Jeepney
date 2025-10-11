@@ -43,7 +43,7 @@
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_driver = new Guna.UI2.WinForms.Guna2Button();
             this.btn_operator = new Guna.UI2.WinForms.Guna2Button();
             this.btn_organization = new Guna.UI2.WinForms.Guna2Button();
             this.btn_brgy = new Guna.UI2.WinForms.Guna2Button();
@@ -170,7 +170,7 @@
             this.side_bar_panel.Controls.Add(this.guna2Button8);
             this.side_bar_panel.Controls.Add(this.guna2Button7);
             this.side_bar_panel.Controls.Add(this.guna2Button6);
-            this.side_bar_panel.Controls.Add(this.guna2Button5);
+            this.side_bar_panel.Controls.Add(this.btn_driver);
             this.side_bar_panel.Controls.Add(this.btn_operator);
             this.side_bar_panel.Controls.Add(this.btn_organization);
             this.side_bar_panel.Controls.Add(this.btn_brgy);
@@ -287,26 +287,27 @@
             this.guna2Button6.Text = "Users";
             this.guna2Button6.TextOffset = new System.Drawing.Point(-20, 0);
             // 
-            // guna2Button5
+            // btn_driver
             // 
-            this.guna2Button5.Checked = true;
-            this.guna2Button5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.guna2Button5.CheckedState.Parent = this.guna2Button5;
-            this.guna2Button5.CustomImages.Parent = this.guna2Button5;
-            this.guna2Button5.FillColor = System.Drawing.Color.White;
-            this.guna2Button5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button5.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.guna2Button5.HoverState.Parent = this.guna2Button5;
-            this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
-            this.guna2Button5.ImageOffset = new System.Drawing.Point(-30, 0);
-            this.guna2Button5.Location = new System.Drawing.Point(0, 228);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
-            this.guna2Button5.Size = new System.Drawing.Size(273, 45);
-            this.guna2Button5.TabIndex = 6;
-            this.guna2Button5.Text = "Users";
-            this.guna2Button5.TextOffset = new System.Drawing.Point(-20, 0);
+            this.btn_driver.Checked = true;
+            this.btn_driver.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_driver.CheckedState.Parent = this.btn_driver;
+            this.btn_driver.CustomImages.Parent = this.btn_driver;
+            this.btn_driver.FillColor = System.Drawing.Color.White;
+            this.btn_driver.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_driver.ForeColor = System.Drawing.Color.Black;
+            this.btn_driver.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_driver.HoverState.Parent = this.btn_driver;
+            this.btn_driver.Image = ((System.Drawing.Image)(resources.GetObject("btn_driver.Image")));
+            this.btn_driver.ImageOffset = new System.Drawing.Point(-30, 0);
+            this.btn_driver.Location = new System.Drawing.Point(0, 228);
+            this.btn_driver.Name = "btn_driver";
+            this.btn_driver.ShadowDecoration.Parent = this.btn_driver;
+            this.btn_driver.Size = new System.Drawing.Size(273, 45);
+            this.btn_driver.TabIndex = 6;
+            this.btn_driver.Text = "Drivers";
+            this.btn_driver.TextOffset = new System.Drawing.Point(-20, 0);
+            this.btn_driver.Click += new System.EventHandler(this.btn_driver_Click);
             // 
             // btn_operator
             // 
@@ -459,7 +460,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button btn_driver;
         private Guna.UI2.WinForms.Guna2Button btn_operator;
         private Guna.UI2.WinForms.Guna2Button btn_organization;
         private Guna.UI2.WinForms.Guna2Button btn_brgy;

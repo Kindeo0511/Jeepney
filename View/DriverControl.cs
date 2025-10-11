@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Jeep.View
+{
+    public partial class DriverControl : UserControl
+    {
+        public DriverControl()
+        {
+            InitializeComponent();
+        }
+
+        private void DriverControl_Load(object sender, EventArgs e)
+        {
+            dgv_driver.Rows.Add("NAJIAH","JUMRANI", "BUA", "09876543212", "123456", "SAHUD", "BOSSING");
+        }
+
+        private void dgv_driver_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            if (e.RowIndex >= 0 && dgv_driver.Columns[e.ColumnIndex].Name == "btn_edit") 
+            {
+                bool isEdit = true;
+                using (var form = new DriverForm(isEdit)) 
+                {
+                    form.ShowDialog();
+                }
+            }
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            using (var form = new DriverForm())
+            {
+                form.ShowDialog();
+            }
+        }
+    }
+}

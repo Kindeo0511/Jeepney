@@ -89,6 +89,18 @@
     <Compile Include="View\ChangePasswordForm.Designer.cs">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DriverControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DriverControl.Designer.cs">
+      <DependentUpon>DriverControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DriverForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DriverForm.Designer.cs">
+      <DependentUpon>DriverForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ForgotPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +193,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DriverControl.resx">
+      <DependentUpon>DriverControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DriverForm.resx">
+      <DependentUpon>DriverForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
