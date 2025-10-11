@@ -123,6 +123,21 @@ namespace Jeep.View
 
         }
 
+        public void LoadFarePayment()
+        {
+
+            dgv_container.Controls.Clear();
+
+
+            var farePayment = new FarePaymentControl();
+            farePayment.Dock = DockStyle.Fill;
+
+
+            dgv_container.Controls.Add(farePayment);
+
+
+        }
+
 
 
         private void btn_users_Click(object sender, EventArgs e)
@@ -158,6 +173,11 @@ namespace Jeep.View
         private void btn_jeepney_Click(object sender, EventArgs e)
         {
             LoadJeepney();
+        }
+
+        private void btn_payment_Click(object sender, EventArgs e)
+        {
+            LoadFarePayment();
         }
     }
 }

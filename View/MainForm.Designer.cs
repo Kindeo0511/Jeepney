@@ -40,7 +40,7 @@
             this.side_bar_panel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_payment = new Guna.UI2.WinForms.Guna2Button();
             this.btn_jeepney = new Guna.UI2.WinForms.Guna2Button();
             this.btn_route = new Guna.UI2.WinForms.Guna2Button();
             this.btn_driver = new Guna.UI2.WinForms.Guna2Button();
@@ -167,7 +167,7 @@
             this.side_bar_panel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.side_bar_panel.Controls.Add(this.guna2Button10);
             this.side_bar_panel.Controls.Add(this.guna2Button9);
-            this.side_bar_panel.Controls.Add(this.guna2Button8);
+            this.side_bar_panel.Controls.Add(this.btn_payment);
             this.side_bar_panel.Controls.Add(this.btn_jeepney);
             this.side_bar_panel.Controls.Add(this.btn_route);
             this.side_bar_panel.Controls.Add(this.btn_driver);
@@ -224,26 +224,27 @@
             this.guna2Button9.Text = "Users";
             this.guna2Button9.TextOffset = new System.Drawing.Point(-20, 0);
             // 
-            // guna2Button8
+            // btn_payment
             // 
-            this.guna2Button8.Checked = true;
-            this.guna2Button8.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.guna2Button8.CheckedState.Parent = this.guna2Button8;
-            this.guna2Button8.CustomImages.Parent = this.guna2Button8;
-            this.guna2Button8.FillColor = System.Drawing.Color.White;
-            this.guna2Button8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button8.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button8.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.guna2Button8.HoverState.Parent = this.guna2Button8;
-            this.guna2Button8.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button8.Image")));
-            this.guna2Button8.ImageOffset = new System.Drawing.Point(-30, 0);
-            this.guna2Button8.Location = new System.Drawing.Point(0, 381);
-            this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.ShadowDecoration.Parent = this.guna2Button8;
-            this.guna2Button8.Size = new System.Drawing.Size(273, 45);
-            this.guna2Button8.TabIndex = 9;
-            this.guna2Button8.Text = "Users";
-            this.guna2Button8.TextOffset = new System.Drawing.Point(-20, 0);
+            this.btn_payment.Checked = true;
+            this.btn_payment.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_payment.CheckedState.Parent = this.btn_payment;
+            this.btn_payment.CustomImages.Parent = this.btn_payment;
+            this.btn_payment.FillColor = System.Drawing.Color.White;
+            this.btn_payment.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_payment.ForeColor = System.Drawing.Color.Black;
+            this.btn_payment.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_payment.HoverState.Parent = this.btn_payment;
+            this.btn_payment.Image = ((System.Drawing.Image)(resources.GetObject("btn_payment.Image")));
+            this.btn_payment.ImageOffset = new System.Drawing.Point(-30, 0);
+            this.btn_payment.Location = new System.Drawing.Point(0, 381);
+            this.btn_payment.Name = "btn_payment";
+            this.btn_payment.ShadowDecoration.Parent = this.btn_payment;
+            this.btn_payment.Size = new System.Drawing.Size(273, 45);
+            this.btn_payment.TabIndex = 9;
+            this.btn_payment.Text = "Fare/Payment";
+            this.btn_payment.TextOffset = new System.Drawing.Point(-20, 0);
+            this.btn_payment.Click += new System.EventHandler(this.btn_payment_Click);
             // 
             // btn_jeepney
             // 
@@ -459,7 +460,7 @@
         private Guna.UI2.WinForms.Guna2Button btn_users;
         private Guna.UI2.WinForms.Guna2Button guna2Button10;
         private Guna.UI2.WinForms.Guna2Button guna2Button9;
-        private Guna.UI2.WinForms.Guna2Button guna2Button8;
+        private Guna.UI2.WinForms.Guna2Button btn_payment;
         private Guna.UI2.WinForms.Guna2Button btn_jeepney;
         private Guna.UI2.WinForms.Guna2Button btn_route;
         private Guna.UI2.WinForms.Guna2Button btn_driver;

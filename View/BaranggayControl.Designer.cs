@@ -33,12 +33,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaranggayControl));
             this.dgv_baranggay = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btn_add = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Action = new System.Windows.Forms.DataGridViewImageColumn();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_add = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_baranggay)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -107,6 +107,27 @@
             this.dgv_baranggay.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgv_baranggay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_baranggay_CellClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Barangay";
+            this.Column1.Name = "Column1";
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.HeaderText = "Action";
+            this.btn_edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_edit.Image")));
+            this.btn_edit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btn_edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Action
+            // 
+            this.Action.HeaderText = "Action";
+            this.Action.Image = ((System.Drawing.Image)(resources.GetObject("Action.Image")));
+            this.Action.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Action.Name = "Action";
+            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BorderThickness = 20;
@@ -153,27 +174,6 @@
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(103, 27);
             this.guna2HtmlLabel2.TabIndex = 0;
             this.guna2HtmlLabel2.Text = "Barangay";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Barangay";
-            this.Column1.Name = "Column1";
-            // 
-            // btn_edit
-            // 
-            this.btn_edit.HeaderText = "Action";
-            this.btn_edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_edit.Image")));
-            this.btn_edit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.btn_edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Action
-            // 
-            this.Action.HeaderText = "Action";
-            this.Action.Image = ((System.Drawing.Image)(resources.GetObject("Action.Image")));
-            this.Action.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Action.Name = "Action";
             // 
             // BaranggayControl
             // 
