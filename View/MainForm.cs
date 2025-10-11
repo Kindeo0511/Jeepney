@@ -108,6 +108,20 @@ namespace Jeep.View
 
 
         }
+        public void LoadJeepney()
+        {
+
+            dgv_container.Controls.Clear();
+
+
+            var jeepney = new JeepneyControl();
+            jeepney.Dock = DockStyle.Fill;
+
+
+            dgv_container.Controls.Add(jeepney);
+
+
+        }
 
 
 
@@ -139,6 +153,11 @@ namespace Jeep.View
         private void btn_route_Click(object sender, EventArgs e)
         {
             LoadRoute();
+        }
+
+        private void btn_jeepney_Click(object sender, EventArgs e)
+        {
+            LoadJeepney();
         }
     }
 }

@@ -41,7 +41,7 @@
             this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_jeepney = new Guna.UI2.WinForms.Guna2Button();
             this.btn_route = new Guna.UI2.WinForms.Guna2Button();
             this.btn_driver = new Guna.UI2.WinForms.Guna2Button();
             this.btn_operator = new Guna.UI2.WinForms.Guna2Button();
@@ -168,7 +168,7 @@
             this.side_bar_panel.Controls.Add(this.guna2Button10);
             this.side_bar_panel.Controls.Add(this.guna2Button9);
             this.side_bar_panel.Controls.Add(this.guna2Button8);
-            this.side_bar_panel.Controls.Add(this.guna2Button7);
+            this.side_bar_panel.Controls.Add(this.btn_jeepney);
             this.side_bar_panel.Controls.Add(this.btn_route);
             this.side_bar_panel.Controls.Add(this.btn_driver);
             this.side_bar_panel.Controls.Add(this.btn_operator);
@@ -245,26 +245,27 @@
             this.guna2Button8.Text = "Users";
             this.guna2Button8.TextOffset = new System.Drawing.Point(-20, 0);
             // 
-            // guna2Button7
+            // btn_jeepney
             // 
-            this.guna2Button7.Checked = true;
-            this.guna2Button7.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.guna2Button7.CheckedState.Parent = this.guna2Button7;
-            this.guna2Button7.CustomImages.Parent = this.guna2Button7;
-            this.guna2Button7.FillColor = System.Drawing.Color.White;
-            this.guna2Button7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button7.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button7.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.guna2Button7.HoverState.Parent = this.guna2Button7;
-            this.guna2Button7.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.Image")));
-            this.guna2Button7.ImageOffset = new System.Drawing.Point(-30, 0);
-            this.guna2Button7.Location = new System.Drawing.Point(0, 330);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.ShadowDecoration.Parent = this.guna2Button7;
-            this.guna2Button7.Size = new System.Drawing.Size(273, 45);
-            this.guna2Button7.TabIndex = 8;
-            this.guna2Button7.Text = "Users";
-            this.guna2Button7.TextOffset = new System.Drawing.Point(-20, 0);
+            this.btn_jeepney.Checked = true;
+            this.btn_jeepney.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_jeepney.CheckedState.Parent = this.btn_jeepney;
+            this.btn_jeepney.CustomImages.Parent = this.btn_jeepney;
+            this.btn_jeepney.FillColor = System.Drawing.Color.White;
+            this.btn_jeepney.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_jeepney.ForeColor = System.Drawing.Color.Black;
+            this.btn_jeepney.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_jeepney.HoverState.Parent = this.btn_jeepney;
+            this.btn_jeepney.Image = ((System.Drawing.Image)(resources.GetObject("btn_jeepney.Image")));
+            this.btn_jeepney.ImageOffset = new System.Drawing.Point(-30, 0);
+            this.btn_jeepney.Location = new System.Drawing.Point(0, 330);
+            this.btn_jeepney.Name = "btn_jeepney";
+            this.btn_jeepney.ShadowDecoration.Parent = this.btn_jeepney;
+            this.btn_jeepney.Size = new System.Drawing.Size(273, 45);
+            this.btn_jeepney.TabIndex = 8;
+            this.btn_jeepney.Text = "Jeepney";
+            this.btn_jeepney.TextOffset = new System.Drawing.Point(-20, 0);
+            this.btn_jeepney.Click += new System.EventHandler(this.btn_jeepney_Click);
             // 
             // btn_route
             // 
@@ -459,7 +460,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button10;
         private Guna.UI2.WinForms.Guna2Button guna2Button9;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
-        private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private Guna.UI2.WinForms.Guna2Button btn_jeepney;
         private Guna.UI2.WinForms.Guna2Button btn_route;
         private Guna.UI2.WinForms.Guna2Button btn_driver;
         private Guna.UI2.WinForms.Guna2Button btn_operator;

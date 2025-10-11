@@ -107,6 +107,18 @@
     <Compile Include="View\ForgotPasswordForm.Designer.cs">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\JeepneyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\JeepneyControl.Designer.cs">
+      <DependentUpon>JeepneyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\JeepneyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\JeepneyForm.Designer.cs">
+      <DependentUpon>JeepneyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +226,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\JeepneyControl.resx">
+      <DependentUpon>JeepneyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\JeepneyForm.resx">
+      <DependentUpon>JeepneyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
