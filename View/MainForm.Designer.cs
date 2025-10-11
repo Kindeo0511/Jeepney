@@ -42,7 +42,7 @@
             this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_route = new Guna.UI2.WinForms.Guna2Button();
             this.btn_driver = new Guna.UI2.WinForms.Guna2Button();
             this.btn_operator = new Guna.UI2.WinForms.Guna2Button();
             this.btn_organization = new Guna.UI2.WinForms.Guna2Button();
@@ -169,7 +169,7 @@
             this.side_bar_panel.Controls.Add(this.guna2Button9);
             this.side_bar_panel.Controls.Add(this.guna2Button8);
             this.side_bar_panel.Controls.Add(this.guna2Button7);
-            this.side_bar_panel.Controls.Add(this.guna2Button6);
+            this.side_bar_panel.Controls.Add(this.btn_route);
             this.side_bar_panel.Controls.Add(this.btn_driver);
             this.side_bar_panel.Controls.Add(this.btn_operator);
             this.side_bar_panel.Controls.Add(this.btn_organization);
@@ -266,26 +266,27 @@
             this.guna2Button7.Text = "Users";
             this.guna2Button7.TextOffset = new System.Drawing.Point(-20, 0);
             // 
-            // guna2Button6
+            // btn_route
             // 
-            this.guna2Button6.Checked = true;
-            this.guna2Button6.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.guna2Button6.CheckedState.Parent = this.guna2Button6;
-            this.guna2Button6.CustomImages.Parent = this.guna2Button6;
-            this.guna2Button6.FillColor = System.Drawing.Color.White;
-            this.guna2Button6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button6.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button6.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.guna2Button6.HoverState.Parent = this.guna2Button6;
-            this.guna2Button6.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.Image")));
-            this.guna2Button6.ImageOffset = new System.Drawing.Point(-30, 0);
-            this.guna2Button6.Location = new System.Drawing.Point(0, 279);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.ShadowDecoration.Parent = this.guna2Button6;
-            this.guna2Button6.Size = new System.Drawing.Size(273, 45);
-            this.guna2Button6.TabIndex = 7;
-            this.guna2Button6.Text = "Users";
-            this.guna2Button6.TextOffset = new System.Drawing.Point(-20, 0);
+            this.btn_route.Checked = true;
+            this.btn_route.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_route.CheckedState.Parent = this.btn_route;
+            this.btn_route.CustomImages.Parent = this.btn_route;
+            this.btn_route.FillColor = System.Drawing.Color.White;
+            this.btn_route.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_route.ForeColor = System.Drawing.Color.Black;
+            this.btn_route.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_route.HoverState.Parent = this.btn_route;
+            this.btn_route.Image = ((System.Drawing.Image)(resources.GetObject("btn_route.Image")));
+            this.btn_route.ImageOffset = new System.Drawing.Point(-30, 0);
+            this.btn_route.Location = new System.Drawing.Point(0, 279);
+            this.btn_route.Name = "btn_route";
+            this.btn_route.ShadowDecoration.Parent = this.btn_route;
+            this.btn_route.Size = new System.Drawing.Size(273, 45);
+            this.btn_route.TabIndex = 7;
+            this.btn_route.Text = "Routes";
+            this.btn_route.TextOffset = new System.Drawing.Point(-20, 0);
+            this.btn_route.Click += new System.EventHandler(this.btn_route_Click);
             // 
             // btn_driver
             // 
@@ -459,7 +460,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button9;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
+        private Guna.UI2.WinForms.Guna2Button btn_route;
         private Guna.UI2.WinForms.Guna2Button btn_driver;
         private Guna.UI2.WinForms.Guna2Button btn_operator;
         private Guna.UI2.WinForms.Guna2Button btn_organization;

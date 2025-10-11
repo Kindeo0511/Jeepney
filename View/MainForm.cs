@@ -94,6 +94,23 @@ namespace Jeep.View
 
         }
 
+        public void LoadRoute()
+        {
+
+            dgv_container.Controls.Clear();
+
+
+            var route = new RouteControl();
+            route.Dock = DockStyle.Fill;
+
+
+            dgv_container.Controls.Add(route);
+
+
+        }
+
+
+
         private void btn_users_Click(object sender, EventArgs e)
         {
             LoadUsers();
@@ -117,6 +134,11 @@ namespace Jeep.View
         private void btn_driver_Click(object sender, EventArgs e)
         {
             LoadDriver();
+        }
+
+        private void btn_route_Click(object sender, EventArgs e)
+        {
+            LoadRoute();
         }
     }
 }

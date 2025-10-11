@@ -143,6 +143,18 @@
     <Compile Include="View\OrganizationForm.Designer.cs">
       <DependentUpon>OrganizationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\RouteControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\RouteControl.Designer.cs">
+      <DependentUpon>RouteControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RouteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RouteForm.Designer.cs">
+      <DependentUpon>RouteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\SuperAdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +232,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\OrganizationForm.resx">
       <DependentUpon>OrganizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RouteControl.resx">
+      <DependentUpon>RouteControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RouteForm.resx">
+      <DependentUpon>RouteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\SuperAdminForm.resx">
       <DependentUpon>SuperAdminForm.cs</DependentUpon>
