@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Jeep.View
@@ -21,18 +15,18 @@ namespace Jeep.View
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-           
+
         }
-        public void LoadUsers() 
+        public void LoadUsers()
         {
-           
+
             dgv_container.Controls.Clear();
 
-   
-            var userControl = new UsersControl();
-            userControl.Dock = DockStyle.Fill; 
 
-          
+            var userControl = new UsersControl();
+            userControl.Dock = DockStyle.Fill;
+
+
             dgv_container.Controls.Add(userControl);
 
 
@@ -264,5 +258,17 @@ namespace Jeep.View
             clickedButton.Checked = true;
         }
 
+        private void btn_dropdown_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip1.Show(guna2HtmlLabel1, new Point(-40, guna2HtmlLabel1.Height));
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            var form = new LoginForm();
+            form.Show();
+            this.Close();
+
+        }
     }
 }

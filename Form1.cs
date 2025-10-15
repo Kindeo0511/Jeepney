@@ -1,12 +1,5 @@
 ﻿using Jeep.View;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Jeep
@@ -16,20 +9,21 @@ namespace Jeep
         public Form1()
         {
             InitializeComponent();
-     
-            
+
+
         }
 
-  
+
 
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            using (var form = new SuperAdminForm())
+            using (var form = new MainForm())
             {
                 form.ShowDialog();
                 this.Hide();
             }
+
 
         }
     }

@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Jeep.View
 {
@@ -15,6 +7,13 @@ namespace Jeep.View
         public ChangePasswordForm()
         {
             InitializeComponent();
+        }
+
+        private void btn_save_Click(object sender, System.EventArgs e)
+        {
+            var form = new LoginForm();
+            form.Show();
+            this.Close();
         }
     }
 }

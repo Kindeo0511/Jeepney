@@ -52,21 +52,23 @@
             // 
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel5);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(159, 314);
+            this.guna2Panel2.Location = new System.Drawing.Point(212, 386);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(680, 165);
+            this.guna2Panel2.Size = new System.Drawing.Size(907, 203);
             this.guna2Panel2.TabIndex = 4;
             // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.AutoSize = false;
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Rokkitt", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(25, 27);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(33, 33);
+            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(485, 75);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(672, 146);
             this.guna2HtmlLabel5.TabIndex = 2;
             this.guna2HtmlLabel5.Text = "There\'s no Super Admin registered, would you like to create Super Admin?";
             // 
@@ -75,24 +77,26 @@
             this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel3.Controls.Add(this.guna2Panel4);
             this.guna2Panel3.Controls.Add(this.guna2Panel1);
-            this.guna2Panel3.Location = new System.Drawing.Point(159, 271);
+            this.guna2Panel3.Location = new System.Drawing.Point(212, 334);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(680, 258);
+            this.guna2Panel3.Size = new System.Drawing.Size(907, 318);
             this.guna2Panel3.TabIndex = 5;
             // 
             // guna2Panel4
             // 
             this.guna2Panel4.AutoRoundedCorners = true;
             this.guna2Panel4.BackColor = System.Drawing.Color.White;
+            this.guna2Panel4.BorderRadius = 34;
             this.guna2Panel4.Controls.Add(this.btn_cancel);
             this.guna2Panel4.Controls.Add(this.btn_ok);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel4.Location = new System.Drawing.Point(0, 200);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.guna2Panel4.Location = new System.Drawing.Point(0, 247);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 4);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
-            this.guna2Panel4.Size = new System.Drawing.Size(680, 58);
+            this.guna2Panel4.Size = new System.Drawing.Size(907, 71);
             this.guna2Panel4.TabIndex = 1;
             // 
             // btn_cancel
@@ -101,13 +105,14 @@
             this.btn_cancel.CheckedState.Parent = this.btn_cancel;
             this.btn_cancel.CustomImages.Parent = this.btn_cancel;
             this.btn_cancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.btn_cancel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_cancel.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.ForeColor = System.Drawing.Color.White;
             this.btn_cancel.HoverState.Parent = this.btn_cancel;
-            this.btn_cancel.Location = new System.Drawing.Point(388, 14);
+            this.btn_cancel.Location = new System.Drawing.Point(517, 17);
+            this.btn_cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.ShadowDecoration.Parent = this.btn_cancel;
-            this.btn_cancel.Size = new System.Drawing.Size(150, 35);
+            this.btn_cancel.Size = new System.Drawing.Size(200, 43);
             this.btn_cancel.TabIndex = 0;
             this.btn_cancel.Text = "Cancel";
             // 
@@ -117,13 +122,14 @@
             this.btn_ok.CheckedState.Parent = this.btn_ok;
             this.btn_ok.CustomImages.Parent = this.btn_ok;
             this.btn_ok.FillColor = System.Drawing.Color.Red;
-            this.btn_ok.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_ok.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ok.ForeColor = System.Drawing.Color.White;
             this.btn_ok.HoverState.Parent = this.btn_ok;
-            this.btn_ok.Location = new System.Drawing.Point(584, 14);
+            this.btn_ok.Location = new System.Drawing.Point(779, 17);
+            this.btn_ok.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_ok.Name = "btn_ok";
             this.btn_ok.ShadowDecoration.Parent = this.btn_ok;
-            this.btn_ok.Size = new System.Drawing.Size(69, 35);
+            this.btn_ok.Size = new System.Drawing.Size(92, 43);
             this.btn_ok.TabIndex = 1;
             this.btn_ok.Text = "OK";
             this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
@@ -138,29 +144,31 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(680, 50);
+            this.guna2Panel1.Size = new System.Drawing.Size(907, 62);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.UseTransparentBackground = true;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(0, 40);
+            this.panel3.Location = new System.Drawing.Point(0, 49);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(680, 10);
+            this.panel3.Size = new System.Drawing.Size(907, 12);
             this.panel3.TabIndex = 3;
             // 
             // guna2HtmlLabel6
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Roboto", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(71, 12);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(94, 11);
+            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(207, 22);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(257, 30);
             this.guna2HtmlLabel6.TabIndex = 1;
             this.guna2HtmlLabel6.Text = "ERROR: No Super Admin";
             // 
@@ -168,10 +176,11 @@
             // 
             this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.Location = new System.Drawing.Point(25, 7);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(33, 9);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(40, 31);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(53, 38);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 0;
             this.guna2PictureBox2.TabStop = false;
@@ -183,17 +192,18 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.ClientSize = new System.Drawing.Size(1333, 738);
             this.ControlBox = false;
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel3);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

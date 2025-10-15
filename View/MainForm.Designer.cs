@@ -31,10 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel_header = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_dropdown = new Guna.UI2.WinForms.Guna2Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btn_logout = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.side_bar_panel = new Guna.UI2.WinForms.Guna2Panel();
@@ -52,7 +54,12 @@
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dgv_container = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel_header.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.side_bar_panel.SuspendLayout();
@@ -61,27 +68,69 @@
             // panel_header
             // 
             this.panel_header.BackColor = System.Drawing.Color.White;
+            this.panel_header.Controls.Add(this.btn_dropdown);
             this.panel_header.Controls.Add(this.guna2CirclePictureBox2);
             this.panel_header.Controls.Add(this.guna2TextBox1);
             this.panel_header.Controls.Add(this.guna2HtmlLabel1);
-            this.panel_header.Controls.Add(this.guna2ComboBox1);
             this.panel_header.Controls.Add(this.guna2CirclePictureBox1);
             this.panel_header.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_header.Location = new System.Drawing.Point(0, 0);
+            this.panel_header.Margin = new System.Windows.Forms.Padding(4);
             this.panel_header.Name = "panel_header";
             this.panel_header.ShadowDecoration.Parent = this.panel_header;
-            this.panel_header.Size = new System.Drawing.Size(1200, 62);
+            this.panel_header.Size = new System.Drawing.Size(1942, 76);
             this.panel_header.TabIndex = 0;
+            // 
+            // btn_dropdown
+            // 
+            this.btn_dropdown.BackColor = System.Drawing.Color.DimGray;
+            this.btn_dropdown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_dropdown.BackgroundImage")));
+            this.btn_dropdown.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.btn_dropdown.CheckedState.Parent = this.btn_dropdown;
+            this.btn_dropdown.ContextMenuStrip = this.contextMenuStrip1;
+            this.btn_dropdown.CustomImages.Parent = this.btn_dropdown;
+            this.btn_dropdown.FillColor = System.Drawing.Color.White;
+            this.btn_dropdown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_dropdown.ForeColor = System.Drawing.Color.White;
+            this.btn_dropdown.HoverState.Parent = this.btn_dropdown;
+            this.btn_dropdown.Image = ((System.Drawing.Image)(resources.GetObject("btn_dropdown.Image")));
+            this.btn_dropdown.Location = new System.Drawing.Point(366, 31);
+            this.btn_dropdown.Name = "btn_dropdown";
+            this.btn_dropdown.ShadowDecoration.Parent = this.btn_dropdown;
+            this.btn_dropdown.Size = new System.Drawing.Size(37, 29);
+            this.btn_dropdown.TabIndex = 6;
+            this.btn_dropdown.Click += new System.EventHandler(this.btn_dropdown_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.AutoSize = false;
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_logout});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.ShowImageMargin = false;
+            this.contextMenuStrip1.Size = new System.Drawing.Size(200, 57);
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.AutoSize = false;
+            this.btn_logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_logout.Image")));
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(200, 24);
+            this.btn_logout.Text = "Logout";
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // guna2CirclePictureBox2
             // 
+            this.guna2CirclePictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CirclePictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox2.Image")));
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(1122, 12);
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(1853, 18);
+            this.guna2CirclePictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
             this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox2.ShadowDecoration.Parent = this.guna2CirclePictureBox2;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(66, 39);
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(35, 35);
             this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox2.TabIndex = 5;
             this.guna2CirclePictureBox2.TabStop = false;
@@ -102,55 +151,38 @@
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
             this.guna2TextBox1.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox1.IconLeft")));
-            this.guna2TextBox1.Location = new System.Drawing.Point(349, 15);
+            this.guna2TextBox1.Location = new System.Drawing.Point(465, 18);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "Quick search";
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(417, 36);
+            this.guna2TextBox1.Size = new System.Drawing.Size(556, 44);
             this.guna2TextBox1.TabIndex = 4;
             // 
             // guna2HtmlLabel1
             // 
+            this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(111, 25);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(185, 33);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(105, 22);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(192, 30);
             this.guna2HtmlLabel1.TabIndex = 3;
             this.guna2HtmlLabel1.Text = "Admin Users";
-            // 
-            // guna2ComboBox1
-            // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2ComboBox1.BorderThickness = 0;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.FormattingEnabled = true;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(101, 15);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(201, 36);
-            this.guna2ComboBox1.TabIndex = 2;
             // 
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(29, 12);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(39, 15);
+            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(66, 39);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(88, 48);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox1.TabIndex = 1;
             this.guna2CirclePictureBox1.TabStop = false;
@@ -175,11 +207,11 @@
             this.side_bar_panel.Controls.Add(this.btn_organization);
             this.side_bar_panel.Controls.Add(this.btn_brgy);
             this.side_bar_panel.Controls.Add(this.btn_users);
-            this.side_bar_panel.Location = new System.Drawing.Point(29, 85);
+            this.side_bar_panel.Location = new System.Drawing.Point(39, 105);
             this.side_bar_panel.Margin = new System.Windows.Forms.Padding(0);
             this.side_bar_panel.Name = "side_bar_panel";
             this.side_bar_panel.ShadowDecoration.Parent = this.side_bar_panel;
-            this.side_bar_panel.Size = new System.Drawing.Size(273, 587);
+            this.side_bar_panel.Size = new System.Drawing.Size(364, 722);
             this.side_bar_panel.TabIndex = 1;
             // 
             // btn_audit_trail
@@ -195,10 +227,11 @@
             this.btn_audit_trail.Image = ((System.Drawing.Image)(resources.GetObject("btn_audit_trail.Image")));
             this.btn_audit_trail.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_audit_trail.ImageOffset = new System.Drawing.Point(40, 0);
-            this.btn_audit_trail.Location = new System.Drawing.Point(0, 534);
+            this.btn_audit_trail.Location = new System.Drawing.Point(0, 657);
+            this.btn_audit_trail.Margin = new System.Windows.Forms.Padding(4);
             this.btn_audit_trail.Name = "btn_audit_trail";
             this.btn_audit_trail.ShadowDecoration.Parent = this.btn_audit_trail;
-            this.btn_audit_trail.Size = new System.Drawing.Size(273, 45);
+            this.btn_audit_trail.Size = new System.Drawing.Size(364, 55);
             this.btn_audit_trail.TabIndex = 12;
             this.btn_audit_trail.Text = "Audit Trail";
             this.btn_audit_trail.Click += new System.EventHandler(this.btn_audit_trail_Click);
@@ -216,10 +249,11 @@
             this.btn_complain_and_feedback.Image = ((System.Drawing.Image)(resources.GetObject("btn_complain_and_feedback.Image")));
             this.btn_complain_and_feedback.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_complain_and_feedback.ImageOffset = new System.Drawing.Point(40, 0);
-            this.btn_complain_and_feedback.Location = new System.Drawing.Point(0, 483);
+            this.btn_complain_and_feedback.Location = new System.Drawing.Point(0, 594);
+            this.btn_complain_and_feedback.Margin = new System.Windows.Forms.Padding(4);
             this.btn_complain_and_feedback.Name = "btn_complain_and_feedback";
             this.btn_complain_and_feedback.ShadowDecoration.Parent = this.btn_complain_and_feedback;
-            this.btn_complain_and_feedback.Size = new System.Drawing.Size(273, 45);
+            this.btn_complain_and_feedback.Size = new System.Drawing.Size(364, 55);
             this.btn_complain_and_feedback.TabIndex = 11;
             this.btn_complain_and_feedback.Text = "Complaint/Feedback";
             this.btn_complain_and_feedback.Click += new System.EventHandler(this.btn_complain_and_feedback_Click);
@@ -237,10 +271,11 @@
             this.btn_discount.Image = ((System.Drawing.Image)(resources.GetObject("btn_discount.Image")));
             this.btn_discount.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_discount.ImageOffset = new System.Drawing.Point(40, 0);
-            this.btn_discount.Location = new System.Drawing.Point(0, 432);
+            this.btn_discount.Location = new System.Drawing.Point(0, 532);
+            this.btn_discount.Margin = new System.Windows.Forms.Padding(4);
             this.btn_discount.Name = "btn_discount";
             this.btn_discount.ShadowDecoration.Parent = this.btn_discount;
-            this.btn_discount.Size = new System.Drawing.Size(273, 45);
+            this.btn_discount.Size = new System.Drawing.Size(364, 55);
             this.btn_discount.TabIndex = 10;
             this.btn_discount.Text = "DIscount";
             this.btn_discount.Click += new System.EventHandler(this.btn_discount_Click);
@@ -258,10 +293,11 @@
             this.btn_payment.Image = ((System.Drawing.Image)(resources.GetObject("btn_payment.Image")));
             this.btn_payment.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_payment.ImageOffset = new System.Drawing.Point(40, 0);
-            this.btn_payment.Location = new System.Drawing.Point(0, 381);
+            this.btn_payment.Location = new System.Drawing.Point(0, 469);
+            this.btn_payment.Margin = new System.Windows.Forms.Padding(4);
             this.btn_payment.Name = "btn_payment";
             this.btn_payment.ShadowDecoration.Parent = this.btn_payment;
-            this.btn_payment.Size = new System.Drawing.Size(273, 45);
+            this.btn_payment.Size = new System.Drawing.Size(364, 55);
             this.btn_payment.TabIndex = 9;
             this.btn_payment.Text = "Fare/Payment";
             this.btn_payment.Click += new System.EventHandler(this.btn_payment_Click);
@@ -279,10 +315,11 @@
             this.btn_jeepney.Image = ((System.Drawing.Image)(resources.GetObject("btn_jeepney.Image")));
             this.btn_jeepney.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_jeepney.ImageOffset = new System.Drawing.Point(40, 0);
-            this.btn_jeepney.Location = new System.Drawing.Point(0, 330);
+            this.btn_jeepney.Location = new System.Drawing.Point(0, 406);
+            this.btn_jeepney.Margin = new System.Windows.Forms.Padding(4);
             this.btn_jeepney.Name = "btn_jeepney";
             this.btn_jeepney.ShadowDecoration.Parent = this.btn_jeepney;
-            this.btn_jeepney.Size = new System.Drawing.Size(273, 45);
+            this.btn_jeepney.Size = new System.Drawing.Size(364, 55);
             this.btn_jeepney.TabIndex = 8;
             this.btn_jeepney.Text = "Jeepney";
             this.btn_jeepney.Click += new System.EventHandler(this.btn_jeepney_Click);
@@ -300,10 +337,11 @@
             this.btn_route.Image = ((System.Drawing.Image)(resources.GetObject("btn_route.Image")));
             this.btn_route.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_route.ImageOffset = new System.Drawing.Point(40, 0);
-            this.btn_route.Location = new System.Drawing.Point(0, 279);
+            this.btn_route.Location = new System.Drawing.Point(0, 343);
+            this.btn_route.Margin = new System.Windows.Forms.Padding(4);
             this.btn_route.Name = "btn_route";
             this.btn_route.ShadowDecoration.Parent = this.btn_route;
-            this.btn_route.Size = new System.Drawing.Size(273, 45);
+            this.btn_route.Size = new System.Drawing.Size(364, 55);
             this.btn_route.TabIndex = 7;
             this.btn_route.Text = "Routes";
             this.btn_route.Click += new System.EventHandler(this.btn_route_Click);
@@ -321,10 +359,11 @@
             this.btn_driver.Image = ((System.Drawing.Image)(resources.GetObject("btn_driver.Image")));
             this.btn_driver.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_driver.ImageOffset = new System.Drawing.Point(40, 0);
-            this.btn_driver.Location = new System.Drawing.Point(0, 228);
+            this.btn_driver.Location = new System.Drawing.Point(0, 281);
+            this.btn_driver.Margin = new System.Windows.Forms.Padding(4);
             this.btn_driver.Name = "btn_driver";
             this.btn_driver.ShadowDecoration.Parent = this.btn_driver;
-            this.btn_driver.Size = new System.Drawing.Size(273, 45);
+            this.btn_driver.Size = new System.Drawing.Size(364, 55);
             this.btn_driver.TabIndex = 6;
             this.btn_driver.Text = "Drivers";
             this.btn_driver.Click += new System.EventHandler(this.btn_driver_Click);
@@ -342,10 +381,11 @@
             this.btn_operator.Image = ((System.Drawing.Image)(resources.GetObject("btn_operator.Image")));
             this.btn_operator.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_operator.ImageOffset = new System.Drawing.Point(40, 0);
-            this.btn_operator.Location = new System.Drawing.Point(0, 177);
+            this.btn_operator.Location = new System.Drawing.Point(0, 218);
+            this.btn_operator.Margin = new System.Windows.Forms.Padding(4);
             this.btn_operator.Name = "btn_operator";
             this.btn_operator.ShadowDecoration.Parent = this.btn_operator;
-            this.btn_operator.Size = new System.Drawing.Size(273, 45);
+            this.btn_operator.Size = new System.Drawing.Size(364, 55);
             this.btn_operator.TabIndex = 5;
             this.btn_operator.Text = "Operators";
             this.btn_operator.Click += new System.EventHandler(this.btn_operator_Click);
@@ -363,16 +403,18 @@
             this.btn_organization.Image = ((System.Drawing.Image)(resources.GetObject("btn_organization.Image")));
             this.btn_organization.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_organization.ImageOffset = new System.Drawing.Point(40, 0);
-            this.btn_organization.Location = new System.Drawing.Point(0, 126);
+            this.btn_organization.Location = new System.Drawing.Point(0, 155);
+            this.btn_organization.Margin = new System.Windows.Forms.Padding(4);
             this.btn_organization.Name = "btn_organization";
             this.btn_organization.ShadowDecoration.Parent = this.btn_organization;
-            this.btn_organization.Size = new System.Drawing.Size(273, 45);
+            this.btn_organization.Size = new System.Drawing.Size(364, 55);
             this.btn_organization.TabIndex = 4;
             this.btn_organization.Text = "Organizations";
             this.btn_organization.Click += new System.EventHandler(this.btn_organization_Click);
             // 
             // btn_brgy
             // 
+            this.btn_brgy.BackColor = System.Drawing.Color.Transparent;
             this.btn_brgy.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
             this.btn_brgy.CheckedState.Parent = this.btn_brgy;
             this.btn_brgy.CustomImages.Parent = this.btn_brgy;
@@ -384,12 +426,14 @@
             this.btn_brgy.Image = ((System.Drawing.Image)(resources.GetObject("btn_brgy.Image")));
             this.btn_brgy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_brgy.ImageOffset = new System.Drawing.Point(40, 0);
-            this.btn_brgy.Location = new System.Drawing.Point(0, 74);
+            this.btn_brgy.Location = new System.Drawing.Point(0, 91);
+            this.btn_brgy.Margin = new System.Windows.Forms.Padding(4);
             this.btn_brgy.Name = "btn_brgy";
             this.btn_brgy.ShadowDecoration.Parent = this.btn_brgy;
-            this.btn_brgy.Size = new System.Drawing.Size(273, 45);
+            this.btn_brgy.Size = new System.Drawing.Size(364, 55);
             this.btn_brgy.TabIndex = 3;
             this.btn_brgy.Text = "Barangay";
+            this.btn_brgy.UseTransparentBackground = true;
             this.btn_brgy.Click += new System.EventHandler(this.btn_brgy_Click);
             // 
             // btn_users
@@ -405,10 +449,11 @@
             this.btn_users.Image = ((System.Drawing.Image)(resources.GetObject("btn_users.Image")));
             this.btn_users.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_users.ImageOffset = new System.Drawing.Point(40, 0);
-            this.btn_users.Location = new System.Drawing.Point(0, 23);
+            this.btn_users.Location = new System.Drawing.Point(0, 28);
+            this.btn_users.Margin = new System.Windows.Forms.Padding(4);
             this.btn_users.Name = "btn_users";
             this.btn_users.ShadowDecoration.Parent = this.btn_users;
-            this.btn_users.Size = new System.Drawing.Size(273, 45);
+            this.btn_users.Size = new System.Drawing.Size(364, 55);
             this.btn_users.TabIndex = 2;
             this.btn_users.Text = "Users";
             this.btn_users.Click += new System.EventHandler(this.btn_users_Click);
@@ -420,12 +465,15 @@
             // 
             // dgv_container
             // 
+            this.dgv_container.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_container.BackColor = System.Drawing.Color.White;
             this.dgv_container.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.dgv_container.Location = new System.Drawing.Point(392, 85);
+            this.dgv_container.Location = new System.Drawing.Point(437, 105);
+            this.dgv_container.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_container.Name = "dgv_container";
             this.dgv_container.ShadowDecoration.Parent = this.dgv_container;
-            this.dgv_container.Size = new System.Drawing.Size(796, 459);
+            this.dgv_container.Size = new System.Drawing.Size(1451, 542);
             this.dgv_container.TabIndex = 2;
             // 
             // guna2Elipse3
@@ -433,25 +481,67 @@
             this.guna2Elipse3.BorderRadius = 30;
             this.guna2Elipse3.TargetControl = this.dgv_container;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(1892, 102);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(50, 883);
+            this.panel2.TabIndex = 5;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 935);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1892, 50);
+            this.panel3.TabIndex = 6;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 102);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(50, 833);
+            this.panel4.TabIndex = 7;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 76);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1942, 26);
+            this.panel1.TabIndex = 4;
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.ClientSize = new System.Drawing.Size(1942, 985);
             this.ControlBox = false;
-            this.Controls.Add(this.dgv_container);
             this.Controls.Add(this.side_bar_panel);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.dgv_container);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_header);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel_header.ResumeLayout(false);
-            this.panel_header.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.side_bar_panel.ResumeLayout(false);
@@ -464,7 +554,6 @@
         private Guna.UI2.WinForms.Guna2Panel panel_header;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
@@ -483,5 +572,12 @@
         private Guna.UI2.WinForms.Guna2Panel dgv_container;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private Guna.UI2.WinForms.Guna2Button btn_audit_trail;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private Guna.UI2.WinForms.Guna2Button btn_dropdown;
+        private System.Windows.Forms.ToolStripMenuItem btn_logout;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel1;
     }
 }

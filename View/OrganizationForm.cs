@@ -1,13 +1,5 @@
 ﻿using Guna.UI2.WinForms;
-using Guna.UI2.WinForms.Suite;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Jeep.View
@@ -29,13 +21,13 @@ namespace Jeep.View
             shadowForm.SetShadowForm(this);
             this.isEdit = isEdit;
 
-            if (isEdit == true) 
+            if (isEdit == true)
             {
                 lbl_title.Text = "EDIT ORGANIZATIONS";
                 btn_add.Visible = false;
                 btn_edit.Visible = true;
             }
-    
+
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)

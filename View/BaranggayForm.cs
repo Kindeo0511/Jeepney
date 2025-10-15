@@ -1,12 +1,5 @@
 ﻿using Guna.UI2.WinForms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Jeep.View
@@ -29,6 +22,7 @@ namespace Jeep.View
             this.isEdit = isEdit;
             btn_add.Visible = false;
             btn_edit.Visible = true;
+            lbl_title.Text = "EDIT BARANGAY";
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)

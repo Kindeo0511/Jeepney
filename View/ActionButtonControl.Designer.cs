@@ -38,11 +38,12 @@
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(27, 2);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(29, 4);
+            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(33, 31);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox1.TabIndex = 1;
             this.guna2CirclePictureBox1.TabStop = false;
@@ -51,11 +52,12 @@
             // guna2CirclePictureBox2
             // 
             this.guna2CirclePictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox2.Image")));
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(100, 2);
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(128, 4);
+            this.guna2CirclePictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
             this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox2.ShadowDecoration.Parent = this.guna2CirclePictureBox2;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(33, 31);
             this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox2.TabIndex = 2;
             this.guna2CirclePictureBox2.TabStop = false;
@@ -63,12 +65,13 @@
             // 
             // ActionButtonControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2CirclePictureBox2);
             this.Controls.Add(this.guna2CirclePictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ActionButtonControl";
-            this.Size = new System.Drawing.Size(151, 30);
+            this.Size = new System.Drawing.Size(200, 45);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             this.ResumeLayout(false);
