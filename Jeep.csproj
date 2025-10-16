@@ -221,6 +221,12 @@
     <Compile Include="View\SuperAdminForm.Designer.cs">
       <DependentUpon>SuperAdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\testForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\testForm.Designer.cs">
+      <DependentUpon>testForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\SuperAdminForm.resx">
       <DependentUpon>SuperAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\testForm.resx">
+      <DependentUpon>testForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>

@@ -150,20 +150,20 @@
             this.side_bar_panel.BackColor = System.Drawing.Color.White;
             this.side_bar_panel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.side_bar_panel.Controls.Add(this.btn_audit_trail);
+            this.side_bar_panel.Controls.Add(this.btn_users);
             this.side_bar_panel.Controls.Add(this.btn_discount);
+            this.side_bar_panel.Controls.Add(this.btn_brgy);
             this.side_bar_panel.Controls.Add(this.btn_payment);
+            this.side_bar_panel.Controls.Add(this.btn_organization);
             this.side_bar_panel.Controls.Add(this.btn_jeepney);
+            this.side_bar_panel.Controls.Add(this.btn_operator);
             this.side_bar_panel.Controls.Add(this.btn_route);
             this.side_bar_panel.Controls.Add(this.btn_driver);
-            this.side_bar_panel.Controls.Add(this.btn_operator);
-            this.side_bar_panel.Controls.Add(this.btn_organization);
-            this.side_bar_panel.Controls.Add(this.btn_brgy);
-            this.side_bar_panel.Controls.Add(this.btn_users);
             this.side_bar_panel.Location = new System.Drawing.Point(39, 105);
             this.side_bar_panel.Margin = new System.Windows.Forms.Padding(0);
             this.side_bar_panel.Name = "side_bar_panel";
             this.side_bar_panel.ShadowDecoration.Parent = this.side_bar_panel;
-            this.side_bar_panel.Size = new System.Drawing.Size(364, 658);
+            this.side_bar_panel.Size = new System.Drawing.Size(364, 630);
             this.side_bar_panel.TabIndex = 1;
             // 
             // btn_audit_trail
@@ -180,7 +180,7 @@
             this.btn_audit_trail.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_audit_trail.ImageOffset = new System.Drawing.Point(40, 0);
             this.btn_audit_trail.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_audit_trail.Location = new System.Drawing.Point(0, 595);
+            this.btn_audit_trail.Location = new System.Drawing.Point(0, 571);
             this.btn_audit_trail.Margin = new System.Windows.Forms.Padding(4);
             this.btn_audit_trail.Name = "btn_audit_trail";
             this.btn_audit_trail.ShadowDecoration.Parent = this.btn_audit_trail;
@@ -203,7 +203,7 @@
             this.btn_discount.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_discount.ImageOffset = new System.Drawing.Point(40, 0);
             this.btn_discount.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_discount.Location = new System.Drawing.Point(0, 532);
+            this.btn_discount.Location = new System.Drawing.Point(0, 508);
             this.btn_discount.Margin = new System.Windows.Forms.Padding(4);
             this.btn_discount.Name = "btn_discount";
             this.btn_discount.ShadowDecoration.Parent = this.btn_discount;
@@ -226,7 +226,7 @@
             this.btn_payment.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_payment.ImageOffset = new System.Drawing.Point(40, 0);
             this.btn_payment.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_payment.Location = new System.Drawing.Point(0, 469);
+            this.btn_payment.Location = new System.Drawing.Point(0, 445);
             this.btn_payment.Margin = new System.Windows.Forms.Padding(4);
             this.btn_payment.Name = "btn_payment";
             this.btn_payment.ShadowDecoration.Parent = this.btn_payment;
@@ -249,7 +249,7 @@
             this.btn_jeepney.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_jeepney.ImageOffset = new System.Drawing.Point(40, 0);
             this.btn_jeepney.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_jeepney.Location = new System.Drawing.Point(0, 406);
+            this.btn_jeepney.Location = new System.Drawing.Point(0, 382);
             this.btn_jeepney.Margin = new System.Windows.Forms.Padding(4);
             this.btn_jeepney.Name = "btn_jeepney";
             this.btn_jeepney.ShadowDecoration.Parent = this.btn_jeepney;
@@ -272,7 +272,7 @@
             this.btn_route.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_route.ImageOffset = new System.Drawing.Point(40, 0);
             this.btn_route.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_route.Location = new System.Drawing.Point(0, 343);
+            this.btn_route.Location = new System.Drawing.Point(0, 319);
             this.btn_route.Margin = new System.Windows.Forms.Padding(4);
             this.btn_route.Name = "btn_route";
             this.btn_route.ShadowDecoration.Parent = this.btn_route;
@@ -295,7 +295,7 @@
             this.btn_driver.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_driver.ImageOffset = new System.Drawing.Point(40, 0);
             this.btn_driver.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_driver.Location = new System.Drawing.Point(0, 281);
+            this.btn_driver.Location = new System.Drawing.Point(0, 256);
             this.btn_driver.Margin = new System.Windows.Forms.Padding(4);
             this.btn_driver.Name = "btn_driver";
             this.btn_driver.ShadowDecoration.Parent = this.btn_driver;
@@ -318,7 +318,7 @@
             this.btn_operator.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_operator.ImageOffset = new System.Drawing.Point(40, 0);
             this.btn_operator.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_operator.Location = new System.Drawing.Point(0, 218);
+            this.btn_operator.Location = new System.Drawing.Point(0, 193);
             this.btn_operator.Margin = new System.Windows.Forms.Padding(4);
             this.btn_operator.Name = "btn_operator";
             this.btn_operator.ShadowDecoration.Parent = this.btn_operator;
@@ -341,7 +341,7 @@
             this.btn_organization.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_organization.ImageOffset = new System.Drawing.Point(40, 0);
             this.btn_organization.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_organization.Location = new System.Drawing.Point(0, 155);
+            this.btn_organization.Location = new System.Drawing.Point(0, 130);
             this.btn_organization.Margin = new System.Windows.Forms.Padding(4);
             this.btn_organization.Name = "btn_organization";
             this.btn_organization.ShadowDecoration.Parent = this.btn_organization;
@@ -365,7 +365,7 @@
             this.btn_brgy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_brgy.ImageOffset = new System.Drawing.Point(40, 0);
             this.btn_brgy.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_brgy.Location = new System.Drawing.Point(0, 91);
+            this.btn_brgy.Location = new System.Drawing.Point(0, 67);
             this.btn_brgy.Margin = new System.Windows.Forms.Padding(4);
             this.btn_brgy.Name = "btn_brgy";
             this.btn_brgy.ShadowDecoration.Parent = this.btn_brgy;
@@ -389,7 +389,7 @@
             this.btn_users.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_users.ImageOffset = new System.Drawing.Point(40, 0);
             this.btn_users.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_users.Location = new System.Drawing.Point(0, 28);
+            this.btn_users.Location = new System.Drawing.Point(0, 4);
             this.btn_users.Margin = new System.Windows.Forms.Padding(4);
             this.btn_users.Name = "btn_users";
             this.btn_users.ShadowDecoration.Parent = this.btn_users;
