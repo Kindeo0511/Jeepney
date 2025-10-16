@@ -130,7 +130,7 @@
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(725, 84);
             this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(327, 41);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(373, 41);
             this.guna2HtmlLabel4.TabIndex = 7;
             this.guna2HtmlLabel4.Text = "Login as Admin User";
             // 

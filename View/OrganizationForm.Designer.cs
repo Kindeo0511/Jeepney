@@ -50,11 +50,11 @@
             this.btn_edit.CheckedState.Parent = this.btn_edit;
             this.btn_edit.CustomImages.Parent = this.btn_edit;
             this.btn_edit.FillColor = System.Drawing.Color.Red;
-            this.btn_edit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_edit.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_edit.ForeColor = System.Drawing.Color.White;
             this.btn_edit.HoverState.Parent = this.btn_edit;
             this.btn_edit.Location = new System.Drawing.Point(544, 433);
-            this.btn_edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_edit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.ShadowDecoration.Parent = this.btn_edit;
             this.btn_edit.Size = new System.Drawing.Size(107, 43);
@@ -69,11 +69,11 @@
             this.btn_cancel.CheckedState.Parent = this.btn_cancel;
             this.btn_cancel.CustomImages.Parent = this.btn_cancel;
             this.btn_cancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(156)))), ((int)(((byte)(160)))));
-            this.btn_cancel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_cancel.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.ForeColor = System.Drawing.Color.White;
             this.btn_cancel.HoverState.Parent = this.btn_cancel;
             this.btn_cancel.Location = new System.Drawing.Point(412, 433);
-            this.btn_cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cancel.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.ShadowDecoration.Parent = this.btn_cancel;
             this.btn_cancel.Size = new System.Drawing.Size(107, 43);
@@ -92,7 +92,7 @@
             this.btn_add.ForeColor = System.Drawing.Color.White;
             this.btn_add.HoverState.Parent = this.btn_add;
             this.btn_add.Location = new System.Drawing.Point(544, 433);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add.Name = "btn_add";
             this.btn_add.ShadowDecoration.Parent = this.btn_add;
             this.btn_add.Size = new System.Drawing.Size(107, 43);
@@ -111,6 +111,7 @@
             this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.Red;
             this.guna2TextBox6.FocusedState.Parent = this.guna2TextBox6;
+            this.guna2TextBox6.Font = new System.Drawing.Font("Rokkitt Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.Red;
             this.guna2TextBox6.HoverState.Parent = this.guna2TextBox6;
             this.guna2TextBox6.Location = new System.Drawing.Point(167, 127);
@@ -127,11 +128,11 @@
             // guna2HtmlLabel7
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(180, 98);
-            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(167, 95);
+            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(77, 22);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(80, 22);
             this.guna2HtmlLabel7.TabIndex = 37;
             this.guna2HtmlLabel7.Text = "Username";
             // 
@@ -147,6 +148,7 @@
             this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.Red;
             this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
+            this.guna2TextBox3.Font = new System.Drawing.Font("Rokkitt Light", 13.8F);
             this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.Red;
             this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
             this.guna2TextBox3.Location = new System.Drawing.Point(167, 329);
@@ -163,11 +165,11 @@
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(180, 300);
-            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Roboto", 10.2F);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(169, 297);
+            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(62, 22);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(67, 22);
             this.guna2HtmlLabel4.TabIndex = 35;
             this.guna2HtmlLabel4.Text = "Address";
             // 
@@ -183,6 +185,7 @@
             this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.Red;
             this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Font = new System.Drawing.Font("Rokkitt Light", 13.8F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.Red;
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
             this.guna2TextBox1.Location = new System.Drawing.Point(167, 231);
@@ -199,20 +202,21 @@
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(180, 203);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Roboto", 10.2F);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(167, 199);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(119, 22);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(128, 22);
             this.guna2HtmlLabel3.TabIndex = 30;
             this.guna2HtmlLabel3.Text = "Contact Number";
             // 
             // lbl_title
             // 
             this.lbl_title.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_title.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbl_title.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title.Location = new System.Drawing.Point(28, 23);
-            this.lbl_title.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbl_title.Location = new System.Drawing.Point(15, 15);
+            this.lbl_title.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_title.Name = "lbl_title";
             this.lbl_title.Size = new System.Drawing.Size(221, 26);
             this.lbl_title.TabIndex = 29;
@@ -240,8 +244,9 @@
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.lbl_title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "OrganizationForm";
+            this.Padding = new System.Windows.Forms.Padding(15, 15, 0, 0);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrganizationForm";
             this.ResumeLayout(false);

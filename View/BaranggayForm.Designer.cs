@@ -123,20 +123,22 @@
             // 
             // guna2HtmlLabel7
             // 
+            this.guna2HtmlLabel7.AutoSize = false;
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(213, 155);
             this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(123, 22);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(254, 22);
             this.guna2HtmlLabel7.TabIndex = 37;
             this.guna2HtmlLabel7.Text = "Barangay Name";
             // 
             // lbl_title
             // 
             this.lbl_title.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_title.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbl_title.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title.Location = new System.Drawing.Point(16, 15);
+            this.lbl_title.Location = new System.Drawing.Point(15, 15);
             this.lbl_title.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_title.Name = "lbl_title";
             this.lbl_title.Size = new System.Drawing.Size(164, 26);
@@ -162,6 +164,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BaranggayForm";
+            this.Padding = new System.Windows.Forms.Padding(15, 15, 0, 0);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BaranggayForm";
             this.ResumeLayout(false);

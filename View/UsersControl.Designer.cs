@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersControl));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersControl));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -40,10 +41,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_add_user = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dgv_users = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btn_add_user = new Guna.UI2.WinForms.Guna2Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,14 +71,41 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1000, 84);
             this.guna2Panel1.TabIndex = 2;
             // 
+            // btn_add_user
+            // 
+            this.btn_add_user.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_add_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_add_user.BorderColor = System.Drawing.Color.Red;
+            this.btn_add_user.BorderRadius = 15;
+            this.btn_add_user.BorderThickness = 2;
+            this.btn_add_user.CheckedState.Parent = this.btn_add_user;
+            this.btn_add_user.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btn_add_user.CustomBorderThickness = new System.Windows.Forms.Padding(1);
+            this.btn_add_user.CustomImages.Parent = this.btn_add_user;
+            this.btn_add_user.FillColor = System.Drawing.Color.Transparent;
+            this.btn_add_user.Font = new System.Drawing.Font("Roboto Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add_user.ForeColor = System.Drawing.Color.Red;
+            this.btn_add_user.HoverState.Parent = this.btn_add_user;
+            this.btn_add_user.Image = ((System.Drawing.Image)(resources.GetObject("btn_add_user.Image")));
+            this.btn_add_user.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.btn_add_user.Location = new System.Drawing.Point(804, 16);
+            this.btn_add_user.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_add_user.Name = "btn_add_user";
+            this.btn_add_user.ShadowDecoration.Parent = this.btn_add_user;
+            this.btn_add_user.Size = new System.Drawing.Size(180, 55);
+            this.btn_add_user.TabIndex = 1;
+            this.btn_add_user.Text = "Add Users";
+            this.btn_add_user.Click += new System.EventHandler(this.btn_add_user_Click);
+            // 
             // guna2HtmlLabel2
             // 
+            this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Roboto Medium", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(24, 39);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(76, 32);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(151, 32);
             this.guna2HtmlLabel2.TabIndex = 0;
             this.guna2HtmlLabel2.Text = "Users";
             // 
@@ -96,7 +124,7 @@
             this.dgv_users.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(214)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(214)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -113,7 +141,7 @@
             this.action_column});
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -125,9 +153,18 @@
             this.dgv_users.Location = new System.Drawing.Point(0, 84);
             this.dgv_users.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_users.Name = "dgv_users";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Roboto", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_users.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgv_users.RowHeadersVisible = false;
             this.dgv_users.RowHeadersWidth = 51;
             this.dgv_users.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.dgv_users.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_users.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_users.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_users.Size = new System.Drawing.Size(1000, 359);
@@ -142,14 +179,14 @@
             this.dgv_users.ThemeStyle.GridColor = System.Drawing.Color.White;
             this.dgv_users.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(214)))));
             this.dgv_users.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_users.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgv_users.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_users.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
             this.dgv_users.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgv_users.ThemeStyle.HeaderStyle.Height = 40;
             this.dgv_users.ThemeStyle.ReadOnly = false;
             this.dgv_users.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_users.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_users.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgv_users.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_users.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgv_users.ThemeStyle.RowsStyle.Height = 22;
             this.dgv_users.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -166,36 +203,11 @@
             this.dataGridViewImageColumn1.MinimumWidth = 6;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             // 
-            // btn_add_user
-            // 
-            this.btn_add_user.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_add_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_add_user.BorderColor = System.Drawing.Color.Red;
-            this.btn_add_user.BorderRadius = 15;
-            this.btn_add_user.BorderThickness = 2;
-            this.btn_add_user.CheckedState.Parent = this.btn_add_user;
-            this.btn_add_user.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.btn_add_user.CustomBorderThickness = new System.Windows.Forms.Padding(1);
-            this.btn_add_user.CustomImages.Parent = this.btn_add_user;
-            this.btn_add_user.FillColor = System.Drawing.Color.Transparent;
-            this.btn_add_user.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add_user.ForeColor = System.Drawing.Color.Red;
-            this.btn_add_user.HoverState.Parent = this.btn_add_user;
-            this.btn_add_user.Image = ((System.Drawing.Image)(resources.GetObject("btn_add_user.Image")));
-            this.btn_add_user.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.btn_add_user.Location = new System.Drawing.Point(811, 16);
-            this.btn_add_user.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_add_user.Name = "btn_add_user";
-            this.btn_add_user.ShadowDecoration.Parent = this.btn_add_user;
-            this.btn_add_user.Size = new System.Drawing.Size(173, 55);
-            this.btn_add_user.TabIndex = 1;
-            this.btn_add_user.Text = "Add Users";
-            this.btn_add_user.Click += new System.EventHandler(this.btn_add_user_Click);
-            // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column1.HeaderText = "Username";
@@ -274,7 +286,6 @@
             this.Size = new System.Drawing.Size(1000, 443);
             this.Load += new System.EventHandler(this.UsersControl_Load);
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).EndInit();
             this.ResumeLayout(false);
 

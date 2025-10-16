@@ -51,6 +51,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerView\RoutesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerView\RoutesForm.Designer.cs">
+      <DependentUpon>RoutesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerView\RoutesMapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerView\RoutesMapForm.Designer.cs">
+      <DependentUpon>RoutesMapForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerView\SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerView\SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,12 +112,6 @@
     </Compile>
     <Compile Include="View\ChangePasswordForm.Designer.cs">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\ComplaintAndFeedBackControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\ComplaintAndFeedBackControl.Designer.cs">
-      <DependentUpon>ComplaintAndFeedBackControl.cs</DependentUpon>
     </Compile>
     <Compile Include="View\DIscountControl.cs">
       <SubType>UserControl</SubType>
@@ -227,6 +239,15 @@
     <Compile Include="View\VerifyOTPForm.Designer.cs">
       <DependentUpon>VerifyOTPForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CustomerView\RoutesForm.resx">
+      <DependentUpon>RoutesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerView\RoutesMapForm.resx">
+      <DependentUpon>RoutesMapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerView\SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,9 +278,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\ComplaintAndFeedBackControl.resx">
-      <DependentUpon>ComplaintAndFeedBackControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\DIscountControl.resx">
       <DependentUpon>DIscountControl.cs</DependentUpon>

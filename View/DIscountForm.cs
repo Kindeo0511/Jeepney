@@ -33,5 +33,10 @@ namespace Jeep.View
         {
             this.Close();
         }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

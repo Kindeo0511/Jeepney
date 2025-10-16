@@ -35,13 +35,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrganizationControl));
             this.dgv_organization = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btn_add = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.action_column = new System.Windows.Forms.DataGridViewImageColumn();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_add = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_organization)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             this.dgv_organization.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(214)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(214)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -72,7 +72,7 @@
             this.action_column});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -107,72 +107,20 @@
             this.dgv_organization.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_organization.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(214)))));
             this.dgv_organization.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_organization.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgv_organization.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_organization.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
             this.dgv_organization.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgv_organization.ThemeStyle.HeaderStyle.Height = 40;
             this.dgv_organization.ThemeStyle.ReadOnly = false;
             this.dgv_organization.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_organization.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_organization.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgv_organization.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_organization.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgv_organization.ThemeStyle.RowsStyle.Height = 22;
             this.dgv_organization.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_organization.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgv_organization.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_organization_CellMouseClick);
             this.dgv_organization.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgv_organization_CellPainting);
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BorderThickness = 20;
-            this.guna2Panel1.Controls.Add(this.btn_add);
-            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel2);
-            this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(-1);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(1000, 84);
-            this.guna2Panel1.TabIndex = 6;
-            // 
-            // btn_add
-            // 
-            this.btn_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_add.BorderColor = System.Drawing.Color.Red;
-            this.btn_add.BorderRadius = 15;
-            this.btn_add.BorderThickness = 2;
-            this.btn_add.CheckedState.Parent = this.btn_add;
-            this.btn_add.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.btn_add.CustomBorderThickness = new System.Windows.Forms.Padding(1);
-            this.btn_add.CustomImages.Parent = this.btn_add;
-            this.btn_add.FillColor = System.Drawing.Color.Transparent;
-            this.btn_add.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.ForeColor = System.Drawing.Color.Red;
-            this.btn_add.HoverState.Parent = this.btn_add;
-            this.btn_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.Image")));
-            this.btn_add.Location = new System.Drawing.Point(761, 16);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.ShadowDecoration.Parent = this.btn_add;
-            this.btn_add.Size = new System.Drawing.Size(223, 55);
-            this.btn_add.TabIndex = 1;
-            this.btn_add.Text = "Add Organizations";
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.AutoSize = false;
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(24, 39);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(382, 45);
-            this.guna2HtmlLabel2.TabIndex = 0;
-            this.guna2HtmlLabel2.Text = "Organizations";
             // 
             // Column2
             // 
@@ -205,7 +153,59 @@
             this.action_column.Name = "action_column";
             this.action_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.action_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.action_column.Width = 95;
+            this.action_column.Width = 89;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BorderThickness = 20;
+            this.guna2Panel1.Controls.Add(this.btn_add);
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel2);
+            this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(-1);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(1000, 84);
+            this.guna2Panel1.TabIndex = 6;
+            // 
+            // btn_add
+            // 
+            this.btn_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_add.BorderColor = System.Drawing.Color.Red;
+            this.btn_add.BorderRadius = 15;
+            this.btn_add.BorderThickness = 2;
+            this.btn_add.CheckedState.Parent = this.btn_add;
+            this.btn_add.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btn_add.CustomBorderThickness = new System.Windows.Forms.Padding(1);
+            this.btn_add.CustomImages.Parent = this.btn_add;
+            this.btn_add.FillColor = System.Drawing.Color.Transparent;
+            this.btn_add.Font = new System.Drawing.Font("Roboto Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.ForeColor = System.Drawing.Color.Red;
+            this.btn_add.HoverState.Parent = this.btn_add;
+            this.btn_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.Image")));
+            this.btn_add.Location = new System.Drawing.Point(761, 16);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.ShadowDecoration.Parent = this.btn_add;
+            this.btn_add.Size = new System.Drawing.Size(223, 55);
+            this.btn_add.TabIndex = 1;
+            this.btn_add.Text = "Add Organizations";
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.AutoSize = false;
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Roboto Medium", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(24, 39);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(382, 45);
+            this.guna2HtmlLabel2.TabIndex = 0;
+            this.guna2HtmlLabel2.Text = "Organizations";
             // 
             // OrganizationControl
             // 

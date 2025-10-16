@@ -10,7 +10,8 @@ namespace Jeep.View
         {
             InitializeComponent();
 
-
+            LoadUsers();
+            SetCheckedButton(btn_users);  
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -146,20 +147,7 @@ namespace Jeep.View
 
         }
 
-        public void LoadComplaintAndFeedBack()
-        {
-
-            dgv_container.Controls.Clear();
-
-
-            var complaint = new ComplaintAndFeedBackControl();
-            complaint.Dock = DockStyle.Fill;
-
-
-            dgv_container.Controls.Add(complaint);
-
-
-        }
+     
 
         public void LoadAuditTrail()
         {
@@ -232,11 +220,6 @@ namespace Jeep.View
             SetCheckedButton((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
-        private void btn_complain_and_feedback_Click(object sender, EventArgs e)
-        {
-            LoadComplaintAndFeedBack();
-            SetCheckedButton((Guna.UI2.WinForms.Guna2Button)sender);
-        }
 
         private void btn_audit_trail_Click(object sender, EventArgs e)
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Jeep.CustomerView;
+using System;
 using System.Windows.Forms;
 
 namespace Jeep.View
@@ -19,9 +20,19 @@ namespace Jeep.View
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            var form = new MainForm();
-            form.Show();
-            this.Close();
+            if (guna2TextBox1.Text == "customer")
+            {
+                var form = new SearchForm();
+                form.Show();
+                this.Close();
+            }
+            else 
+            {
+                var form = new MainForm();
+                form.Show();
+                this.Close();
+            }
+              
         }
     }
 }
