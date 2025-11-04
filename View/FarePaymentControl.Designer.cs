@@ -34,13 +34,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FarePaymentControl));
             this.dgv_fare_payment = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.action_column = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_add = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.FareID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RouteName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BaseFare = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiscountFare = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action_column = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_fare_payment)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +59,7 @@
             this.dgv_fare_payment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(214)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(214)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -65,12 +67,14 @@
             this.dgv_fare_payment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_fare_payment.ColumnHeadersHeight = 40;
             this.dgv_fare_payment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column6,
-            this.Column1,
+            this.FareID,
+            this.RouteName,
+            this.BaseFare,
+            this.DiscountFare,
             this.action_column});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -97,46 +101,21 @@
             this.dgv_fare_payment.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_fare_payment.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(214)))));
             this.dgv_fare_payment.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_fare_payment.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_fare_payment.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_fare_payment.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
             this.dgv_fare_payment.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgv_fare_payment.ThemeStyle.HeaderStyle.Height = 40;
             this.dgv_fare_payment.ThemeStyle.ReadOnly = false;
             this.dgv_fare_payment.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_fare_payment.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_fare_payment.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_fare_payment.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_fare_payment.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgv_fare_payment.ThemeStyle.RowsStyle.Height = 22;
             this.dgv_fare_payment.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_fare_payment.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_fare_payment.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_fare_payment_CellContentClick);
             this.dgv_fare_payment.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_fare_payment_CellMouseClick);
             this.dgv_fare_payment.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgv_fare_payment_CellPainting);
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.HeaderText = "Route Taken\n";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Pricing";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // action_column
-            // 
-            this.action_column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.action_column.HeaderText = "Action";
-            this.action_column.Image = ((System.Drawing.Image)(resources.GetObject("action_column.Image")));
-            this.action_column.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.action_column.MinimumWidth = 6;
-            this.action_column.Name = "action_column";
-            this.action_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.action_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.action_column.Width = 85;
             // 
             // guna2Panel1
             // 
@@ -166,7 +145,7 @@
             this.btn_add.CustomBorderThickness = new System.Windows.Forms.Padding(1);
             this.btn_add.CustomImages.Parent = this.btn_add;
             this.btn_add.FillColor = System.Drawing.Color.Transparent;
-            this.btn_add.Font = new System.Drawing.Font("Roboto Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add.ForeColor = System.Drawing.Color.Red;
             this.btn_add.HoverState.Parent = this.btn_add;
             this.btn_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.Image")));
@@ -183,7 +162,7 @@
             // 
             this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Roboto Medium", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(17, 36);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
@@ -195,6 +174,45 @@
             // 
             this.guna2Elipse1.BorderRadius = 25;
             this.guna2Elipse1.TargetControl = this.guna2HtmlLabel2;
+            // 
+            // FareID
+            // 
+            this.FareID.HeaderText = "FareID";
+            this.FareID.MinimumWidth = 6;
+            this.FareID.Name = "FareID";
+            this.FareID.Visible = false;
+            // 
+            // RouteName
+            // 
+            this.RouteName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RouteName.HeaderText = "RouteName";
+            this.RouteName.MinimumWidth = 6;
+            this.RouteName.Name = "RouteName";
+            // 
+            // BaseFare
+            // 
+            this.BaseFare.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BaseFare.HeaderText = "BaseFare";
+            this.BaseFare.MinimumWidth = 6;
+            this.BaseFare.Name = "BaseFare";
+            // 
+            // DiscountFare
+            // 
+            this.DiscountFare.HeaderText = "DiscountFare";
+            this.DiscountFare.MinimumWidth = 6;
+            this.DiscountFare.Name = "DiscountFare";
+            // 
+            // action_column
+            // 
+            this.action_column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.action_column.HeaderText = "Action";
+            this.action_column.Image = ((System.Drawing.Image)(resources.GetObject("action_column.Image")));
+            this.action_column.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.action_column.MinimumWidth = 6;
+            this.action_column.Name = "action_column";
+            this.action_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.action_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.action_column.Width = 83;
             // 
             // FarePaymentControl
             // 
@@ -219,8 +237,10 @@
         private Guna.UI2.WinForms.Guna2Button btn_add;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FareID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RouteName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BaseFare;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiscountFare;
         private System.Windows.Forms.DataGridViewImageColumn action_column;
     }
 }

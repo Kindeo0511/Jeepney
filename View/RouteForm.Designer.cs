@@ -36,18 +36,21 @@
             this.btn_edit = new Guna.UI2.WinForms.Guna2Button();
             this.btn_cancel = new Guna.UI2.WinForms.Guna2Button();
             this.btn_add = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cmbOrganization = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtFrom = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtStopOver = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTo = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.lstStopovers = new System.Windows.Forms.ListBox();
+            this.btnRemoveStopover = new Guna.UI2.WinForms.Guna2Button();
+            this.timeStart = new System.Windows.Forms.DateTimePicker();
+            this.timeEnd = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // guna2Elipse2
@@ -61,7 +64,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_title.AutoSize = false;
             this.lbl_title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.lbl_title.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title.Location = new System.Drawing.Point(16, 15);
             this.lbl_title.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_title.Name = "lbl_title";
@@ -82,10 +85,10 @@
             this.btn_edit.CheckedState.Parent = this.btn_edit;
             this.btn_edit.CustomImages.Parent = this.btn_edit;
             this.btn_edit.FillColor = System.Drawing.Color.Red;
-            this.btn_edit.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_edit.ForeColor = System.Drawing.Color.Black;
             this.btn_edit.HoverState.Parent = this.btn_edit;
-            this.btn_edit.Location = new System.Drawing.Point(265, 369);
+            this.btn_edit.Location = new System.Drawing.Point(381, 369);
             this.btn_edit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.ShadowDecoration.Parent = this.btn_edit;
@@ -93,6 +96,7 @@
             this.btn_edit.TabIndex = 64;
             this.btn_edit.Text = "Confirm";
             this.btn_edit.Visible = false;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // btn_cancel
             // 
@@ -101,7 +105,7 @@
             this.btn_cancel.CheckedState.Parent = this.btn_cancel;
             this.btn_cancel.CustomImages.Parent = this.btn_cancel;
             this.btn_cancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-            this.btn_cancel.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.ForeColor = System.Drawing.Color.Black;
             this.btn_cancel.HoverState.Parent = this.btn_cancel;
             this.btn_cancel.Location = new System.Drawing.Point(645, 369);
@@ -120,78 +124,50 @@
             this.btn_add.CheckedState.Parent = this.btn_add;
             this.btn_add.CustomImages.Parent = this.btn_add;
             this.btn_add.FillColor = System.Drawing.Color.Red;
-            this.btn_add.Font = new System.Drawing.Font("Roboto", 10.2F);
+            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.btn_add.ForeColor = System.Drawing.Color.Black;
             this.btn_add.HoverState.Parent = this.btn_add;
-            this.btn_add.Location = new System.Drawing.Point(265, 369);
+            this.btn_add.Location = new System.Drawing.Point(381, 369);
             this.btn_add.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add.Name = "btn_add";
             this.btn_add.ShadowDecoration.Parent = this.btn_add;
             this.btn_add.Size = new System.Drawing.Size(133, 43);
             this.btn_add.TabIndex = 62;
             this.btn_add.Text = "Add";
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // guna2ComboBox1
+            // cmbOrganization
             // 
-            this.guna2ComboBox1.AutoRoundedCorners = true;
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.BorderRadius = 19;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Red;
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.Red;
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Roboto", 10.2F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.FormattingEnabled = true;
-            this.guna2ComboBox1.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 35;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.cmbOrganization.AutoRoundedCorners = true;
+            this.cmbOrganization.BackColor = System.Drawing.Color.Transparent;
+            this.cmbOrganization.BorderColor = System.Drawing.Color.Black;
+            this.cmbOrganization.BorderRadius = 19;
+            this.cmbOrganization.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbOrganization.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbOrganization.FocusedColor = System.Drawing.Color.Red;
+            this.cmbOrganization.FocusedState.BorderColor = System.Drawing.Color.Red;
+            this.cmbOrganization.FocusedState.Parent = this.cmbOrganization;
+            this.cmbOrganization.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.cmbOrganization.ForeColor = System.Drawing.Color.Black;
+            this.cmbOrganization.FormattingEnabled = true;
+            this.cmbOrganization.HoverState.BorderColor = System.Drawing.Color.Red;
+            this.cmbOrganization.HoverState.Parent = this.cmbOrganization;
+            this.cmbOrganization.ItemHeight = 35;
+            this.cmbOrganization.Items.AddRange(new object[] {
             "BOSSING"});
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(764, 263);
-            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(265, 41);
-            this.guna2ComboBox1.StartIndex = 0;
-            this.guna2ComboBox1.TabIndex = 61;
-            // 
-            // guna2TextBox5
-            // 
-            this.guna2TextBox5.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox5.BorderRadius = 15;
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "10:00 PM";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox5.FocusedState.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.Font = new System.Drawing.Font("Roboto", 10.2F);
-            this.guna2TextBox5.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox5.HoverState.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.Location = new System.Drawing.Point(395, 262);
-            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PasswordChar = '\0';
-            this.guna2TextBox5.PlaceholderForeColor = System.Drawing.Color.Red;
-            this.guna2TextBox5.PlaceholderText = "End time";
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.SelectionStart = 8;
-            this.guna2TextBox5.ShadowDecoration.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.Size = new System.Drawing.Size(267, 43);
-            this.guna2TextBox5.TabIndex = 60;
+            this.cmbOrganization.ItemsAppearance.Parent = this.cmbOrganization;
+            this.cmbOrganization.Location = new System.Drawing.Point(764, 263);
+            this.cmbOrganization.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbOrganization.Name = "cmbOrganization";
+            this.cmbOrganization.ShadowDecoration.Parent = this.cmbOrganization;
+            this.cmbOrganization.Size = new System.Drawing.Size(265, 41);
+            this.cmbOrganization.StartIndex = 0;
+            this.cmbOrganization.TabIndex = 61;
             // 
             // guna2HtmlLabel6
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Roboto", 10.2F);
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(408, 234);
             this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
@@ -199,119 +175,90 @@
             this.guna2HtmlLabel6.TabIndex = 59;
             this.guna2HtmlLabel6.Text = "Time End";
             // 
-            // guna2TextBox6
+            // txtFrom
             // 
-            this.guna2TextBox6.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox6.BorderRadius = 15;
-            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox6.DefaultText = "FTI";
-            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.DisabledState.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox6.FocusedState.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.Font = new System.Drawing.Font("Roboto", 10.2F);
-            this.guna2TextBox6.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox6.HoverState.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.Location = new System.Drawing.Point(43, 149);
-            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.guna2TextBox6.Name = "guna2TextBox6";
-            this.guna2TextBox6.PasswordChar = '\0';
-            this.guna2TextBox6.PlaceholderForeColor = System.Drawing.Color.Red;
-            this.guna2TextBox6.PlaceholderText = "";
-            this.guna2TextBox6.SelectedText = "";
-            this.guna2TextBox6.SelectionStart = 3;
-            this.guna2TextBox6.ShadowDecoration.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.Size = new System.Drawing.Size(267, 43);
-            this.guna2TextBox6.TabIndex = 58;
+            this.txtFrom.BorderColor = System.Drawing.Color.Black;
+            this.txtFrom.BorderRadius = 15;
+            this.txtFrom.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFrom.DefaultText = "FTI";
+            this.txtFrom.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFrom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFrom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFrom.DisabledState.Parent = this.txtFrom;
+            this.txtFrom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFrom.FocusedState.BorderColor = System.Drawing.Color.Red;
+            this.txtFrom.FocusedState.Parent = this.txtFrom;
+            this.txtFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtFrom.ForeColor = System.Drawing.Color.Black;
+            this.txtFrom.HoverState.BorderColor = System.Drawing.Color.Red;
+            this.txtFrom.HoverState.Parent = this.txtFrom;
+            this.txtFrom.Location = new System.Drawing.Point(43, 149);
+            this.txtFrom.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtFrom.Name = "txtFrom";
+            this.txtFrom.PasswordChar = '\0';
+            this.txtFrom.PlaceholderForeColor = System.Drawing.Color.Red;
+            this.txtFrom.PlaceholderText = "";
+            this.txtFrom.SelectedText = "";
+            this.txtFrom.SelectionStart = 3;
+            this.txtFrom.ShadowDecoration.Parent = this.txtFrom;
+            this.txtFrom.Size = new System.Drawing.Size(267, 43);
+            this.txtFrom.TabIndex = 58;
             // 
             // guna2HtmlLabel7
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(43, 117);
             this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(43, 22);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(42, 22);
             this.guna2HtmlLabel7.TabIndex = 57;
             this.guna2HtmlLabel7.Text = "From";
-            // 
-            // guna2TextBox3
-            // 
-            this.guna2TextBox3.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox3.BorderRadius = 15;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "5:00 AM\n";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Font = new System.Drawing.Font("Roboto", 10.2F);
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Location = new System.Drawing.Point(43, 262);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderForeColor = System.Drawing.Color.Red;
-            this.guna2TextBox3.PlaceholderText = "Start time";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.SelectionStart = 8;
-            this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Size = new System.Drawing.Size(267, 43);
-            this.guna2TextBox3.TabIndex = 56;
             // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Roboto", 10.2F);
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(777, 234);
             this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(148, 22);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(147, 22);
             this.guna2HtmlLabel4.TabIndex = 55;
             this.guna2HtmlLabel4.Text = "Organization Name";
             // 
-            // guna2TextBox4
+            // txtStopOver
             // 
-            this.guna2TextBox4.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox4.BorderRadius = 15;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "GATE 3";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox4.FocusedState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Font = new System.Drawing.Font("Roboto", 10.2F);
-            this.guna2TextBox4.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Location = new System.Drawing.Point(764, 145);
-            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderForeColor = System.Drawing.Color.Red;
-            this.guna2TextBox4.PlaceholderText = "Possible stop over";
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.SelectionStart = 6;
-            this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Size = new System.Drawing.Size(267, 43);
-            this.guna2TextBox4.TabIndex = 54;
+            this.txtStopOver.BorderColor = System.Drawing.Color.Black;
+            this.txtStopOver.BorderRadius = 15;
+            this.txtStopOver.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtStopOver.DefaultText = "GATE 3";
+            this.txtStopOver.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtStopOver.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtStopOver.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtStopOver.DisabledState.Parent = this.txtStopOver;
+            this.txtStopOver.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtStopOver.FocusedState.BorderColor = System.Drawing.Color.Red;
+            this.txtStopOver.FocusedState.Parent = this.txtStopOver;
+            this.txtStopOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtStopOver.ForeColor = System.Drawing.Color.Black;
+            this.txtStopOver.HoverState.BorderColor = System.Drawing.Color.Red;
+            this.txtStopOver.HoverState.Parent = this.txtStopOver;
+            this.txtStopOver.Location = new System.Drawing.Point(764, 145);
+            this.txtStopOver.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtStopOver.Name = "txtStopOver";
+            this.txtStopOver.PasswordChar = '\0';
+            this.txtStopOver.PlaceholderForeColor = System.Drawing.Color.Red;
+            this.txtStopOver.PlaceholderText = "Possible stop over";
+            this.txtStopOver.SelectedText = "";
+            this.txtStopOver.SelectionStart = 6;
+            this.txtStopOver.ShadowDecoration.Parent = this.txtStopOver;
+            this.txtStopOver.Size = new System.Drawing.Size(267, 43);
+            this.txtStopOver.TabIndex = 54;
             // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Roboto", 10.2F);
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(777, 117);
             this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
@@ -322,73 +269,142 @@
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Roboto", 10.2F);
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(43, 225);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(82, 22);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(81, 22);
             this.guna2HtmlLabel2.TabIndex = 52;
             this.guna2HtmlLabel2.Text = "Time Start";
             // 
-            // guna2TextBox1
+            // txtTo
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.BorderRadius = 15;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "PASAY";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Roboto", 10.2F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(395, 145);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Red;
-            this.guna2TextBox1.PlaceholderText = "To";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.SelectionStart = 5;
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(267, 43);
-            this.guna2TextBox1.TabIndex = 51;
+            this.txtTo.BorderColor = System.Drawing.Color.Black;
+            this.txtTo.BorderRadius = 15;
+            this.txtTo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTo.DefaultText = "PASAY";
+            this.txtTo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTo.DisabledState.Parent = this.txtTo;
+            this.txtTo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTo.FocusedState.BorderColor = System.Drawing.Color.Red;
+            this.txtTo.FocusedState.Parent = this.txtTo;
+            this.txtTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtTo.ForeColor = System.Drawing.Color.Black;
+            this.txtTo.HoverState.BorderColor = System.Drawing.Color.Red;
+            this.txtTo.HoverState.Parent = this.txtTo;
+            this.txtTo.Location = new System.Drawing.Point(395, 145);
+            this.txtTo.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtTo.Name = "txtTo";
+            this.txtTo.PasswordChar = '\0';
+            this.txtTo.PlaceholderForeColor = System.Drawing.Color.Red;
+            this.txtTo.PlaceholderText = "To";
+            this.txtTo.SelectedText = "";
+            this.txtTo.SelectionStart = 5;
+            this.txtTo.ShadowDecoration.Parent = this.txtTo;
+            this.txtTo.Size = new System.Drawing.Size(267, 43);
+            this.txtTo.TabIndex = 51;
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Roboto", 10.2F);
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(408, 117);
             this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(23, 22);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(22, 22);
             this.guna2HtmlLabel3.TabIndex = 50;
             this.guna2HtmlLabel3.Text = "To";
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.RosyBrown;
+            this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(143, 369);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(133, 43);
+            this.guna2Button1.TabIndex = 65;
+            this.guna2Button1.Text = "Add_StopOver";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // lstStopovers
+            // 
+            this.lstStopovers.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstStopovers.FormattingEnabled = true;
+            this.lstStopovers.ItemHeight = 23;
+            this.lstStopovers.Location = new System.Drawing.Point(838, 328);
+            this.lstStopovers.Name = "lstStopovers";
+            this.lstStopovers.Size = new System.Drawing.Size(191, 165);
+            this.lstStopovers.TabIndex = 66;
+            // 
+            // btnRemoveStopover
+            // 
+            this.btnRemoveStopover.AutoRoundedCorners = true;
+            this.btnRemoveStopover.BorderRadius = 20;
+            this.btnRemoveStopover.CheckedState.Parent = this.btnRemoveStopover;
+            this.btnRemoveStopover.CustomImages.Parent = this.btnRemoveStopover;
+            this.btnRemoveStopover.FillColor = System.Drawing.Color.RosyBrown;
+            this.btnRemoveStopover.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveStopover.ForeColor = System.Drawing.Color.Black;
+            this.btnRemoveStopover.HoverState.Parent = this.btnRemoveStopover;
+            this.btnRemoveStopover.Location = new System.Drawing.Point(143, 449);
+            this.btnRemoveStopover.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRemoveStopover.Name = "btnRemoveStopover";
+            this.btnRemoveStopover.ShadowDecoration.Parent = this.btnRemoveStopover;
+            this.btnRemoveStopover.Size = new System.Drawing.Size(133, 43);
+            this.btnRemoveStopover.TabIndex = 67;
+            this.btnRemoveStopover.Text = "Remove_StopOver";
+            this.btnRemoveStopover.Click += new System.EventHandler(this.btnRemoveStopover_Click);
+            // 
+            // timeStart
+            // 
+            this.timeStart.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeStart.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.timeStart.Location = new System.Drawing.Point(49, 282);
+            this.timeStart.Name = "timeStart";
+            this.timeStart.Size = new System.Drawing.Size(200, 32);
+            this.timeStart.TabIndex = 70;
+            // 
+            // timeEnd
+            // 
+            this.timeEnd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.timeEnd.Location = new System.Drawing.Point(408, 282);
+            this.timeEnd.Name = "timeEnd";
+            this.timeEnd.Size = new System.Drawing.Size(200, 32);
+            this.timeEnd.TabIndex = 71;
             // 
             // RouteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.timeEnd);
+            this.Controls.Add(this.timeStart);
+            this.Controls.Add(this.btnRemoveStopover);
+            this.Controls.Add(this.lstStopovers);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_add);
-            this.Controls.Add(this.guna2ComboBox1);
-            this.Controls.Add(this.guna2TextBox5);
+            this.Controls.Add(this.cmbOrganization);
             this.Controls.Add(this.guna2HtmlLabel6);
-            this.Controls.Add(this.guna2TextBox6);
+            this.Controls.Add(this.txtFrom);
             this.Controls.Add(this.guna2HtmlLabel7);
-            this.Controls.Add(this.guna2TextBox3);
             this.Controls.Add(this.guna2HtmlLabel4);
-            this.Controls.Add(this.guna2TextBox4);
+            this.Controls.Add(this.txtStopOver);
             this.Controls.Add(this.guna2HtmlLabel5);
             this.Controls.Add(this.guna2HtmlLabel2);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.txtTo);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.lbl_title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -396,6 +412,7 @@
             this.Name = "RouteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RouteForm";
+            this.Load += new System.EventHandler(this.RouteForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -410,17 +427,20 @@
         private Guna.UI2.WinForms.Guna2Button btn_edit;
         private Guna.UI2.WinForms.Guna2Button btn_cancel;
         private Guna.UI2.WinForms.Guna2Button btn_add;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbOrganization;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Guna.UI2.WinForms.Guna2TextBox txtFrom;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox txtStopOver;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtTo;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.ListBox lstStopovers;
+        private Guna.UI2.WinForms.Guna2Button btnRemoveStopover;
+        private System.Windows.Forms.DateTimePicker timeEnd;
+        private System.Windows.Forms.DateTimePicker timeStart;
     }
 }

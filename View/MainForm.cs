@@ -16,6 +16,17 @@ namespace Jeep.View
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            if (CurrentUser.Role.Equals("Staff", StringComparison.OrdinalIgnoreCase))
+            {
+                btn_audit_trail.Visible = false;
+                btn_users.Visible = false;
+            }
+            else if (CurrentUser.Role.Equals("Admin", StringComparison.OrdinalIgnoreCase))
+            {
+                btn_audit_trail.Visible = true;
+                btn_users.Visible = true;
+            }
+
 
         }
         public void LoadUsers()

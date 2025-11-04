@@ -35,13 +35,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrganizationControl));
             this.dgv_organization = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.action_column = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_add = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.OrganizationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrganizationName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContactNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action_column = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_organization)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +59,7 @@
             this.dgv_organization.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(214)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(214)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -66,13 +67,14 @@
             this.dgv_organization.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_organization.ColumnHeadersHeight = 40;
             this.dgv_organization.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
-            this.Column3,
-            this.Column1,
+            this.OrganizationID,
+            this.OrganizationName,
+            this.ContactNumber,
+            this.Address,
             this.action_column});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -107,53 +109,21 @@
             this.dgv_organization.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_organization.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(214)))));
             this.dgv_organization.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_organization.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_organization.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_organization.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
             this.dgv_organization.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgv_organization.ThemeStyle.HeaderStyle.Height = 40;
             this.dgv_organization.ThemeStyle.ReadOnly = false;
             this.dgv_organization.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_organization.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_organization.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_organization.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_organization.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgv_organization.ThemeStyle.RowsStyle.Height = 22;
             this.dgv_organization.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_organization.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_organization.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_organization_CellContentClick);
             this.dgv_organization.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_organization_CellMouseClick);
             this.dgv_organization.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgv_organization_CellPainting);
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Organizations Name";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Contact Number";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Address";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // action_column
-            // 
-            this.action_column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 0, 25, 0);
-            this.action_column.DefaultCellStyle = dataGridViewCellStyle3;
-            this.action_column.HeaderText = " Action";
-            this.action_column.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.action_column.MinimumWidth = 6;
-            this.action_column.Name = "action_column";
-            this.action_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.action_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.action_column.Width = 89;
             // 
             // guna2Panel1
             // 
@@ -182,7 +152,7 @@
             this.btn_add.CustomBorderThickness = new System.Windows.Forms.Padding(1);
             this.btn_add.CustomImages.Parent = this.btn_add;
             this.btn_add.FillColor = System.Drawing.Color.Transparent;
-            this.btn_add.Font = new System.Drawing.Font("Roboto Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add.ForeColor = System.Drawing.Color.Red;
             this.btn_add.HoverState.Parent = this.btn_add;
             this.btn_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.Image")));
@@ -199,13 +169,53 @@
             // 
             this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Roboto Medium", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(24, 39);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(382, 45);
             this.guna2HtmlLabel2.TabIndex = 0;
             this.guna2HtmlLabel2.Text = "Organizations";
+            // 
+            // OrganizationID
+            // 
+            this.OrganizationID.HeaderText = "OrganizationID";
+            this.OrganizationID.MinimumWidth = 6;
+            this.OrganizationID.Name = "OrganizationID";
+            this.OrganizationID.Visible = false;
+            // 
+            // OrganizationName
+            // 
+            this.OrganizationName.HeaderText = "Organizations Name";
+            this.OrganizationName.MinimumWidth = 6;
+            this.OrganizationName.Name = "OrganizationName";
+            // 
+            // ContactNumber
+            // 
+            this.ContactNumber.HeaderText = "Contact Number";
+            this.ContactNumber.MinimumWidth = 6;
+            this.ContactNumber.Name = "ContactNumber";
+            // 
+            // Address
+            // 
+            this.Address.HeaderText = "Address";
+            this.Address.MinimumWidth = 6;
+            this.Address.Name = "Address";
+            // 
+            // action_column
+            // 
+            this.action_column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 0, 25, 0);
+            this.action_column.DefaultCellStyle = dataGridViewCellStyle3;
+            this.action_column.HeaderText = " Action";
+            this.action_column.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.action_column.MinimumWidth = 6;
+            this.action_column.Name = "action_column";
+            this.action_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.action_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.action_column.Width = 88;
             // 
             // OrganizationControl
             // 
@@ -229,9 +239,10 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btn_add;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrganizationID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrganizationName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ContactNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewImageColumn action_column;
     }
 }

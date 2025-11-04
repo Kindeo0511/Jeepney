@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 namespace Jeep.View
 {
@@ -10,10 +11,10 @@ namespace Jeep.View
         {
             InitializeComponent();
         }
-        public VerifyOTPForm(bool forgotpassword)
+        public VerifyOTPForm(bool forgisForgotPassword,bool  otp, string emailotpassword)
         {
             InitializeComponent();
-            this.isForgotPassword = forgotpassword;
+         
         }
 
         private void btn_send_otp_Click(object sender, EventArgs e)
@@ -34,6 +35,11 @@ namespace Jeep.View
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void VerifyOTPForm_Load(object sender, EventArgs e)
         {
 
         }

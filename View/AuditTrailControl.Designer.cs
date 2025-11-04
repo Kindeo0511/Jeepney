@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_audit_trail = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActionType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ModuleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_audit_trail)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,37 +53,37 @@
             // dgv_audit_trail
             // 
             this.dgv_audit_trail.AllowUserToAddRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.dgv_audit_trail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.dgv_audit_trail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_audit_trail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_audit_trail.BackgroundColor = System.Drawing.Color.White;
             this.dgv_audit_trail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_audit_trail.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_audit_trail.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(214)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(214)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_audit_trail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_audit_trail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_audit_trail.ColumnHeadersHeight = 40;
             this.dgv_audit_trail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column6,
-            this.Column5,
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_audit_trail.DefaultCellStyle = dataGridViewCellStyle6;
+            this.UserName,
+            this.Role,
+            this.ActionType,
+            this.ModuleName,
+            this.Description,
+            this.ActionDate});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_audit_trail.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_audit_trail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_audit_trail.EnableHeadersVisualStyles = false;
             this.dgv_audit_trail.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -105,61 +105,26 @@
             this.dgv_audit_trail.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_audit_trail.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(214)))));
             this.dgv_audit_trail.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_audit_trail.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_audit_trail.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_audit_trail.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
             this.dgv_audit_trail.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgv_audit_trail.ThemeStyle.HeaderStyle.Height = 40;
             this.dgv_audit_trail.ThemeStyle.ReadOnly = false;
             this.dgv_audit_trail.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_audit_trail.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_audit_trail.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_audit_trail.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_audit_trail.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgv_audit_trail.ThemeStyle.RowsStyle.Height = 22;
             this.dgv_audit_trail.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_audit_trail.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Username";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Role";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Action Type";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Module Name";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Description";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Action Date";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
+            this.dgv_audit_trail.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_audit_trail_CellContentClick);
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.BorderThickness = 20;
-            this.guna2Panel1.Controls.Add(this.guna2DateTimePicker2);
-            this.guna2Panel1.Controls.Add(this.guna2DateTimePicker1);
+            this.guna2Panel1.Controls.Add(this.dtpTo);
+            this.guna2Panel1.Controls.Add(this.dtpFrom);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel2);
@@ -174,54 +139,54 @@
             this.guna2Panel1.TabIndex = 12;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
-            // guna2DateTimePicker2
+            // dtpTo
             // 
-            this.guna2DateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2DateTimePicker2.AutoRoundedCorners = true;
-            this.guna2DateTimePicker2.BorderRadius = 16;
-            this.guna2DateTimePicker2.BorderThickness = 1;
-            this.guna2DateTimePicker2.CheckedState.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.guna2DateTimePicker2.HoverState.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(768, 25);
-            this.guna2DateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            this.guna2DateTimePicker2.ShadowDecoration.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.Size = new System.Drawing.Size(217, 34);
-            this.guna2DateTimePicker2.TabIndex = 4;
-            this.guna2DateTimePicker2.Value = new System.DateTime(2025, 10, 12, 6, 35, 49, 545);
+            this.dtpTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpTo.AutoRoundedCorners = true;
+            this.dtpTo.BorderRadius = 16;
+            this.dtpTo.BorderThickness = 1;
+            this.dtpTo.CheckedState.Parent = this.dtpTo;
+            this.dtpTo.FillColor = System.Drawing.Color.White;
+            this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTo.HoverState.Parent = this.dtpTo;
+            this.dtpTo.Location = new System.Drawing.Point(768, 25);
+            this.dtpTo.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.ShadowDecoration.Parent = this.dtpTo;
+            this.dtpTo.Size = new System.Drawing.Size(217, 34);
+            this.dtpTo.TabIndex = 4;
+            this.dtpTo.Value = new System.DateTime(2025, 10, 12, 6, 35, 49, 545);
             // 
-            // guna2DateTimePicker1
+            // dtpFrom
             // 
-            this.guna2DateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2DateTimePicker1.AutoRoundedCorners = true;
-            this.guna2DateTimePicker1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2DateTimePicker1.BorderRadius = 16;
-            this.guna2DateTimePicker1.BorderThickness = 1;
-            this.guna2DateTimePicker1.CheckedState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Roboto", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(410, 25);
-            this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(223, 34);
-            this.guna2DateTimePicker1.TabIndex = 3;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2025, 10, 12, 6, 35, 46, 45);
+            this.dtpFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpFrom.AutoRoundedCorners = true;
+            this.dtpFrom.BackColor = System.Drawing.Color.Transparent;
+            this.dtpFrom.BorderRadius = 16;
+            this.dtpFrom.BorderThickness = 1;
+            this.dtpFrom.CheckedState.Parent = this.dtpFrom;
+            this.dtpFrom.FillColor = System.Drawing.Color.White;
+            this.dtpFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFrom.HoverState.Parent = this.dtpFrom;
+            this.dtpFrom.Location = new System.Drawing.Point(410, 25);
+            this.dtpFrom.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpFrom.Name = "dtpFrom";
+            this.dtpFrom.ShadowDecoration.Parent = this.dtpFrom;
+            this.dtpFrom.Size = new System.Drawing.Size(223, 34);
+            this.dtpFrom.TabIndex = 3;
+            this.dtpFrom.Value = new System.DateTime(2025, 10, 12, 6, 35, 46, 45);
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel3.AutoSize = false;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Roboto", 10.2F);
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(678, 37);
             this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
@@ -234,7 +199,7 @@
             this.guna2HtmlLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(314, 37);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
@@ -246,7 +211,7 @@
             // 
             this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Roboto Medium", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(19, 25);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
@@ -258,6 +223,42 @@
             // 
             this.guna2Elipse1.BorderRadius = 25;
             this.guna2Elipse1.TargetControl = this.guna2HtmlLabel2;
+            // 
+            // UserName
+            // 
+            this.UserName.HeaderText = "Username";
+            this.UserName.MinimumWidth = 6;
+            this.UserName.Name = "UserName";
+            // 
+            // Role
+            // 
+            this.Role.HeaderText = "Role";
+            this.Role.MinimumWidth = 6;
+            this.Role.Name = "Role";
+            // 
+            // ActionType
+            // 
+            this.ActionType.HeaderText = "Action Type";
+            this.ActionType.MinimumWidth = 6;
+            this.ActionType.Name = "ActionType";
+            // 
+            // ModuleName
+            // 
+            this.ModuleName.HeaderText = "Module Name";
+            this.ModuleName.MinimumWidth = 6;
+            this.ModuleName.Name = "ModuleName";
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.MinimumWidth = 6;
+            this.Description.Name = "Description";
+            // 
+            // ActionDate
+            // 
+            this.ActionDate.HeaderText = "Action Date";
+            this.ActionDate.MinimumWidth = 6;
+            this.ActionDate.Name = "ActionDate";
             // 
             // AuditTrailControl
             // 
@@ -281,15 +282,15 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpTo;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpFrom;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Role;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ActionType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ModuleName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ActionDate;
     }
 }

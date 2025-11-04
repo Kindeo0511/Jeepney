@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using MySql.Data.MySqlClient;
+using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -6,7 +9,9 @@ namespace Jeep.View
 {
     public partial class FarePaymentControl : UserControl
     {
-        private int actionColumnIndex = -1;
+        private string connectionString = "server=localhost;user id=root;password=;database=jeepney;";
+        private int actionColumnIndex = 4;
+
         public FarePaymentControl()
         {
             InitializeComponent();
@@ -16,16 +21,50 @@ namespace Jeep.View
         {
             using (var form = new FarePaymentForm())
             {
-                form.ShowDialog();
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    LoadFares();
+                }
             }
         }
 
         private void FarePaymentControl_Load(object sender, EventArgs e)
         {
-            dgv_fare_payment.Rows.Add("BICUTAN-PATEROS", "28");
-            actionColumnIndex = dgv_fare_payment.Columns["action_column"].Index;
+            LoadFares();
         }
 
+        private void LoadFares()
+        {
+            dgv_fare_payment.Rows.Clear();
+
+            using (var con = new MySqlConnection(connectionString))
+            {
+                con.Open();
+                string query = @"SELECT 
+                                    f.FareID,
+                                    CONCAT(r.RouteFrom, ' - ', r.RouteTo) AS RouteName,
+                                    f.BaseFare,
+                                    f.DiscountFare
+                                 FROM fare f
+                                 JOIN route r ON f.RouteID = r.RouteID";
+
+                using (var cmd = new MySqlCommand(query, con))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        dgv_fare_payment.Rows.Add(
+                            reader["FareID"],
+                            reader["RouteName"],
+                            reader["BaseFare"],
+                            reader["DiscountFare"],
+
+                            null
+                        );
+                    }
+                }
+            }
+        }
 
         private void dgv_fare_payment_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
@@ -33,28 +72,23 @@ namespace Jeep.View
             {
                 e.PaintBackground(e.CellBounds, true);
 
-                int iconSize = 24;
-                int padding = 8;
+                int iconSize = 20;
+                int padding = 5;
 
                 var editIcon = Properties.Resources.edit_icon;
                 var deleteIcon = Properties.Resources.delete_icon;
 
-
                 var editRect = new Rectangle(
-                    e.CellBounds.Left + padding - 10,
+                    e.CellBounds.Left + padding,
                     e.CellBounds.Top + (e.CellBounds.Height - iconSize) / 2,
                     iconSize,
                     iconSize);
 
                 var deleteRect = new Rectangle(
-                    e.CellBounds.Left + padding + iconSize,
+                    e.CellBounds.Left + iconSize + padding * 3,
                     e.CellBounds.Top + (e.CellBounds.Height - iconSize) / 2,
                     iconSize,
                     iconSize);
-
-
-                //var editRect = new Rectangle(e.CellBounds.Left + padding, e.CellBounds.Top + (e.CellBounds.Height - iconSize) / 2, iconSize, iconSize);
-                //var deleteRect = new Rectangle(e.CellBounds.Left + padding + iconSize + 10, e.CellBounds.Top + (e.CellBounds.Height - iconSize) / 2, iconSize, iconSize);
 
                 e.Graphics.DrawImage(editIcon, editRect);
                 e.Graphics.DrawImage(deleteIcon, deleteRect);
@@ -67,26 +101,52 @@ namespace Jeep.View
         {
             if (e.ColumnIndex == actionColumnIndex && e.RowIndex >= 0)
             {
+                int fareID = Convert.ToInt32(dgv_fare_payment.Rows[e.RowIndex].Cells["FareID"].Value);
                 int clickX = e.Location.X;
-
-                if (clickX < 20)
+                if (clickX < 25) // Edit
                 {
-
                     using (var form = new FarePaymentForm(true))
                     {
-                        form.ShowDialog();
+                        form.LoadFareForEdit(fareID);
+                        if (form.ShowDialog() == DialogResult.OK)
+                        {
+                            LoadFares();
+                        }
                     }
                 }
-                else if (clickX > 30 && clickX < 50)
+                else if (clickX > 35 && clickX < 70) // Delete
                 {
-
-                    DialogResult result = MessageBox.Show("Are you sure you want to delete this payment?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (result == DialogResult.Yes)
+                    if (MessageBox.Show("Are you sure you want to delete this fare?",
+                        "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
-                        dgv_fare_payment.Rows.RemoveAt(e.RowIndex);
+                        DeleteFare(fareID);
+                        LoadFares();
                     }
                 }
             }
+        }
+
+        private void DeleteFare(int fareID)
+        {
+            using (var con = new MySqlConnection(connectionString))
+            {
+                con.Open();
+
+                // Delete child records first
+                var cmd1 = new MySqlCommand("DELETE FROM fare_stopover WHERE FareID = @id", con);
+                cmd1.Parameters.AddWithValue("@id", fareID);
+                cmd1.ExecuteNonQuery();
+
+                // Delete main fare
+                var cmd2 = new MySqlCommand("DELETE FROM fare WHERE FareID = @id", con);
+                cmd2.Parameters.AddWithValue("@id", fareID);
+                cmd2.ExecuteNonQuery();
+            }
+        }
+
+        private void dgv_fare_payment_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

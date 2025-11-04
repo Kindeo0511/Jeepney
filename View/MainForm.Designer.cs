@@ -39,15 +39,14 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.side_bar_panel = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_audit_trail = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_discount = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_users = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_brgy = new Guna.UI2.WinForms.Guna2Button();
             this.btn_payment = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_organization = new Guna.UI2.WinForms.Guna2Button();
             this.btn_jeepney = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_operator = new Guna.UI2.WinForms.Guna2Button();
             this.btn_route = new Guna.UI2.WinForms.Guna2Button();
             this.btn_driver = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_operator = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_organization = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_brgy = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_users = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dgv_container = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -151,7 +150,6 @@
             this.side_bar_panel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.side_bar_panel.Controls.Add(this.btn_audit_trail);
             this.side_bar_panel.Controls.Add(this.btn_users);
-            this.side_bar_panel.Controls.Add(this.btn_discount);
             this.side_bar_panel.Controls.Add(this.btn_brgy);
             this.side_bar_panel.Controls.Add(this.btn_payment);
             this.side_bar_panel.Controls.Add(this.btn_organization);
@@ -163,7 +161,7 @@
             this.side_bar_panel.Margin = new System.Windows.Forms.Padding(0);
             this.side_bar_panel.Name = "side_bar_panel";
             this.side_bar_panel.ShadowDecoration.Parent = this.side_bar_panel;
-            this.side_bar_panel.Size = new System.Drawing.Size(364, 630);
+            this.side_bar_panel.Size = new System.Drawing.Size(364, 582);
             this.side_bar_panel.TabIndex = 1;
             // 
             // btn_audit_trail
@@ -172,7 +170,7 @@
             this.btn_audit_trail.CheckedState.Parent = this.btn_audit_trail;
             this.btn_audit_trail.CustomImages.Parent = this.btn_audit_trail;
             this.btn_audit_trail.FillColor = System.Drawing.Color.White;
-            this.btn_audit_trail.Font = new System.Drawing.Font("Roboto Medium", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_audit_trail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.btn_audit_trail.ForeColor = System.Drawing.Color.Black;
             this.btn_audit_trail.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
             this.btn_audit_trail.HoverState.Parent = this.btn_audit_trail;
@@ -180,7 +178,7 @@
             this.btn_audit_trail.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_audit_trail.ImageOffset = new System.Drawing.Point(40, 0);
             this.btn_audit_trail.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_audit_trail.Location = new System.Drawing.Point(0, 571);
+            this.btn_audit_trail.Location = new System.Drawing.Point(0, 508);
             this.btn_audit_trail.Margin = new System.Windows.Forms.Padding(4);
             this.btn_audit_trail.Name = "btn_audit_trail";
             this.btn_audit_trail.ShadowDecoration.Parent = this.btn_audit_trail;
@@ -189,28 +187,53 @@
             this.btn_audit_trail.Text = "Audit Trail";
             this.btn_audit_trail.Click += new System.EventHandler(this.btn_audit_trail_Click);
             // 
-            // btn_discount
+            // btn_users
             // 
-            this.btn_discount.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.btn_discount.CheckedState.Parent = this.btn_discount;
-            this.btn_discount.CustomImages.Parent = this.btn_discount;
-            this.btn_discount.FillColor = System.Drawing.Color.White;
-            this.btn_discount.Font = new System.Drawing.Font("Roboto Medium", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btn_discount.ForeColor = System.Drawing.Color.Black;
-            this.btn_discount.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.btn_discount.HoverState.Parent = this.btn_discount;
-            this.btn_discount.Image = ((System.Drawing.Image)(resources.GetObject("btn_discount.Image")));
-            this.btn_discount.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_discount.ImageOffset = new System.Drawing.Point(40, 0);
-            this.btn_discount.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_discount.Location = new System.Drawing.Point(0, 508);
-            this.btn_discount.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_discount.Name = "btn_discount";
-            this.btn_discount.ShadowDecoration.Parent = this.btn_discount;
-            this.btn_discount.Size = new System.Drawing.Size(364, 55);
-            this.btn_discount.TabIndex = 10;
-            this.btn_discount.Text = "DIscount";
-            this.btn_discount.Click += new System.EventHandler(this.btn_discount_Click);
+            this.btn_users.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_users.CheckedState.Parent = this.btn_users;
+            this.btn_users.CustomImages.Parent = this.btn_users;
+            this.btn_users.FillColor = System.Drawing.Color.White;
+            this.btn_users.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_users.ForeColor = System.Drawing.Color.Black;
+            this.btn_users.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_users.HoverState.Parent = this.btn_users;
+            this.btn_users.Image = ((System.Drawing.Image)(resources.GetObject("btn_users.Image")));
+            this.btn_users.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_users.ImageOffset = new System.Drawing.Point(40, 0);
+            this.btn_users.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_users.Location = new System.Drawing.Point(0, 4);
+            this.btn_users.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_users.Name = "btn_users";
+            this.btn_users.ShadowDecoration.Parent = this.btn_users;
+            this.btn_users.Size = new System.Drawing.Size(364, 55);
+            this.btn_users.TabIndex = 2;
+            this.btn_users.Text = "Users";
+            this.btn_users.Click += new System.EventHandler(this.btn_users_Click);
+            // 
+            // btn_brgy
+            // 
+            this.btn_brgy.BackColor = System.Drawing.Color.Transparent;
+            this.btn_brgy.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_brgy.CheckedState.Parent = this.btn_brgy;
+            this.btn_brgy.CustomImages.Parent = this.btn_brgy;
+            this.btn_brgy.FillColor = System.Drawing.Color.White;
+            this.btn_brgy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_brgy.ForeColor = System.Drawing.Color.Black;
+            this.btn_brgy.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_brgy.HoverState.Parent = this.btn_brgy;
+            this.btn_brgy.Image = ((System.Drawing.Image)(resources.GetObject("btn_brgy.Image")));
+            this.btn_brgy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_brgy.ImageOffset = new System.Drawing.Point(40, 0);
+            this.btn_brgy.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_brgy.Location = new System.Drawing.Point(0, 67);
+            this.btn_brgy.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_brgy.Name = "btn_brgy";
+            this.btn_brgy.ShadowDecoration.Parent = this.btn_brgy;
+            this.btn_brgy.Size = new System.Drawing.Size(364, 55);
+            this.btn_brgy.TabIndex = 3;
+            this.btn_brgy.Text = "Barangay";
+            this.btn_brgy.UseTransparentBackground = true;
+            this.btn_brgy.Click += new System.EventHandler(this.btn_brgy_Click);
             // 
             // btn_payment
             // 
@@ -218,7 +241,7 @@
             this.btn_payment.CheckedState.Parent = this.btn_payment;
             this.btn_payment.CustomImages.Parent = this.btn_payment;
             this.btn_payment.FillColor = System.Drawing.Color.White;
-            this.btn_payment.Font = new System.Drawing.Font("Roboto Medium", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_payment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.btn_payment.ForeColor = System.Drawing.Color.Black;
             this.btn_payment.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
             this.btn_payment.HoverState.Parent = this.btn_payment;
@@ -235,13 +258,36 @@
             this.btn_payment.Text = "Fare/Payment";
             this.btn_payment.Click += new System.EventHandler(this.btn_payment_Click);
             // 
+            // btn_organization
+            // 
+            this.btn_organization.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_organization.CheckedState.Parent = this.btn_organization;
+            this.btn_organization.CustomImages.Parent = this.btn_organization;
+            this.btn_organization.FillColor = System.Drawing.Color.White;
+            this.btn_organization.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_organization.ForeColor = System.Drawing.Color.Black;
+            this.btn_organization.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_organization.HoverState.Parent = this.btn_organization;
+            this.btn_organization.Image = ((System.Drawing.Image)(resources.GetObject("btn_organization.Image")));
+            this.btn_organization.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_organization.ImageOffset = new System.Drawing.Point(40, 0);
+            this.btn_organization.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_organization.Location = new System.Drawing.Point(0, 130);
+            this.btn_organization.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_organization.Name = "btn_organization";
+            this.btn_organization.ShadowDecoration.Parent = this.btn_organization;
+            this.btn_organization.Size = new System.Drawing.Size(364, 55);
+            this.btn_organization.TabIndex = 4;
+            this.btn_organization.Text = "Organizations";
+            this.btn_organization.Click += new System.EventHandler(this.btn_organization_Click);
+            // 
             // btn_jeepney
             // 
             this.btn_jeepney.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
             this.btn_jeepney.CheckedState.Parent = this.btn_jeepney;
             this.btn_jeepney.CustomImages.Parent = this.btn_jeepney;
             this.btn_jeepney.FillColor = System.Drawing.Color.White;
-            this.btn_jeepney.Font = new System.Drawing.Font("Roboto Medium", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_jeepney.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.btn_jeepney.ForeColor = System.Drawing.Color.Black;
             this.btn_jeepney.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
             this.btn_jeepney.HoverState.Parent = this.btn_jeepney;
@@ -258,13 +304,36 @@
             this.btn_jeepney.Text = "Jeepney";
             this.btn_jeepney.Click += new System.EventHandler(this.btn_jeepney_Click);
             // 
+            // btn_operator
+            // 
+            this.btn_operator.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_operator.CheckedState.Parent = this.btn_operator;
+            this.btn_operator.CustomImages.Parent = this.btn_operator;
+            this.btn_operator.FillColor = System.Drawing.Color.White;
+            this.btn_operator.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_operator.ForeColor = System.Drawing.Color.Black;
+            this.btn_operator.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.btn_operator.HoverState.Parent = this.btn_operator;
+            this.btn_operator.Image = ((System.Drawing.Image)(resources.GetObject("btn_operator.Image")));
+            this.btn_operator.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_operator.ImageOffset = new System.Drawing.Point(40, 0);
+            this.btn_operator.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_operator.Location = new System.Drawing.Point(0, 193);
+            this.btn_operator.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_operator.Name = "btn_operator";
+            this.btn_operator.ShadowDecoration.Parent = this.btn_operator;
+            this.btn_operator.Size = new System.Drawing.Size(364, 55);
+            this.btn_operator.TabIndex = 5;
+            this.btn_operator.Text = "Operators";
+            this.btn_operator.Click += new System.EventHandler(this.btn_operator_Click);
+            // 
             // btn_route
             // 
             this.btn_route.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
             this.btn_route.CheckedState.Parent = this.btn_route;
             this.btn_route.CustomImages.Parent = this.btn_route;
             this.btn_route.FillColor = System.Drawing.Color.White;
-            this.btn_route.Font = new System.Drawing.Font("Roboto Medium", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_route.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.btn_route.ForeColor = System.Drawing.Color.Black;
             this.btn_route.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
             this.btn_route.HoverState.Parent = this.btn_route;
@@ -287,7 +356,7 @@
             this.btn_driver.CheckedState.Parent = this.btn_driver;
             this.btn_driver.CustomImages.Parent = this.btn_driver;
             this.btn_driver.FillColor = System.Drawing.Color.White;
-            this.btn_driver.Font = new System.Drawing.Font("Roboto Medium", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_driver.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.btn_driver.ForeColor = System.Drawing.Color.Black;
             this.btn_driver.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
             this.btn_driver.HoverState.Parent = this.btn_driver;
@@ -303,100 +372,6 @@
             this.btn_driver.TabIndex = 6;
             this.btn_driver.Text = "Drivers";
             this.btn_driver.Click += new System.EventHandler(this.btn_driver_Click);
-            // 
-            // btn_operator
-            // 
-            this.btn_operator.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.btn_operator.CheckedState.Parent = this.btn_operator;
-            this.btn_operator.CustomImages.Parent = this.btn_operator;
-            this.btn_operator.FillColor = System.Drawing.Color.White;
-            this.btn_operator.Font = new System.Drawing.Font("Roboto Medium", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btn_operator.ForeColor = System.Drawing.Color.Black;
-            this.btn_operator.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.btn_operator.HoverState.Parent = this.btn_operator;
-            this.btn_operator.Image = ((System.Drawing.Image)(resources.GetObject("btn_operator.Image")));
-            this.btn_operator.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_operator.ImageOffset = new System.Drawing.Point(40, 0);
-            this.btn_operator.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_operator.Location = new System.Drawing.Point(0, 193);
-            this.btn_operator.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_operator.Name = "btn_operator";
-            this.btn_operator.ShadowDecoration.Parent = this.btn_operator;
-            this.btn_operator.Size = new System.Drawing.Size(364, 55);
-            this.btn_operator.TabIndex = 5;
-            this.btn_operator.Text = "Operators";
-            this.btn_operator.Click += new System.EventHandler(this.btn_operator_Click);
-            // 
-            // btn_organization
-            // 
-            this.btn_organization.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.btn_organization.CheckedState.Parent = this.btn_organization;
-            this.btn_organization.CustomImages.Parent = this.btn_organization;
-            this.btn_organization.FillColor = System.Drawing.Color.White;
-            this.btn_organization.Font = new System.Drawing.Font("Roboto Medium", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btn_organization.ForeColor = System.Drawing.Color.Black;
-            this.btn_organization.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.btn_organization.HoverState.Parent = this.btn_organization;
-            this.btn_organization.Image = ((System.Drawing.Image)(resources.GetObject("btn_organization.Image")));
-            this.btn_organization.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_organization.ImageOffset = new System.Drawing.Point(40, 0);
-            this.btn_organization.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_organization.Location = new System.Drawing.Point(0, 130);
-            this.btn_organization.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_organization.Name = "btn_organization";
-            this.btn_organization.ShadowDecoration.Parent = this.btn_organization;
-            this.btn_organization.Size = new System.Drawing.Size(364, 55);
-            this.btn_organization.TabIndex = 4;
-            this.btn_organization.Text = "Organizations";
-            this.btn_organization.Click += new System.EventHandler(this.btn_organization_Click);
-            // 
-            // btn_brgy
-            // 
-            this.btn_brgy.BackColor = System.Drawing.Color.Transparent;
-            this.btn_brgy.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.btn_brgy.CheckedState.Parent = this.btn_brgy;
-            this.btn_brgy.CustomImages.Parent = this.btn_brgy;
-            this.btn_brgy.FillColor = System.Drawing.Color.White;
-            this.btn_brgy.Font = new System.Drawing.Font("Roboto Medium", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btn_brgy.ForeColor = System.Drawing.Color.Black;
-            this.btn_brgy.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.btn_brgy.HoverState.Parent = this.btn_brgy;
-            this.btn_brgy.Image = ((System.Drawing.Image)(resources.GetObject("btn_brgy.Image")));
-            this.btn_brgy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_brgy.ImageOffset = new System.Drawing.Point(40, 0);
-            this.btn_brgy.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_brgy.Location = new System.Drawing.Point(0, 67);
-            this.btn_brgy.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_brgy.Name = "btn_brgy";
-            this.btn_brgy.ShadowDecoration.Parent = this.btn_brgy;
-            this.btn_brgy.Size = new System.Drawing.Size(364, 55);
-            this.btn_brgy.TabIndex = 3;
-            this.btn_brgy.Text = "Barangay";
-            this.btn_brgy.UseTransparentBackground = true;
-            this.btn_brgy.Click += new System.EventHandler(this.btn_brgy_Click);
-            // 
-            // btn_users
-            // 
-            this.btn_users.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.btn_users.CheckedState.Parent = this.btn_users;
-            this.btn_users.CustomImages.Parent = this.btn_users;
-            this.btn_users.FillColor = System.Drawing.Color.White;
-            this.btn_users.Font = new System.Drawing.Font("Roboto Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_users.ForeColor = System.Drawing.Color.Black;
-            this.btn_users.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.btn_users.HoverState.Parent = this.btn_users;
-            this.btn_users.Image = ((System.Drawing.Image)(resources.GetObject("btn_users.Image")));
-            this.btn_users.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_users.ImageOffset = new System.Drawing.Point(40, 0);
-            this.btn_users.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_users.Location = new System.Drawing.Point(0, 4);
-            this.btn_users.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_users.Name = "btn_users";
-            this.btn_users.ShadowDecoration.Parent = this.btn_users;
-            this.btn_users.Size = new System.Drawing.Size(364, 55);
-            this.btn_users.TabIndex = 2;
-            this.btn_users.Text = "Users";
-            this.btn_users.Click += new System.EventHandler(this.btn_users_Click);
             // 
             // guna2Elipse2
             // 
@@ -497,7 +472,6 @@
         private Guna.UI2.WinForms.Guna2Panel side_bar_panel;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button btn_users;
-        private Guna.UI2.WinForms.Guna2Button btn_discount;
         private Guna.UI2.WinForms.Guna2Button btn_payment;
         private Guna.UI2.WinForms.Guna2Button btn_jeepney;
         private Guna.UI2.WinForms.Guna2Button btn_route;

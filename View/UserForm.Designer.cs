@@ -32,17 +32,17 @@
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.lbl_title = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEmailaddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbPosition = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btn_add = new Guna.UI2.WinForms.Guna2Button();
             this.btn_cancel = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -53,203 +53,204 @@
             // 
             this.lbl_title.BackColor = System.Drawing.Color.Transparent;
             this.lbl_title.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_title.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title.Location = new System.Drawing.Point(15, 15);
             this.lbl_title.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(156, 26);
+            this.lbl_title.Size = new System.Drawing.Size(652, 27);
             this.lbl_title.TabIndex = 0;
             this.lbl_title.Text = "ADD NEW USER";
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Roboto", 10.2F);
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(41, 297);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(66, 22);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(63, 22);
             this.guna2HtmlLabel2.TabIndex = 15;
             this.guna2HtmlLabel2.Text = "Position";
             // 
-            // guna2TextBox1
+            // txtPassword
             // 
-            this.guna2TextBox1.BorderRadius = 15;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Rokkitt Light", 13.8F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(361, 106);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Red;
-            this.guna2TextBox1.PlaceholderText = "Enter password";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(267, 43);
-            this.guna2TextBox1.TabIndex = 14;
+            this.txtPassword.BorderRadius = 15;
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.DefaultText = "";
+            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.DisabledState.Parent = this.txtPassword;
+            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.Red;
+            this.txtPassword.FocusedState.Parent = this.txtPassword;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.Red;
+            this.txtPassword.HoverState.Parent = this.txtPassword;
+            this.txtPassword.Location = new System.Drawing.Point(361, 106);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PlaceholderForeColor = System.Drawing.Color.Red;
+            this.txtPassword.PlaceholderText = "Enter password";
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
+            this.txtPassword.Size = new System.Drawing.Size(267, 43);
+            this.txtPassword.TabIndex = 14;
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Roboto", 10.2F);
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(361, 74);
             this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(80, 22);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(77, 22);
             this.guna2HtmlLabel3.TabIndex = 13;
             this.guna2HtmlLabel3.Text = "Password";
             // 
-            // guna2TextBox3
+            // txtAddress
             // 
-            this.guna2TextBox3.BorderRadius = 15;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Font = new System.Drawing.Font("Rokkitt Light", 13.8F);
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Location = new System.Drawing.Point(361, 335);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderForeColor = System.Drawing.Color.Red;
-            this.guna2TextBox3.PlaceholderText = "Enter address";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Size = new System.Drawing.Size(267, 43);
-            this.guna2TextBox3.TabIndex = 20;
+            this.txtAddress.BorderRadius = 15;
+            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddress.DefaultText = "";
+            this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.DisabledState.Parent = this.txtAddress;
+            this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.Red;
+            this.txtAddress.FocusedState.Parent = this.txtAddress;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.txtAddress.HoverState.BorderColor = System.Drawing.Color.Red;
+            this.txtAddress.HoverState.Parent = this.txtAddress;
+            this.txtAddress.Location = new System.Drawing.Point(361, 335);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.PasswordChar = '\0';
+            this.txtAddress.PlaceholderForeColor = System.Drawing.Color.Red;
+            this.txtAddress.PlaceholderText = "Enter address";
+            this.txtAddress.SelectedText = "";
+            this.txtAddress.ShadowDecoration.Parent = this.txtAddress;
+            this.txtAddress.Size = new System.Drawing.Size(267, 43);
+            this.txtAddress.TabIndex = 20;
             // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Roboto", 10.2F);
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(361, 303);
             this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(67, 22);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(65, 22);
             this.guna2HtmlLabel4.TabIndex = 19;
             this.guna2HtmlLabel4.Text = "Address";
             // 
-            // guna2TextBox4
+            // txtPhoneNumber
             // 
-            this.guna2TextBox4.BorderRadius = 15;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox4.FocusedState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Font = new System.Drawing.Font("Rokkitt Light", 13.8F);
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Location = new System.Drawing.Point(41, 215);
-            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderForeColor = System.Drawing.Color.Red;
-            this.guna2TextBox4.PlaceholderText = "Enter phone number";
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Size = new System.Drawing.Size(267, 43);
-            this.guna2TextBox4.TabIndex = 18;
+            this.txtPhoneNumber.BorderRadius = 15;
+            this.txtPhoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhoneNumber.DefaultText = "";
+            this.txtPhoneNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPhoneNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPhoneNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNumber.DisabledState.Parent = this.txtPhoneNumber;
+            this.txtPhoneNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNumber.FocusedState.BorderColor = System.Drawing.Color.Red;
+            this.txtPhoneNumber.FocusedState.Parent = this.txtPhoneNumber;
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.Red;
+            this.txtPhoneNumber.HoverState.Parent = this.txtPhoneNumber;
+            this.txtPhoneNumber.Location = new System.Drawing.Point(41, 215);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtPhoneNumber.MaxLength = 11;
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.PasswordChar = '\0';
+            this.txtPhoneNumber.PlaceholderForeColor = System.Drawing.Color.Red;
+            this.txtPhoneNumber.PlaceholderText = "Enter phone number";
+            this.txtPhoneNumber.SelectedText = "";
+            this.txtPhoneNumber.ShadowDecoration.Parent = this.txtPhoneNumber;
+            this.txtPhoneNumber.Size = new System.Drawing.Size(267, 43);
+            this.txtPhoneNumber.TabIndex = 18;
             // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Roboto", 10.2F);
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(41, 183);
             this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(116, 22);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(114, 22);
             this.guna2HtmlLabel5.TabIndex = 17;
             this.guna2HtmlLabel5.Text = "Phone Number";
             // 
-            // guna2TextBox5
+            // txtEmailaddress
             // 
-            this.guna2TextBox5.BorderRadius = 15;
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox5.FocusedState.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.Font = new System.Drawing.Font("Rokkitt Light", 13.8F);
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox5.HoverState.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.Location = new System.Drawing.Point(361, 215);
-            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PasswordChar = '\0';
-            this.guna2TextBox5.PlaceholderForeColor = System.Drawing.Color.Red;
-            this.guna2TextBox5.PlaceholderText = "Enter email address";
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.ShadowDecoration.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.Size = new System.Drawing.Size(267, 43);
-            this.guna2TextBox5.TabIndex = 24;
+            this.txtEmailaddress.BorderRadius = 15;
+            this.txtEmailaddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmailaddress.DefaultText = "";
+            this.txtEmailaddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmailaddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmailaddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmailaddress.DisabledState.Parent = this.txtEmailaddress;
+            this.txtEmailaddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmailaddress.FocusedState.BorderColor = System.Drawing.Color.Red;
+            this.txtEmailaddress.FocusedState.Parent = this.txtEmailaddress;
+            this.txtEmailaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.txtEmailaddress.HoverState.BorderColor = System.Drawing.Color.Red;
+            this.txtEmailaddress.HoverState.Parent = this.txtEmailaddress;
+            this.txtEmailaddress.Location = new System.Drawing.Point(361, 215);
+            this.txtEmailaddress.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtEmailaddress.Name = "txtEmailaddress";
+            this.txtEmailaddress.PasswordChar = '\0';
+            this.txtEmailaddress.PlaceholderForeColor = System.Drawing.Color.Red;
+            this.txtEmailaddress.PlaceholderText = "Enter email address";
+            this.txtEmailaddress.SelectedText = "";
+            this.txtEmailaddress.ShadowDecoration.Parent = this.txtEmailaddress;
+            this.txtEmailaddress.Size = new System.Drawing.Size(267, 43);
+            this.txtEmailaddress.TabIndex = 24;
             // 
             // guna2HtmlLabel6
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Roboto", 10.2F);
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(361, 183);
             this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(113, 22);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(112, 22);
             this.guna2HtmlLabel6.TabIndex = 23;
             this.guna2HtmlLabel6.Text = "Email Address";
             // 
-            // guna2TextBox6
+            // txtUsername
             // 
-            this.guna2TextBox6.BorderRadius = 15;
-            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox6.DefaultText = "";
-            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.DisabledState.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox6.FocusedState.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.Font = new System.Drawing.Font("Rokkitt Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.guna2TextBox6.HoverState.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.Location = new System.Drawing.Point(41, 106);
-            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.guna2TextBox6.Name = "guna2TextBox6";
-            this.guna2TextBox6.PasswordChar = '\0';
-            this.guna2TextBox6.PlaceholderForeColor = System.Drawing.Color.Red;
-            this.guna2TextBox6.PlaceholderText = "Enter username";
-            this.guna2TextBox6.SelectedText = "";
-            this.guna2TextBox6.ShadowDecoration.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.Size = new System.Drawing.Size(267, 43);
-            this.guna2TextBox6.TabIndex = 22;
+            this.txtUsername.BorderRadius = 15;
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsername.DefaultText = "";
+            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.DisabledState.Parent = this.txtUsername;
+            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.Red;
+            this.txtUsername.FocusedState.Parent = this.txtUsername;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.Red;
+            this.txtUsername.HoverState.Parent = this.txtUsername;
+            this.txtUsername.Location = new System.Drawing.Point(41, 106);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.PlaceholderForeColor = System.Drawing.Color.Red;
+            this.txtUsername.PlaceholderText = "Enter username";
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
+            this.txtUsername.Size = new System.Drawing.Size(267, 43);
+            this.txtUsername.TabIndex = 22;
             // 
             // guna2HtmlLabel7
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(41, 74);
             this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
@@ -257,32 +258,33 @@
             this.guna2HtmlLabel7.TabIndex = 21;
             this.guna2HtmlLabel7.Text = "Username";
             // 
-            // guna2ComboBox1
+            // cmbPosition
             // 
-            this.guna2ComboBox1.AutoRoundedCorners = true;
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 19;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Red;
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.Red;
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Rokkitt Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.FormattingEnabled = true;
-            this.guna2ComboBox1.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 35;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
-            "Choose position"});
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(41, 327);
-            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(265, 41);
-            this.guna2ComboBox1.StartIndex = 0;
-            this.guna2ComboBox1.TabIndex = 25;
+            this.cmbPosition.AutoRoundedCorners = true;
+            this.cmbPosition.BackColor = System.Drawing.Color.Transparent;
+            this.cmbPosition.BorderRadius = 19;
+            this.cmbPosition.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPosition.FocusedColor = System.Drawing.Color.Red;
+            this.cmbPosition.FocusedState.BorderColor = System.Drawing.Color.Red;
+            this.cmbPosition.FocusedState.Parent = this.cmbPosition;
+            this.cmbPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbPosition.FormattingEnabled = true;
+            this.cmbPosition.HoverState.BorderColor = System.Drawing.Color.Red;
+            this.cmbPosition.HoverState.Parent = this.cmbPosition;
+            this.cmbPosition.ItemHeight = 35;
+            this.cmbPosition.Items.AddRange(new object[] {
+            "Admin",
+            "Staff"});
+            this.cmbPosition.ItemsAppearance.Parent = this.cmbPosition;
+            this.cmbPosition.Location = new System.Drawing.Point(41, 327);
+            this.cmbPosition.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbPosition.Name = "cmbPosition";
+            this.cmbPosition.ShadowDecoration.Parent = this.cmbPosition;
+            this.cmbPosition.Size = new System.Drawing.Size(265, 41);
+            this.cmbPosition.StartIndex = 0;
+            this.cmbPosition.TabIndex = 25;
             // 
             // btn_add
             // 
@@ -301,6 +303,7 @@
             this.btn_add.Size = new System.Drawing.Size(107, 43);
             this.btn_add.TabIndex = 26;
             this.btn_add.Text = "Add";
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // btn_cancel
             // 
@@ -309,7 +312,7 @@
             this.btn_cancel.CheckedState.Parent = this.btn_cancel;
             this.btn_cancel.CustomImages.Parent = this.btn_cancel;
             this.btn_cancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(156)))), ((int)(((byte)(160)))));
-            this.btn_cancel.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.ForeColor = System.Drawing.Color.White;
             this.btn_cancel.HoverState.Parent = this.btn_cancel;
             this.btn_cancel.Location = new System.Drawing.Point(389, 443);
@@ -333,7 +336,7 @@
             this.btn_edit.CheckedState.Parent = this.btn_edit;
             this.btn_edit.CustomImages.Parent = this.btn_edit;
             this.btn_edit.FillColor = System.Drawing.Color.Red;
-            this.btn_edit.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_edit.ForeColor = System.Drawing.Color.White;
             this.btn_edit.HoverState.Parent = this.btn_edit;
             this.btn_edit.Location = new System.Drawing.Point(521, 443);
@@ -355,17 +358,17 @@
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_add);
-            this.Controls.Add(this.guna2ComboBox1);
-            this.Controls.Add(this.guna2TextBox5);
+            this.Controls.Add(this.cmbPosition);
+            this.Controls.Add(this.txtEmailaddress);
             this.Controls.Add(this.guna2HtmlLabel6);
-            this.Controls.Add(this.guna2TextBox6);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.guna2HtmlLabel7);
-            this.Controls.Add(this.guna2TextBox3);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.guna2HtmlLabel4);
-            this.Controls.Add(this.guna2TextBox4);
+            this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.guna2HtmlLabel5);
             this.Controls.Add(this.guna2HtmlLabel2);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.lbl_title);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
@@ -375,6 +378,7 @@
             this.Padding = new System.Windows.Forms.Padding(15, 15, 0, 0);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserForm";
+            this.Load += new System.EventHandler(this.UserForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,17 +389,17 @@
         public Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_title;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox txtAddress;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox txtPhoneNumber;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmailaddress;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbPosition;
         private Guna.UI2.WinForms.Guna2Button btn_add;
         private Guna.UI2.WinForms.Guna2Button btn_cancel;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
