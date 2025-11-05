@@ -33,9 +33,26 @@ namespace Jeep.CustomerView
 
         private void guna2Button3_Click_1(object sender, EventArgs e)
         {
-            var form = new RoutesMapForm();
-            form.Show();
-            this.Close();
+            //var mapForm = new RoutesMapForm(selectedRoute);
+            //mapForm.Show();
+
+            //this.Close();
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            // This button represents a route, e.g., "FTI - Pasay"
+            string selectedRoute = "FTI - Pasay";
+
+            try
+            {
+                var mapForm = new RoutesMapForm(selectedRoute);
+                mapForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to open route map: " + ex.Message);
+            }
         }
     }
 }

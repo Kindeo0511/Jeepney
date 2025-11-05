@@ -35,11 +35,12 @@
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.SearchFomr = new Guna.UI2.WinForms.Guna2Panel();
             this.txt_search = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lstSuggestions = new System.Windows.Forms.ListBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
+            this.SearchFomr.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -74,7 +75,7 @@
             this.guna2Button2.CheckedState.Parent = this.guna2Button2;
             this.guna2Button2.CustomImages.Parent = this.guna2Button2;
             this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Roboto Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.Black;
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
             this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
@@ -96,7 +97,7 @@
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Roboto Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
@@ -116,18 +117,19 @@
             this.guna2Elipse1.BorderRadius = 30;
             this.guna2Elipse1.TargetControl = this.guna2Panel3;
             // 
-            // guna2Panel2
+            // SearchFomr
             // 
-            this.guna2Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Panel2.BackgroundImage")));
-            this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel2.Controls.Add(this.txt_search);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(1300, 714);
-            this.guna2Panel2.TabIndex = 2;
-            this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
+            this.SearchFomr.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SearchFomr.BackgroundImage")));
+            this.SearchFomr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SearchFomr.Controls.Add(this.txt_search);
+            this.SearchFomr.Controls.Add(this.lstSuggestions);
+            this.SearchFomr.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SearchFomr.Location = new System.Drawing.Point(0, 0);
+            this.SearchFomr.Name = "SearchFomr";
+            this.SearchFomr.ShadowDecoration.Parent = this.SearchFomr;
+            this.SearchFomr.Size = new System.Drawing.Size(1300, 714);
+            this.SearchFomr.TabIndex = 2;
+            this.SearchFomr.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
             // txt_search
             // 
@@ -151,7 +153,7 @@
             this.txt_search.HoverState.Parent = this.txt_search;
             this.txt_search.IconRight = ((System.Drawing.Image)(resources.GetObject("txt_search.IconRight")));
             this.txt_search.IconRightSize = new System.Drawing.Size(35, 35);
-            this.txt_search.Location = new System.Drawing.Point(349, 316);
+            this.txt_search.Location = new System.Drawing.Point(349, 329);
             this.txt_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_search.Name = "txt_search";
             this.txt_search.PasswordChar = '\0';
@@ -160,8 +162,19 @@
             this.txt_search.ShadowDecoration.Parent = this.txt_search;
             this.txt_search.Size = new System.Drawing.Size(647, 50);
             this.txt_search.TabIndex = 0;
-            this.txt_search.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
             this.txt_search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_search_KeyDown);
+            // 
+            // lstSuggestions
+            // 
+            this.lstSuggestions.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstSuggestions.FormattingEnabled = true;
+            this.lstSuggestions.ItemHeight = 21;
+            this.lstSuggestions.Location = new System.Drawing.Point(349, 386);
+            this.lstSuggestions.Name = "lstSuggestions";
+            this.lstSuggestions.Size = new System.Drawing.Size(655, 25);
+            this.lstSuggestions.TabIndex = 1;
+            this.lstSuggestions.Click += new System.EventHandler(this.lstSuggestions_Click);
             // 
             // SearchForm
             // 
@@ -170,7 +183,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1300, 800);
             this.ControlBox = false;
-            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.SearchFomr);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SearchForm";
@@ -178,7 +191,7 @@
             this.Text = "SearchForm";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
+            this.SearchFomr.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -187,10 +200,11 @@
 
         private Guna.UI2.WinForms.Guna2TextBox txt_search;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel SearchFomr;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private System.Windows.Forms.ListBox lstSuggestions;
     }
 }

@@ -1,4 +1,5 @@
-﻿using Jeep.View;
+﻿using Jeep.CustomerView;
+using Jeep.View;
 using System;
 using System.Windows.Forms;
 
@@ -14,7 +15,7 @@ namespace Jeep
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new SearchForm());
         }
     }
 }

@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Net;
 using System.Net.Mail;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Jeep.View
 {
     public partial class ForgotPasswordForm : Form
     {
+        private string generatedOTP;
+        private DateTime otpExpiry;
         public ForgotPasswordForm()
         {
             InitializeComponent();
@@ -55,8 +58,8 @@ namespace Jeep.View
         {
             try
             {
-                string fromEmail = "your-email@gmail.com"; // Replace with your sender email
-                string fromPassword = "your-email-password"; // Replace with your email app password
+                string fromEmail = "sahudibad159@gmail.com"; 
+                string fromPassword = "fhgm unrf juxa ylva"; 
 
                 MailMessage mail = new MailMessage();
                 mail.From = new MailAddress(fromEmail);
@@ -77,6 +80,11 @@ namespace Jeep.View
                 MessageBox.Show("Failed to send OTP: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+        }
+
+        private void ForgotPasswordForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

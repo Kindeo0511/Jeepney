@@ -20,7 +20,7 @@ namespace Jeep.View
         {
             var form = new ForgotPasswordForm();
             form.Show();
-            this.Close();
+            this.Hide(); 
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -96,6 +96,26 @@ namespace Jeep.View
                         }
                     }
                 }
+            }
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = true;
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkShowPassword.Checked)
+            {
+                // Show actual password
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                // Hide password (show dots)
+                txtPassword.UseSystemPasswordChar = true;
             }
         }
     }

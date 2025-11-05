@@ -6,30 +6,42 @@ namespace Jeep.View
 {
     public partial class VerifyOTPForm : Form
     {
-        bool isForgotPassword = false;
+        private bool isForgotPassword;
+        private string otp;
+        private string email;
         public VerifyOTPForm()
         {
             InitializeComponent();
         }
-        public VerifyOTPForm(bool forgisForgotPassword,bool  otp, string emailotpassword)
+        public VerifyOTPForm(bool isForgotPassword, string otp, string email)
         {
             InitializeComponent();
-         
+            this.isForgotPassword = isForgotPassword; 
+            this.otp = otp;
+            this.email = email;
         }
+
 
         private void btn_send_otp_Click(object sender, EventArgs e)
         {
-            if (isForgotPassword == true)
+            if (txtOTP.Text == otp)
             {
-                var form = new ChangePasswordForm();
-                form.Show();
-                this.Close();
+                if (isForgotPassword)
+                {
+                    var form = new ChangePasswordForm(email); 
+                    form.Show();
+                    this.Close();
+                }
+                else
+                {
+                    var form = new LoginForm();
+                    form.Show();
+                    this.Close();
+                }
             }
             else
             {
-                var form = new LoginForm();
-                form.Show();
-                this.Close();
+                MessageBox.Show("Invalid OTP!");
             }
 
         }
