@@ -130,6 +130,7 @@
             this.txtDriverFullname.PasswordChar = '\0';
             this.txtDriverFullname.PlaceholderForeColor = System.Drawing.Color.Red;
             this.txtDriverFullname.PlaceholderText = "End time";
+            this.txtDriverFullname.ReadOnly = true;
             this.txtDriverFullname.SelectedText = "";
             this.txtDriverFullname.ShadowDecoration.Parent = this.txtDriverFullname;
             this.txtDriverFullname.Size = new System.Drawing.Size(267, 43);
