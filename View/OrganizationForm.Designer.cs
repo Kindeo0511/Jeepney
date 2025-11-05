@@ -33,14 +33,14 @@
             this.btn_cancel = new Guna.UI2.WinForms.Guna2Button();
             this.btn_add = new Guna.UI2.WinForms.Guna2Button();
             this.txtOrganizartion = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtContactNumber = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_title = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_edit
@@ -127,17 +127,6 @@
             this.txtOrganizartion.Size = new System.Drawing.Size(333, 43);
             this.txtOrganizartion.TabIndex = 38;
             // 
-            // guna2HtmlLabel7
-            // 
-            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(167, 95);
-            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(142, 22);
-            this.guna2HtmlLabel7.TabIndex = 37;
-            this.guna2HtmlLabel7.Text = "OrganizationName";
-            // 
             // txtAddress
             // 
             this.txtAddress.BorderRadius = 15;
@@ -163,17 +152,6 @@
             this.txtAddress.ShadowDecoration.Parent = this.txtAddress;
             this.txtAddress.Size = new System.Drawing.Size(333, 43);
             this.txtAddress.TabIndex = 36;
-            // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(169, 297);
-            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(65, 22);
-            this.guna2HtmlLabel4.TabIndex = 35;
-            this.guna2HtmlLabel4.Text = "Address";
             // 
             // txtContactNumber
             // 
@@ -201,17 +179,6 @@
             this.txtContactNumber.Size = new System.Drawing.Size(333, 43);
             this.txtContactNumber.TabIndex = 31;
             // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(167, 199);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(125, 22);
-            this.guna2HtmlLabel3.TabIndex = 30;
-            this.guna2HtmlLabel3.Text = "Contact Number";
-            // 
             // lbl_title
             // 
             this.lbl_title.BackColor = System.Drawing.Color.Transparent;
@@ -229,21 +196,51 @@
             this.guna2Elipse1.BorderRadius = 25;
             this.guna2Elipse1.TargetControl = this;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label1.Location = new System.Drawing.Point(165, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 20);
+            this.label1.TabIndex = 45;
+            this.label1.Text = "OrganizationName";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label2.Location = new System.Drawing.Point(163, 205);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(131, 20);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "Contact Number";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label3.Location = new System.Drawing.Point(165, 303);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 20);
+            this.label3.TabIndex = 47;
+            this.label3.Text = "Address";
+            // 
             // OrganizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(667, 517);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.txtOrganizartion);
-            this.Controls.Add(this.guna2HtmlLabel7);
             this.Controls.Add(this.txtAddress);
-            this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.txtContactNumber);
-            this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.lbl_title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -263,13 +260,13 @@
         private Guna.UI2.WinForms.Guna2Button btn_cancel;
         private Guna.UI2.WinForms.Guna2Button btn_add;
         private Guna.UI2.WinForms.Guna2TextBox txtOrganizartion;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2TextBox txtAddress;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2TextBox txtContactNumber;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_title;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         public Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

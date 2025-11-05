@@ -31,15 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePasswordForm));
             this.txtConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtNewPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_save = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,18 +68,6 @@
             this.txtConfirmPassword.ShadowDecoration.Parent = this.txtConfirmPassword;
             this.txtConfirmPassword.Size = new System.Drawing.Size(267, 62);
             this.txtConfirmPassword.TabIndex = 12;
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.AutoSize = false;
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(78, 231);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(254, 22);
-            this.guna2HtmlLabel2.TabIndex = 11;
-            this.guna2HtmlLabel2.Text = "Confirm password";
             // 
             // txtNewPassword
             // 
@@ -115,18 +103,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(420, 5);
             this.panel1.TabIndex = 1;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.AutoSize = false;
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(78, 122);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(254, 22);
-            this.guna2HtmlLabel1.TabIndex = 7;
-            this.guna2HtmlLabel1.Text = "New password";
             // 
             // btn_save
             // 
@@ -182,13 +158,13 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.label3);
+            this.guna2ShadowPanel1.Controls.Add(this.label2);
             this.guna2ShadowPanel1.Controls.Add(this.btn_save);
             this.guna2ShadowPanel1.Controls.Add(this.guna2Button1);
             this.guna2ShadowPanel1.Controls.Add(this.txtConfirmPassword);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2ShadowPanel1.Controls.Add(this.panel1);
             this.guna2ShadowPanel1.Controls.Add(this.txtNewPassword);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2ShadowPanel1.Controls.Add(this.label1);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(582, 362);
@@ -199,6 +175,26 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(427, 447);
             this.guna2ShadowPanel1.TabIndex = 4;
             this.guna2ShadowPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2ShadowPanel1_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label2.Location = new System.Drawing.Point(61, 124);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 20);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "New password";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label3.Location = new System.Drawing.Point(61, 234);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(145, 20);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Confirm password";
             // 
             // ChangePasswordForm
             // 
@@ -225,13 +221,13 @@
         #endregion
         private Guna.UI2.WinForms.Guna2TextBox txtNewPassword;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btn_save;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2TextBox txtConfirmPassword;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

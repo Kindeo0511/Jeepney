@@ -32,7 +32,8 @@ namespace Jeep.View
             if (operatorID.HasValue)
             {
                 this.Text = "Edit Operator";
-                btn_add.Text = "Update";
+                btn_edit.Visible = true;
+                btn_add.Visible = false;
 
                 txtOperatorName.Text = operatorName;
                 txtNoVecicle.Text = noOfVehicle;
