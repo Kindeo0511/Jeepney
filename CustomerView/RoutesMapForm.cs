@@ -41,8 +41,8 @@ namespace Jeep.CustomerView
 
             try
             {
-                LoadRouteInfo(route);     // loads fares
-                LoadRouteMapImage(route); // loads image
+                LoadRouteInfo(route);    
+                LoadRouteMapImage(route);
             }
             catch (Exception ex)
             {

@@ -37,13 +37,13 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvRouteMap = new System.Windows.Forms.DataGridView();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.picRouteMap = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRouteMap)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRouteMap)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -123,7 +123,7 @@
             this.guna2Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Panel2.BackgroundImage")));
             this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2Panel2.Controls.Add(this.dgvRouteMap);
-            this.guna2Panel2.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel2.Controls.Add(this.picRouteMap);
             this.guna2Panel2.Controls.Add(this.guna2ComboBox1);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
@@ -145,18 +145,18 @@
             this.dgvRouteMap.Size = new System.Drawing.Size(344, 411);
             this.dgvRouteMap.TabIndex = 100;
             // 
-            // guna2PictureBox1
+            // picRouteMap
             // 
-            this.guna2PictureBox1.AutoRoundedCorners = true;
-            this.guna2PictureBox1.BorderRadius = 250;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.Location = new System.Drawing.Point(243, 116);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(849, 502);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 1;
-            this.guna2PictureBox1.TabStop = false;
+            this.picRouteMap.AutoRoundedCorners = true;
+            this.picRouteMap.BorderRadius = 250;
+            this.picRouteMap.Image = ((System.Drawing.Image)(resources.GetObject("picRouteMap.Image")));
+            this.picRouteMap.Location = new System.Drawing.Point(243, 116);
+            this.picRouteMap.Name = "picRouteMap";
+            this.picRouteMap.ShadowDecoration.Parent = this.picRouteMap;
+            this.picRouteMap.Size = new System.Drawing.Size(849, 502);
+            this.picRouteMap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picRouteMap.TabIndex = 1;
+            this.picRouteMap.TabStop = false;
             // 
             // guna2ComboBox1
             // 
@@ -199,7 +199,7 @@
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRouteMap)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRouteMap)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -213,7 +213,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox picRouteMap;
         private System.Windows.Forms.DataGridView dgvRouteMap;
     }
 }

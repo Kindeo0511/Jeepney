@@ -210,15 +210,15 @@ namespace Jeep.View
 
         private bool ValidateInputs()
         {
-           
+         
             if (string.IsNullOrWhiteSpace(txtFrom.Text))
             {
                 MessageBox.Show("Starting point is required.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (!System.Text.RegularExpressions.Regex.IsMatch(txtFrom.Text, @"^[A-Za-z\s]+$"))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtFrom.Text, @"^[A-Za-z0-9\s]+$"))
             {
-                MessageBox.Show("Starting point should contain only letters and spaces.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Starting point should contain only letters, numbers, and spaces.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -228,59 +228,48 @@ namespace Jeep.View
                 MessageBox.Show("Destination is required.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (!System.Text.RegularExpressions.Regex.IsMatch(txtTo.Text, @"^[A-Za-z\s]+$"))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtTo.Text, @"^[A-Za-z0-9\s]+$"))
             {
-                MessageBox.Show("Destination should contain only letters and spaces.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Destination should contain only letters, numbers, and spaces.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
            
-            if (string.IsNullOrWhiteSpace(txtStopOver.Text))
+            if (lstStopovers.Items.Count == 0)
             {
-                MessageBox.Show("Possible stop over is required.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (!System.Text.RegularExpressions.Regex.IsMatch(txtStopOver.Text, @"^[A-Za-z\s]+$"))
-            {
-                MessageBox.Show("Stop over should contain only letters and spaces.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please add at least one stopover before saving.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-        
-            if (timeStart.Text.Trim() == "")
+    
+            if (!string.IsNullOrWhiteSpace(txtStopOver.Text) && lstStopovers.Items.Count > 0)
             {
-                MessageBox.Show("Starting time is required.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (!TimeSpan.TryParse(timeStart.Text, out _))
-            {
-                MessageBox.Show("Invalid starting time format.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please add or clear the stopover text before saving.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-           
-            if (timeEnd.Text.Trim() == "")
+         
+            if (!string.IsNullOrWhiteSpace(txtStopOver.Text) &&
+                !System.Text.RegularExpressions.Regex.IsMatch(txtStopOver.Text, @"^[A-Za-z0-9\s]+$"))
             {
-                MessageBox.Show("Ending time is required.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (!TimeSpan.TryParse(timeEnd.Text, out _))
-            {
-                MessageBox.Show("Invalid ending time format.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Stopover should contain only letters, numbers, and spaces.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-           
-            if (timeStart.Value >= timeEnd.Value)
+         
+            TimeSpan startTime = timeStart.Value.TimeOfDay;
+            TimeSpan endTime = timeEnd.Value.TimeOfDay;
+
+            if (startTime >= endTime)
             {
-                MessageBox.Show("Time Start must be earlier than Time End.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Start time must be earlier than end time.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-           
+          
             if (cmbOrganization.SelectedIndex == -1)
             {
-                MessageBox.Show("Organization name is required.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select an organization.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (!System.Text.RegularExpressions.Regex.IsMatch(cmbOrganization.Text, @"^[A-Za-z0-9\s]+$"))
@@ -289,9 +278,9 @@ namespace Jeep.View
                 return false;
             }
 
-         
             return true;
         }
+
 
     }
 }

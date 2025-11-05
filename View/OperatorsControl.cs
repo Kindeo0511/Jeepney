@@ -28,7 +28,7 @@ namespace Jeep.View
         private void OperatorsControl_Load(object sender, EventArgs e)
         {
             LoadOperatorsFromDatabase();
-            actionColumnIndex = dgv_operator.Columns["action_column"].Index;
+            actionColumnIndex = 7; 
         }
         private void LoadOperatorsFromDatabase()
         {
@@ -67,7 +67,7 @@ namespace Jeep.View
                                 reader["FranchiseNo"],
                                 reader["ContactNumber"],
                                 reader["Address"],
-                                null // Action column
+                                null 
                             );
                         }
                     }
@@ -114,45 +114,31 @@ namespace Jeep.View
 
         private void dgv_operator_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex == actionColumnIndex && e.RowIndex >= 0)
+            // Make sure we clicked the action column
+            if (e.RowIndex >= 0 && e.ColumnIndex == actionColumnIndex)
             {
+                int operatorID = Convert.ToInt32(dgv_operator.Rows[e.RowIndex].Cells["OperatorID"].Value);
                 int clickX = e.Location.X;
-                DataGridViewRow row = dgv_operator.Rows[e.RowIndex];
-                int operatorID = Convert.ToInt32(row.Cells["OperatorID"].Value);
 
-                // Get cell bounds for more precise icon click detection
-                Rectangle cellBounds = dgv_operator.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false);
-                int iconSize = 24;
-                int padding = 8;
-
-                Rectangle editRect = new Rectangle(
-                    cellBounds.Left + padding,
-                    cellBounds.Top + (cellBounds.Height - iconSize) / 2,
-                    iconSize,
-                    iconSize);
-
-                Rectangle deleteRect = new Rectangle(
-                    cellBounds.Right - iconSize - padding,
-                    cellBounds.Top + (cellBounds.Height - iconSize) / 2,
-                    iconSize,
-                    iconSize);
-
-                // Check if click is on EDIT
-                if (editRect.Contains(e.Location))
+                // 🛠 Adjust based on your actual icon width and padding
+                if (clickX < 25)
                 {
+                    // --- EDIT operator ---
+                    DataGridViewRow row = dgv_operator.Rows[e.RowIndex];
                     int organizationID = 0;
                     string orgName = row.Cells["OrganizationName"].Value?.ToString() ?? "";
 
-                    // Get OrganizationID from DB (since DataGridView only shows name)
+                    // Get OrganizationID from DB
                     using (var con = new MySqlConnection("server=localhost;user id=root;password=;database=jeepney;"))
                     {
                         con.Open();
-                        string getOrgIDQuery = "SELECT OrganizationID FROM organization WHERE OrganizationName = @OrganizationName LIMIT 1";
-                        using (var cmd = new MySqlCommand(getOrgIDQuery, con))
+                        string query = "SELECT OrganizationID FROM organization WHERE OrganizationName = @OrganizationName LIMIT 1";
+                        using (var cmd = new MySqlCommand(query, con))
                         {
                             cmd.Parameters.AddWithValue("@OrganizationName", orgName);
                             object result = cmd.ExecuteScalar();
-                            if (result != null) organizationID = Convert.ToInt32(result);
+                            if (result != null)
+                                organizationID = Convert.ToInt32(result);
                         }
                     }
 
@@ -170,9 +156,9 @@ namespace Jeep.View
                         }
                     }
                 }
-                // Check if click is on DELETE
-                else if (deleteRect.Contains(e.Location))
+                else if (clickX > 35 && clickX < 70)
                 {
+                    // --- DELETE operator ---
                     DialogResult confirm = MessageBox.Show(
                         "Are you sure you want to delete this operator?",
                         "Confirm Delete",
@@ -187,6 +173,7 @@ namespace Jeep.View
                 }
             }
         }
+
 
 
         private void DeleteOperator(int operatorID)
