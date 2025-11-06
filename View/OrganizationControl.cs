@@ -82,7 +82,7 @@ namespace Jeep.View
                     iconSize);
 
                 var deleteRect = new Rectangle(
-                    e.CellBounds.Left + padding + iconSize + 24,
+                    e.CellBounds.Left + padding + iconSize + 12,
                     e.CellBounds.Top + (e.CellBounds.Height - iconSize) / 2,
                     iconSize,
                     iconSize);
@@ -117,7 +117,7 @@ namespace Jeep.View
                     }
                 }
                 // 🗑️ Delete
-                else if (clickX > 60 && clickX < 100)
+                else if (clickX > 40 && clickX < 80)
                 {
                     DialogResult result = MessageBox.Show("Are you sure you want to delete this organization?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (result == DialogResult.Yes)

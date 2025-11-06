@@ -38,18 +38,18 @@
             this.btn_cancel = new Guna.UI2.WinForms.Guna2Button();
             this.btn_add = new Guna.UI2.WinForms.Guna2Button();
             this.txtBaseFare = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dgvStopovers = new System.Windows.Forms.DataGridView();
-            this.txtDiscountFare = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.StopoverID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StopFare = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiscountFare = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtDiscountFare = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStopovers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +74,6 @@
             this.cmbRouteTaken.Name = "cmbRouteTaken";
             this.cmbRouteTaken.ShadowDecoration.Parent = this.cmbRouteTaken;
             this.cmbRouteTaken.Size = new System.Drawing.Size(265, 36);
-            this.cmbRouteTaken.StartIndex = 0;
             this.cmbRouteTaken.TabIndex = 98;
             this.cmbRouteTaken.SelectedIndexChanged += new System.EventHandler(this.cmbRouteTaken_SelectedIndexChanged);
             // 
@@ -190,17 +189,6 @@
             this.txtBaseFare.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBaseFare.TextChanged += new System.EventHandler(this.txtBaseFare_TextChanged);
             // 
-            // guna2HtmlLabel7
-            // 
-            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(122, 127);
-            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(97, 22);
-            this.guna2HtmlLabel7.TabIndex = 90;
-            this.guna2HtmlLabel7.Text = "Route Taken";
-            // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
@@ -234,17 +222,6 @@
             this.guna2HtmlLabel2.TabIndex = 85;
             this.guna2HtmlLabel2.Text = null;
             // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(490, 127);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(76, 22);
-            this.guna2HtmlLabel3.TabIndex = 84;
-            this.guna2HtmlLabel3.Text = "BaseFare";
-            // 
             // dgvStopovers
             // 
             this.dgvStopovers.AllowUserToResizeColumns = false;
@@ -262,47 +239,6 @@
             this.dgvStopovers.Size = new System.Drawing.Size(1030, 243);
             this.dgvStopovers.TabIndex = 99;
             this.dgvStopovers.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStopovers_CellEndEdit);
-            // 
-            // txtDiscountFare
-            // 
-            this.txtDiscountFare.BorderColor = System.Drawing.Color.Black;
-            this.txtDiscountFare.BorderRadius = 15;
-            this.txtDiscountFare.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDiscountFare.DefaultText = "";
-            this.txtDiscountFare.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDiscountFare.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDiscountFare.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDiscountFare.DisabledState.Parent = this.txtDiscountFare;
-            this.txtDiscountFare.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDiscountFare.FocusedState.BorderColor = System.Drawing.Color.Red;
-            this.txtDiscountFare.FocusedState.Parent = this.txtDiscountFare;
-            this.txtDiscountFare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtDiscountFare.ForeColor = System.Drawing.Color.Black;
-            this.txtDiscountFare.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.txtDiscountFare.HoverState.Parent = this.txtDiscountFare;
-            this.txtDiscountFare.Location = new System.Drawing.Point(791, 155);
-            this.txtDiscountFare.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.txtDiscountFare.Name = "txtDiscountFare";
-            this.txtDiscountFare.PasswordChar = '\0';
-            this.txtDiscountFare.PlaceholderForeColor = System.Drawing.Color.Red;
-            this.txtDiscountFare.PlaceholderText = "";
-            this.txtDiscountFare.ReadOnly = true;
-            this.txtDiscountFare.SelectedText = "";
-            this.txtDiscountFare.ShadowDecoration.Parent = this.txtDiscountFare;
-            this.txtDiscountFare.Size = new System.Drawing.Size(267, 43);
-            this.txtDiscountFare.TabIndex = 100;
-            this.txtDiscountFare.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(812, 127);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(104, 22);
-            this.guna2HtmlLabel1.TabIndex = 101;
-            this.guna2HtmlLabel1.Text = "DiscountFare";
             // 
             // StopoverID
             // 
@@ -335,13 +271,75 @@
             this.DiscountFare.ReadOnly = true;
             this.DiscountFare.Width = 125;
             // 
+            // txtDiscountFare
+            // 
+            this.txtDiscountFare.BorderColor = System.Drawing.Color.Black;
+            this.txtDiscountFare.BorderRadius = 15;
+            this.txtDiscountFare.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDiscountFare.DefaultText = "";
+            this.txtDiscountFare.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDiscountFare.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDiscountFare.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDiscountFare.DisabledState.Parent = this.txtDiscountFare;
+            this.txtDiscountFare.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDiscountFare.FocusedState.BorderColor = System.Drawing.Color.Red;
+            this.txtDiscountFare.FocusedState.Parent = this.txtDiscountFare;
+            this.txtDiscountFare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtDiscountFare.ForeColor = System.Drawing.Color.Black;
+            this.txtDiscountFare.HoverState.BorderColor = System.Drawing.Color.Red;
+            this.txtDiscountFare.HoverState.Parent = this.txtDiscountFare;
+            this.txtDiscountFare.Location = new System.Drawing.Point(791, 155);
+            this.txtDiscountFare.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtDiscountFare.Name = "txtDiscountFare";
+            this.txtDiscountFare.PasswordChar = '\0';
+            this.txtDiscountFare.PlaceholderForeColor = System.Drawing.Color.Red;
+            this.txtDiscountFare.PlaceholderText = "";
+            this.txtDiscountFare.ReadOnly = true;
+            this.txtDiscountFare.SelectedText = "";
+            this.txtDiscountFare.ShadowDecoration.Parent = this.txtDiscountFare;
+            this.txtDiscountFare.Size = new System.Drawing.Size(267, 43);
+            this.txtDiscountFare.TabIndex = 100;
+            this.txtDiscountFare.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label1.Location = new System.Drawing.Point(118, 131);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 20);
+            this.label1.TabIndex = 102;
+            this.label1.Text = "Route Taken";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label2.Location = new System.Drawing.Point(483, 126);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 20);
+            this.label2.TabIndex = 103;
+            this.label2.Text = "BaseFare";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label3.Location = new System.Drawing.Point(808, 126);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 20);
+            this.label3.TabIndex = 104;
+            this.label3.Text = "DiscountFare";
+            // 
             // FarePaymentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1148, 654);
-            this.Controls.Add(this.guna2HtmlLabel1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDiscountFare);
             this.Controls.Add(this.dgvStopovers);
             this.Controls.Add(this.cmbRouteTaken);
@@ -349,11 +347,9 @@
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.txtBaseFare);
-            this.Controls.Add(this.guna2HtmlLabel7);
             this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.guna2HtmlLabel5);
             this.Controls.Add(this.guna2HtmlLabel2);
-            this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.lbl_title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -378,17 +374,17 @@
         private Guna.UI2.WinForms.Guna2Button btn_cancel;
         private Guna.UI2.WinForms.Guna2Button btn_add;
         private Guna.UI2.WinForms.Guna2TextBox txtBaseFare;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private System.Windows.Forms.DataGridView dgvStopovers;
         private Guna.UI2.WinForms.Guna2TextBox txtDiscountFare;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn StopoverID;
         private System.Windows.Forms.DataGridViewTextBoxColumn StopName;
         private System.Windows.Forms.DataGridViewTextBoxColumn StopFare;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiscountFare;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

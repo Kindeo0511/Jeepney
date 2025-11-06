@@ -103,7 +103,7 @@ namespace Jeep.View
                     iconSize);
 
                 var deleteRect = new Rectangle(
-                    e.CellBounds.Left + padding + iconSize + 24,
+                    e.CellBounds.Left + padding + iconSize + 12,
                     e.CellBounds.Top + (e.CellBounds.Height - iconSize) / 2,
                     iconSize,
                     iconSize);
