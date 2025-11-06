@@ -28,6 +28,7 @@ namespace Jeep.CustomerView
             }
 
             route = selectedRoute.Trim();
+
             SetupDataGridView();
         }
 
@@ -37,6 +38,7 @@ namespace Jeep.CustomerView
           //  MessageBox.Show("Form Loaded for: " + route);
             try
             {
+                label1.Text = route;
                 LoadRouteInfo(route);
                 LoadRouteMapImage(route);
             }

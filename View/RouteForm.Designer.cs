@@ -159,7 +159,6 @@
             this.cmbOrganization.Name = "cmbOrganization";
             this.cmbOrganization.ShadowDecoration.Parent = this.cmbOrganization;
             this.cmbOrganization.Size = new System.Drawing.Size(265, 41);
-            this.cmbOrganization.StartIndex = 0;
             this.cmbOrganization.TabIndex = 61;
             // 
             // txtFrom
@@ -252,7 +251,7 @@
             this.guna2Button1.BorderRadius = 20;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.RosyBrown;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(145)))), ((int)(((byte)(141)))));
             this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
@@ -281,7 +280,7 @@
             this.btnRemoveStopover.BorderRadius = 20;
             this.btnRemoveStopover.CheckedState.Parent = this.btnRemoveStopover;
             this.btnRemoveStopover.CustomImages.Parent = this.btnRemoveStopover;
-            this.btnRemoveStopover.FillColor = System.Drawing.Color.RosyBrown;
+            this.btnRemoveStopover.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(145)))), ((int)(((byte)(141)))));
             this.btnRemoveStopover.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveStopover.ForeColor = System.Drawing.Color.Black;
             this.btnRemoveStopover.HoverState.Parent = this.btnRemoveStopover;

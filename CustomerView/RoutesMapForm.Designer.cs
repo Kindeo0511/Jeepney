@@ -38,7 +38,8 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvRouteMap = new System.Windows.Forms.DataGridView();
             this.picRouteMap = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtRouteName = new Guna.UI.WinForms.GunaTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -122,9 +123,10 @@
             // 
             this.guna2Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Panel2.BackgroundImage")));
             this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel2.Controls.Add(this.label1);
+            this.guna2Panel2.Controls.Add(this.txtRouteName);
             this.guna2Panel2.Controls.Add(this.dgvRouteMap);
             this.guna2Panel2.Controls.Add(this.picRouteMap);
-            this.guna2Panel2.Controls.Add(this.guna2ComboBox1);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel2.Name = "guna2Panel2";
@@ -156,29 +158,33 @@
             this.picRouteMap.TabIndex = 1;
             this.picRouteMap.TabStop = false;
             // 
-            // guna2ComboBox1
+            // txtRouteName
             // 
-            this.guna2ComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ComboBox1.AutoRoundedCorners = true;
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 17;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.FormattingEnabled = true;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(349, 12);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(878, 36);
-            this.guna2ComboBox1.TabIndex = 0;
-            this.guna2ComboBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtRouteName.BackColor = System.Drawing.Color.Transparent;
+            this.txtRouteName.BaseColor = System.Drawing.Color.White;
+            this.txtRouteName.BorderColor = System.Drawing.Color.Silver;
+            this.txtRouteName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRouteName.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtRouteName.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtRouteName.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtRouteName.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRouteName.Location = new System.Drawing.Point(318, 12);
+            this.txtRouteName.Name = "txtRouteName";
+            this.txtRouteName.PasswordChar = '\0';
+            this.txtRouteName.Radius = 20;
+            this.txtRouteName.SelectedText = "";
+            this.txtRouteName.Size = new System.Drawing.Size(787, 43);
+            this.txtRouteName.TabIndex = 101;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(585, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(224, 22);
+            this.label1.TabIndex = 102;
+            this.label1.Text = "BAGUMBAYAN - PASIG\n";
             // 
             // RoutesMapForm
             // 
@@ -195,6 +201,7 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRouteMap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRouteMap)).EndInit();
             this.ResumeLayout(false);
@@ -209,8 +216,9 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private Guna.UI2.WinForms.Guna2PictureBox picRouteMap;
         private System.Windows.Forms.DataGridView dgvRouteMap;
+        private Guna.UI.WinForms.GunaTextBox txtRouteName;
+        private System.Windows.Forms.Label label1;
     }
 }
