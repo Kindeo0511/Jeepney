@@ -426,5 +426,12 @@
   <ItemGroup>
     <None Include="Resources\_ionicons_svg_md-trash.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\FTI_Pasay_Map.png" />
+    <Content Include="Resources\575637531_1866900290623165_8986357613471079357_n.png" />
+    <Content Include="Resources\576331753_2002865210496794_1951809797886952399_n.png" />
+    <Content Include="Resources\576401430_1330836421422082_8356875838040916144_n.png" />
+    <Content Include="Resources\576626848_1139112315103790_6256042420027132856_n.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

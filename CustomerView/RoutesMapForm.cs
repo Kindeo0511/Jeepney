@@ -34,6 +34,7 @@ namespace Jeep.CustomerView
 
         private void RoutesMapForm_Load(object sender, EventArgs e)
         {
+            MessageBox.Show("Form Loaded for: " + route);
             try
             {
                 LoadRouteInfo(route);
@@ -121,27 +122,33 @@ namespace Jeep.CustomerView
         {
             try
             {
-                // ✅ Option 1: Use Resources (recommended)
+
+                string basePath = Application.StartupPath + @"\Resources\";
+
+                string imagePath = "";
+
                 switch (routeName)
                 {
                     case "FTI - Pasay":
-                        picRouteMap.Image = Properties.Resources.FTI_Pasay_Map; // Make sure this matches resource name
+                        imagePath = basePath + "FTI_Pasay_Map.png";
                         break;
-
                     case "Bagumbayan - Pasig":
-                        picRouteMap.Image = Properties.Resources.Bagumbayan_Pasig_Map;
+                        imagePath = basePath + "Bagumbayan_Pasig_Map.png";
                         break;
-
                     case "FTI - Market Market":
-                        picRouteMap.Image = Properties.Resources.FTI_MarketMarket_Map;
+                        imagePath = basePath + "FTI_MarketMarket_Map.png";
                         break;
-
                     default:
-                        picRouteMap.Image = Properties.Resources.default_map;
+                        imagePath = basePath + "default_map.png";
                         break;
                 }
 
-                picRouteMap.SizeMode = PictureBoxSizeMode.Zoom;
+                if (System.IO.File.Exists(imagePath))
+                    picRouteMap.Image = Image.FromFile(imagePath);
+                else
+                    MessageBox.Show($"Map not found for {routeName}");
+
+            
             }
             catch (Exception ex)
             {

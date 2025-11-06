@@ -251,6 +251,7 @@
             this.Name = "RoutesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RoutesForm";
+            this.Load += new System.EventHandler(this.RoutesForm_Load);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);

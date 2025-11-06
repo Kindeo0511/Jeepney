@@ -142,17 +142,22 @@ namespace Jeep.View
                 return false;
             }
 
-            // 🔹 Contact Number
+            // 🔹 Contact Number Validation
             if (string.IsNullOrWhiteSpace(txtContactNumber.Text))
             {
                 MessageBox.Show("Contact number is required.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (!System.Text.RegularExpressions.Regex.IsMatch(txtContactNumber.Text.Trim(), @"^09\d{9}$"))
+
+            // Check if it starts with 09 and has 11 digits total
+            string contact = txtContactNumber.Text.Trim();
+            if (!System.Text.RegularExpressions.Regex.IsMatch(contact, @"^09\d{9}$"))
             {
-                MessageBox.Show("Contact number should contain only digits.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Contact number must start with '09' and contain exactly 11 digits (e.g., 09123456789).",
+                                "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+
 
             // 🔹 Address
             if (string.IsNullOrWhiteSpace(txtAddress.Text))

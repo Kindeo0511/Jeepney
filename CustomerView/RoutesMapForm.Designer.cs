@@ -149,7 +149,6 @@
             // 
             this.picRouteMap.AutoRoundedCorners = true;
             this.picRouteMap.BorderRadius = 250;
-            this.picRouteMap.Image = ((System.Drawing.Image)(resources.GetObject("picRouteMap.Image")));
             this.picRouteMap.Location = new System.Drawing.Point(243, 116);
             this.picRouteMap.Name = "picRouteMap";
             this.picRouteMap.ShadowDecoration.Parent = this.picRouteMap;
@@ -179,7 +178,6 @@
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
             this.guna2ComboBox1.Size = new System.Drawing.Size(878, 36);
-            this.guna2ComboBox1.StartIndex = 0;
             this.guna2ComboBox1.TabIndex = 0;
             this.guna2ComboBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
