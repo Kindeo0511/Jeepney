@@ -24,11 +24,10 @@ namespace Jeep.CustomerView
             lstSuggestions.Click += lstSuggestions_Click;
             txt_search.KeyDown += txt_search_KeyDown;
         }
-        // Search routes by input
+        // Search routes by user input
         private DataTable SearchRoutes(string query)
         {
             DataTable dt = new DataTable();
-
             try
             {
                 using (var con = new MySqlConnection(connectionString))
@@ -38,13 +37,14 @@ namespace Jeep.CustomerView
                     string sql = @"
                         SELECT CONCAT(RouteFrom, ' - ', RouteTo) AS RouteName
                         FROM route
-                        WHERE RouteFrom LIKE @q OR RouteTo LIKE @q OR CONCAT(RouteFrom,' - ',RouteTo) LIKE @q
+                        WHERE RouteFrom LIKE @q 
+                           OR RouteTo LIKE @q 
+                           OR CONCAT(RouteFrom,' - ',RouteTo) LIKE @q;
                     ";
 
                     using (var cmd = new MySqlCommand(sql, con))
                     {
                         cmd.Parameters.AddWithValue("@q", "%" + query + "%");
-
                         using (var adapter = new MySqlDataAdapter(cmd))
                         {
                             adapter.Fill(dt);
@@ -60,7 +60,7 @@ namespace Jeep.CustomerView
             return dt;
         }
 
-        // Show suggestions as user types
+        // Show suggestions while typing
         private void txt_search_TextChanged(object sender, EventArgs e)
         {
             string search = txt_search.Text.Trim();
@@ -72,75 +72,79 @@ namespace Jeep.CustomerView
             }
 
             DataTable dt = SearchRoutes(search);
-
             lstSuggestions.Items.Clear();
+
             foreach (DataRow row in dt.Rows)
-            {
                 lstSuggestions.Items.Add(row["RouteName"].ToString());
-            }
 
             lstSuggestions.Visible = lstSuggestions.Items.Count > 0;
-
             if (lstSuggestions.Visible)
             {
                 lstSuggestions.Width = txt_search.Width;
-                int itemHeight = lstSuggestions.ItemHeight;
-                int maxVisibleItems = 8;
-                int visibleItems = Math.Min(lstSuggestions.Items.Count, maxVisibleItems);
-                lstSuggestions.Height = itemHeight * visibleItems + 2;
+                lstSuggestions.Height = Math.Min(lstSuggestions.ItemHeight * lstSuggestions.Items.Count, 200);
             }
         }
 
-        // User clicks a suggestion
+        // Click suggestion
         private void lstSuggestions_Click(object sender, EventArgs e)
         {
             if (lstSuggestions.SelectedItem == null) return;
 
             string selectedRoute = lstSuggestions.SelectedItem.ToString().Trim();
-
-            if (string.IsNullOrEmpty(selectedRoute))
-            {
-                MessageBox.Show("Selected route is empty.");
-                return;
-            }
-
             txt_search.Text = selectedRoute;
             lstSuggestions.Visible = false;
 
             OpenRouteMap(selectedRoute);
         }
 
-        // Enter key pressed
+        // Press Enter key
         private void txt_search_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode != Keys.Enter) return;
-
-            string selectedRoute = txt_search.Text.Trim();
-
-            if (string.IsNullOrEmpty(selectedRoute))
+            if (e.KeyCode == Keys.Enter)
             {
-                MessageBox.Show("Please select a route.");
-                return;
-            }
+                e.SuppressKeyPress = true;
 
-            OpenRouteMap(selectedRoute);
-            e.SuppressKeyPress = true;
+                string selectedRoute = txt_search.Text.Trim();
+                if (string.IsNullOrEmpty(selectedRoute))
+                {
+                    MessageBox.Show("Please type or select a route.");
+                    return;
+                }
+
+                OpenRouteMap(selectedRoute);
+            }
         }
 
-        // Opens the RoutesMapForm safely
         private void OpenRouteMap(string selectedRoute)
         {
             try
             {
+                selectedRoute = selectedRoute?.Trim().Replace("–", "-");
+
+                if (string.IsNullOrEmpty(selectedRoute))
+                {
+                    MessageBox.Show("Please select a valid route.");
+                    return;
+                }
+
+                // Debug line: see the route actually passed
+            //    MessageBox.Show($"Opening route: '{selectedRoute}'");
+
                 var mapForm = new RoutesMapForm(selectedRoute);
+
+                // Hide AFTER confirming the form loaded successfully
+                mapForm.Shown += (s, args) => this.Hide();
+                mapForm.FormClosed += (s, args) => this.Show();
+
                 mapForm.Show();
-                this.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Failed to open route map: " + ex.Message);
             }
         }
+
+
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {

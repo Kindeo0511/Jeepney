@@ -28,13 +28,13 @@ namespace Jeep.CustomerView
             }
 
             route = selectedRoute.Trim();
-
             SetupDataGridView();
         }
 
+
         private void RoutesMapForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Form Loaded for: " + route);
+          //  MessageBox.Show("Form Loaded for: " + route);
             try
             {
                 LoadRouteInfo(route);
@@ -61,48 +61,68 @@ namespace Jeep.CustomerView
 
         private void LoadRouteInfo(string routeName)
         {
-            DataTable dt = new DataTable();
-
-            using (var con = new MySqlConnection(connectionString))
+            try
             {
-                con.Open();
-
-                string query = @"
-                    SELECT 
-                        IFNULL(s.StopName, '-') AS StopName,
-                        IFNULL(fs.StopFare, 0) AS StopFare,
-                        IFNULL(fs.DiscountFare, 0) AS StopDiscount,
-                        IFNULL(f.BaseFare, 0) AS BaseFare,
-                        IFNULL(f.DiscountFare, 0) AS DiscountFare
-                    FROM route ro
-                    INNER JOIN fare f ON f.RouteID = ro.RouteID
-                    LEFT JOIN fare_stopover fs ON fs.FareID = f.FareID
-                    LEFT JOIN stopover s ON s.StopoverID = fs.StopoverID
-                    WHERE ro.RouteID = (
-                        SELECT RouteID FROM route WHERE CONCAT(RouteFrom,' - ',RouteTo) = @RouteName LIMIT 1
-                    )
-                    ORDER BY fs.StopFare ASC;";
-
-                using (var cmd = new MySqlCommand(query, con))
+                using (var con = new MySqlConnection(connectionString))
                 {
-                    cmd.Parameters.AddWithValue("@RouteName", routeName);
-                    using (var adapter = new MySqlDataAdapter(cmd))
+                    con.Open();
+
+                    string query = @"
+                SELECT 
+                    s.StopName AS 'Stop Name',
+                    IFNULL(fs.StopFare, 0) AS 'Stop Fare',
+                    IFNULL(fs.DiscountFare, 0) AS 'Discount Fare',
+                    IFNULL(f.BaseFare, 0) AS 'Base Fare',
+                    IFNULL(f.DiscountFare, 0) AS 'Base Discount'
+                FROM route ro
+                INNER JOIN fare f 
+                    ON f.RouteID = ro.RouteID
+                LEFT JOIN fare_stopover fs 
+                    ON fs.FareID = f.FareID
+                LEFT JOIN stopover s 
+                    ON s.StopoverID = fs.StopoverID 
+                    AND s.RouteID = ro.RouteID
+                WHERE CONCAT(ro.RouteFrom, ' - ', ro.RouteTo) = @RouteName
+                ORDER BY fs.StopFare ASC;
+            ";
+
+                    using (var cmd = new MySqlCommand(query, con))
                     {
-                        adapter.Fill(dt);
+                        cmd.Parameters.AddWithValue("@RouteName", routeName);
+                        DataTable dt = new DataTable();
+                        using (var adapter = new MySqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(dt);
+                        }
+
+                        if (dt.Rows.Count > 0)
+                        {
+                            dgvRouteMap.DataSource = dt;
+                            dgvRouteMap.Refresh();
+
+                            // Optional: format DataGridView
+                            dgvRouteMap.Columns["Stop Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            dgvRouteMap.Columns["Stop Fare"].DefaultCellStyle.Format = "₱0.00";
+                            dgvRouteMap.Columns["Discount Fare"].DefaultCellStyle.Format = "₱0.00";
+                            dgvRouteMap.Columns["Base Fare"].DefaultCellStyle.Format = "₱0.00";
+                            dgvRouteMap.Columns["Base Discount"].DefaultCellStyle.Format = "₱0.00";
+                        }
+                        else
+                        {
+                            dgvRouteMap.DataSource = null;
+                            MessageBox.Show("No stopovers found for the selected route.",
+                                "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
             }
-
-            if (dt.Rows.Count == 0)
+            catch (Exception ex)
             {
-                MessageBox.Show("No stops found for the selected route.");
-                dgvRouteMap.DataSource = null;
-            }
-            else
-            {
-                dgvRouteMap.DataSource = dt;
+                MessageBox.Show("Error loading route info:\n" + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
@@ -122,39 +142,52 @@ namespace Jeep.CustomerView
         {
             try
             {
+                // Normalize
+                string cleanRoute = routeName.Trim().Replace("–", "-").ToLower();
 
-                string basePath = Application.StartupPath + @"\Resources\";
+                string basePath = @"C:\Users\dell latitude\source\repos\Jeepney\Resources";
+                string imageFile = "default_map.jfif";
 
-                string imagePath = "";
-
-                switch (routeName)
+                switch (cleanRoute)
                 {
-                    case "FTI - Pasay":
-                        imagePath = basePath + "FTI_Pasay_Map.png";
+                    case "bagumbayan - pasig":
+                        imageFile = "Bagumbayan-Pasig.jfif";
                         break;
-                    case "Bagumbayan - Pasig":
-                        imagePath = basePath + "Bagumbayan_Pasig_Map.png";
+                    case "fortbonifacio - market-market":
+                        imageFile = "Fortbonifacio-MarketMarket.jfif";
                         break;
-                    case "FTI - Market Market":
-                        imagePath = basePath + "FTI_MarketMarket_Map.png";
+                    case "guadalupe - taguig-tipas":
+                        imageFile = "Guadalupet-TaguigViaTipas.jfif";
                         break;
-                    default:
-                        imagePath = basePath + "default_map.png";
+                    case "pateros - market-market":
+                        imageFile = "Pateros-MarketMarket.jfif";
+                        break;
+                    case "guadalupe - fti":
+                        imageFile = "Guada-Fti.jfif";
+                        break;
+                    case "pasig - taguig":
+                        imageFile = "Pasig-BagongKalsada.jfif";
                         break;
                 }
 
-                if (System.IO.File.Exists(imagePath))
-                    picRouteMap.Image = Image.FromFile(imagePath);
-                else
-                    MessageBox.Show($"Map not found for {routeName}");
+                string imagePath = System.IO.Path.Combine(basePath, imageFile);
 
-            
+                if (System.IO.File.Exists(imagePath))
+                {
+                    picRouteMap.Image = Image.FromFile(imagePath);
+                    picRouteMap.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                else
+                {
+                    MessageBox.Show($"Map image not found at:\n{imagePath}", "Missing File", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error loading map image: " + ex.Message);
             }
         }
+
 
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)
         {

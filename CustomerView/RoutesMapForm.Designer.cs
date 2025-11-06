@@ -148,12 +148,11 @@
             // picRouteMap
             // 
             this.picRouteMap.AutoRoundedCorners = true;
-            this.picRouteMap.BorderRadius = 250;
             this.picRouteMap.Location = new System.Drawing.Point(243, 116);
             this.picRouteMap.Name = "picRouteMap";
             this.picRouteMap.ShadowDecoration.Parent = this.picRouteMap;
             this.picRouteMap.Size = new System.Drawing.Size(849, 502);
-            this.picRouteMap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picRouteMap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picRouteMap.TabIndex = 1;
             this.picRouteMap.TabStop = false;
             // 

@@ -27,22 +27,13 @@ namespace Jeep.CustomerView
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             var form = new SearchForm();
-            form.Show();
+            form.ShowDialog();
             this.Close();
         }
 
         private void guna2Button3_Click_1(object sender, EventArgs e)
         {
-            //var mapForm = new RoutesMapForm(selectedRoute);
-            //mapForm.Show();
-
-            //this.Close();
-        }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-            // This button represents a route, e.g., "FTI - Pasay"
-            string selectedRoute = "FTI - Pasay";
+            string selectedRoute = "Bagumbayan - Pasig";
 
             try
             {
@@ -55,6 +46,22 @@ namespace Jeep.CustomerView
             }
         }
 
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            string selectedRoute = "FortBonifacio - Market-Market";
+
+            try
+            {
+                var mapForm = new RoutesMapForm(selectedRoute);
+                mapForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to open route map: " + ex.Message);
+            }
+
+        }
+
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -63,6 +70,66 @@ namespace Jeep.CustomerView
         private void RoutesForm_Load(object sender, EventArgs e)
         {
            
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            string selectedRoute = "Guadalupe - Taguig-Tipas";
+
+            try
+            {
+                var mapForm = new RoutesMapForm(selectedRoute);
+                mapForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to open route map: " + ex.Message);
+            }
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            string selectedRoute = "Pateros - Market-Market";
+
+            try
+            {
+                var mapForm = new RoutesMapForm(selectedRoute);
+                mapForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to open route map: " + ex.Message);
+            }
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            string selectedRoute = "Guadalupe - FTI";
+
+            try
+            {
+                var mapForm = new RoutesMapForm(selectedRoute);
+                mapForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to open route map: " + ex.Message);
+            }
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            string selectedRoute = "Pasig - Taguig";
+
+            try
+            {
+                var mapForm = new RoutesMapForm(selectedRoute);
+                mapForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to open route map: " + ex.Message);
+            }
         }
     }
 }
