@@ -31,7 +31,8 @@ namespace Jeep.View
 
             if (operatorID.HasValue)
             {
-                this.Text = "Edit Operator";
+
+                this.lbl_title.Text = "Edit Operator";
                 btn_edit.Visible = true;
                 btn_add.Visible = false;
 
