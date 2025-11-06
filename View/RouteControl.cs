@@ -48,9 +48,11 @@ namespace Jeep.View
                         {
                             dgv_route.Rows.Add(
                                 reader["RouteID"],
+                                 reader["RouteFrom"].ToString(),
+                                   reader["RouteTo"].ToString(),
                                 reader["OrganizationName"].ToString(),
-                                reader["RouteFrom"].ToString(),
-                                reader["RouteTo"].ToString(),
+                               
+                              
                               ((TimeSpan)reader["TimeStart"]).ToString(@"hh\:mm\:ss"),
                               ((TimeSpan)reader["TimeEnd"]).ToString(@"hh\:mm\:ss"),
 
