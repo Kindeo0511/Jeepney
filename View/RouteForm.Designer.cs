@@ -153,8 +153,6 @@
             this.cmbOrganization.HoverState.BorderColor = System.Drawing.Color.Red;
             this.cmbOrganization.HoverState.Parent = this.cmbOrganization;
             this.cmbOrganization.ItemHeight = 35;
-            this.cmbOrganization.Items.AddRange(new object[] {
-            "BOSSING"});
             this.cmbOrganization.ItemsAppearance.Parent = this.cmbOrganization;
             this.cmbOrganization.Location = new System.Drawing.Point(764, 263);
             this.cmbOrganization.Margin = new System.Windows.Forms.Padding(4);
@@ -180,7 +178,7 @@
             this.txtFrom.BorderColor = System.Drawing.Color.Black;
             this.txtFrom.BorderRadius = 15;
             this.txtFrom.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFrom.DefaultText = "FTI";
+            this.txtFrom.DefaultText = "";
             this.txtFrom.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtFrom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtFrom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -199,7 +197,6 @@
             this.txtFrom.PlaceholderForeColor = System.Drawing.Color.Red;
             this.txtFrom.PlaceholderText = "";
             this.txtFrom.SelectedText = "";
-            this.txtFrom.SelectionStart = 3;
             this.txtFrom.ShadowDecoration.Parent = this.txtFrom;
             this.txtFrom.Size = new System.Drawing.Size(267, 43);
             this.txtFrom.TabIndex = 58;
@@ -231,7 +228,7 @@
             this.txtStopOver.BorderColor = System.Drawing.Color.Black;
             this.txtStopOver.BorderRadius = 15;
             this.txtStopOver.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtStopOver.DefaultText = "GATE 3";
+            this.txtStopOver.DefaultText = "";
             this.txtStopOver.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtStopOver.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtStopOver.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -250,7 +247,6 @@
             this.txtStopOver.PlaceholderForeColor = System.Drawing.Color.Red;
             this.txtStopOver.PlaceholderText = "Possible stop over";
             this.txtStopOver.SelectedText = "";
-            this.txtStopOver.SelectionStart = 6;
             this.txtStopOver.ShadowDecoration.Parent = this.txtStopOver;
             this.txtStopOver.Size = new System.Drawing.Size(267, 43);
             this.txtStopOver.TabIndex = 54;
@@ -282,7 +278,7 @@
             this.txtTo.BorderColor = System.Drawing.Color.Black;
             this.txtTo.BorderRadius = 15;
             this.txtTo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTo.DefaultText = "PASAY";
+            this.txtTo.DefaultText = "";
             this.txtTo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -301,7 +297,6 @@
             this.txtTo.PlaceholderForeColor = System.Drawing.Color.Red;
             this.txtTo.PlaceholderText = "To";
             this.txtTo.SelectedText = "";
-            this.txtTo.SelectionStart = 5;
             this.txtTo.ShadowDecoration.Parent = this.txtTo;
             this.txtTo.Size = new System.Drawing.Size(267, 43);
             this.txtTo.TabIndex = 51;

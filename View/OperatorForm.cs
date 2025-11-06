@@ -70,6 +70,9 @@ namespace Jeep.View
                 cmbOrganization.DisplayMember = "OrganizationName";
                 cmbOrganization.ValueMember = "OrganizationID";
 
+                cmbOrganization.SelectedIndex = -1;
+                cmbOrganization.Text = "Select Organization";
+
                 // ✅ Debug check
                 Console.WriteLine("Loaded organizations:");
                 foreach (DataRow row in dt.Rows)

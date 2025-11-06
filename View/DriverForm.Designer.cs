@@ -141,7 +141,6 @@
             this.cmbOperator.Name = "cmbOperator";
             this.cmbOperator.ShadowDecoration.Parent = this.cmbOperator;
             this.cmbOperator.Size = new System.Drawing.Size(265, 41);
-            this.cmbOperator.StartIndex = 0;
             this.cmbOperator.TabIndex = 41;
             this.cmbOperator.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -517,6 +516,7 @@
             this.Name = "DriverForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DriverForm";
+            this.Load += new System.EventHandler(this.DriverForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pictureBox_Panel.ResumeLayout(false);
             this.ResumeLayout(false);

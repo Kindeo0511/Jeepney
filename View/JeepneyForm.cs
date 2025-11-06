@@ -35,6 +35,8 @@ namespace Jeep.View
                 cmbOrganization.DataSource = dt;
                 cmbOrganization.DisplayMember = "OrganizationName";
                 cmbOrganization.ValueMember = "OrganizationID";
+                cmbOrganization.SelectedIndex = -1;
+                cmbOrganization.Text = "Select Organization";
             }
         }
 

@@ -60,7 +60,10 @@ namespace Jeep.View
 
             cmbOperator.DataSource = dt;
             cmbOperator.DisplayMember = "OperatorName";  
-            cmbOperator.ValueMember = "OperatorID";      
+            cmbOperator.ValueMember = "OperatorID";
+
+            cmbOperator.SelectedIndex = -1;
+            cmbOperator.Text = "Select Organization";
         }
 
 
@@ -344,5 +347,10 @@ namespace Jeep.View
                 }
             }
             }
+
+        private void DriverForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

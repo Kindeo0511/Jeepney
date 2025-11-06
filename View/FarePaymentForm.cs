@@ -312,11 +312,11 @@ namespace Jeep.View
                 return false;
             }
 
-            if (!Regex.IsMatch(barangayName, @"^[A-Za-z\s]+$"))
-            {
-                MessageBox.Show("Barangay name should contain only letters and spaces.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
+            //if (!Regex.IsMatch(barangayName, @"^[A-Za-z\s]+$"))
+            //{
+            //    MessageBox.Show("Barangay name should contain only letters and spaces.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return false;
+            //}
 
             return true; // All validations passed
         }
