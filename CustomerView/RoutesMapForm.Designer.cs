@@ -36,10 +36,10 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtRouteName = new Guna.UI.WinForms.GunaTextBox();
             this.dgvRouteMap = new System.Windows.Forms.DataGridView();
             this.picRouteMap = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.txtRouteName = new Guna.UI.WinForms.GunaTextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -135,28 +135,15 @@
             this.guna2Panel2.TabIndex = 4;
             this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
-            // dgvRouteMap
+            // label1
             // 
-            this.dgvRouteMap.AllowUserToResizeColumns = false;
-            this.dgvRouteMap.AllowUserToResizeRows = false;
-            this.dgvRouteMap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRouteMap.Location = new System.Drawing.Point(1120, 167);
-            this.dgvRouteMap.Name = "dgvRouteMap";
-            this.dgvRouteMap.RowHeadersWidth = 51;
-            this.dgvRouteMap.RowTemplate.Height = 24;
-            this.dgvRouteMap.Size = new System.Drawing.Size(344, 411);
-            this.dgvRouteMap.TabIndex = 100;
-            // 
-            // picRouteMap
-            // 
-            this.picRouteMap.AutoRoundedCorners = true;
-            this.picRouteMap.Location = new System.Drawing.Point(243, 116);
-            this.picRouteMap.Name = "picRouteMap";
-            this.picRouteMap.ShadowDecoration.Parent = this.picRouteMap;
-            this.picRouteMap.Size = new System.Drawing.Size(849, 502);
-            this.picRouteMap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picRouteMap.TabIndex = 1;
-            this.picRouteMap.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(585, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(224, 22);
+            this.label1.TabIndex = 102;
+            this.label1.Text = "BAGUMBAYAN - PASIG\n";
             // 
             // txtRouteName
             // 
@@ -176,15 +163,29 @@
             this.txtRouteName.Size = new System.Drawing.Size(787, 43);
             this.txtRouteName.TabIndex = 101;
             // 
-            // label1
+            // dgvRouteMap
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(585, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 22);
-            this.label1.TabIndex = 102;
-            this.label1.Text = "BAGUMBAYAN - PASIG\n";
+            this.dgvRouteMap.AllowUserToResizeColumns = false;
+            this.dgvRouteMap.AllowUserToResizeRows = false;
+            this.dgvRouteMap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRouteMap.Location = new System.Drawing.Point(1120, 167);
+            this.dgvRouteMap.Name = "dgvRouteMap";
+            this.dgvRouteMap.RowHeadersWidth = 51;
+            this.dgvRouteMap.RowTemplate.Height = 24;
+            this.dgvRouteMap.Size = new System.Drawing.Size(344, 411);
+            this.dgvRouteMap.TabIndex = 100;
+            // 
+            // picRouteMap
+            // 
+            this.picRouteMap.AutoRoundedCorners = true;
+            this.picRouteMap.BorderRadius = 250;
+            this.picRouteMap.Location = new System.Drawing.Point(243, 116);
+            this.picRouteMap.Name = "picRouteMap";
+            this.picRouteMap.ShadowDecoration.Parent = this.picRouteMap;
+            this.picRouteMap.Size = new System.Drawing.Size(849, 502);
+            this.picRouteMap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picRouteMap.TabIndex = 1;
+            this.picRouteMap.TabStop = false;
             // 
             // RoutesMapForm
             // 
@@ -197,6 +198,7 @@
             this.Name = "RoutesMapForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RoutesForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RoutesMapForm_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);

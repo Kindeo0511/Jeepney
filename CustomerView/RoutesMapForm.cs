@@ -50,16 +50,41 @@ namespace Jeep.CustomerView
 
         private void SetupDataGridView()
         {
+            // Basic behavior
             dgvRouteMap.ReadOnly = true;
             dgvRouteMap.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvRouteMap.AllowUserToAddRows = false;
-            dgvRouteMap.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvRouteMap.RowTemplate.Height = 35;
-            dgvRouteMap.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
-            dgvRouteMap.RowHeadersVisible = false;
+            dgvRouteMap.AllowUserToResizeRows = false;
+            dgvRouteMap.MultiSelect = false;
             dgvRouteMap.AutoGenerateColumns = true;
-        }
+            dgvRouteMap.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvRouteMap.RowHeadersVisible = false;
 
+            // Size & padding (smaller for compact view)
+            dgvRouteMap.RowTemplate.Height = 25;
+
+            // Colors (clean and light)
+            dgvRouteMap.BackgroundColor = Color.White;
+            dgvRouteMap.BorderStyle = BorderStyle.FixedSingle;
+            dgvRouteMap.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvRouteMap.GridColor = Color.LightGray;
+
+            // Alternating row color (subtle for readability)
+            dgvRouteMap.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
+
+            // Header style (simple and compact)
+            dgvRouteMap.EnableHeadersVisualStyles = false;
+            dgvRouteMap.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(220, 220, 220);
+            dgvRouteMap.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgvRouteMap.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            dgvRouteMap.ColumnHeadersHeight = 28;
+
+            // Cell text
+            dgvRouteMap.DefaultCellStyle.Font = new Font("Segoe UI", 9F);
+            dgvRouteMap.DefaultCellStyle.ForeColor = Color.Black;
+            dgvRouteMap.DefaultCellStyle.SelectionBackColor = Color.FromArgb(200, 220, 255);
+            dgvRouteMap.DefaultCellStyle.SelectionForeColor = Color.Black;
+        }
 
         private void LoadRouteInfo(string routeName)
         {
