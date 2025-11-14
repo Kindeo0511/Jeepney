@@ -80,6 +80,7 @@ namespace Jeep.CustomerView
             {
                 var mapForm = new RoutesMapForm(selectedRoute);
                 mapForm.Show();
+                
             }
             catch (Exception ex)
             {

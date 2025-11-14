@@ -183,7 +183,7 @@
             this.picRouteMap.Name = "picRouteMap";
             this.picRouteMap.ShadowDecoration.Parent = this.picRouteMap;
             this.picRouteMap.Size = new System.Drawing.Size(849, 502);
-            this.picRouteMap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picRouteMap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picRouteMap.TabIndex = 1;
             this.picRouteMap.TabStop = false;
             // 
